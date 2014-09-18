@@ -1,0 +1,20 @@
+{
+  "name": "petopia_client",
+  "version": "0.0.0",
+  "description": "pet sitters right meow",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StrawberryFieldz/petopia_client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StrawberryFieldz/petopia_client/issues"
+  },
+  "homepage": "https://github.com/StrawberryFieldz/petopia_client"
+}

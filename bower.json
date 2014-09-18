@@ -1,0 +1,17 @@
+{
+  "name": "petopia_client",
+  "version": "0.0.0",
+  "homepage": "https://github.com/StrawberryFieldz/petopia_client.git",
+  "description": "pet sitters right meow",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
