@@ -1,4 +1,4 @@
-describe('1) navbar', function () {
+describe('navbar', function () {
   'use strict';
 
   it('exists', function () {

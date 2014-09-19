@@ -11,7 +11,7 @@ gulp.task('default', function() {
 
 });
 
-gulp.task('karma', shell.task([
+gulp.task('test', shell.task([
 	'karma start'
 ]));
 
@@ -26,4 +26,8 @@ gulp.task('serve', function(){
 	  .on('restart', function(){
 	  	console.log('Server restarted!!!');
 	  })
+});
+
+gulp.task('watch', function(){
+	gulp.watch(paths.scripts, ['lint'])
 });
