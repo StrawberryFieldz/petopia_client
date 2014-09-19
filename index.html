@@ -1,1 +1,40 @@
-'Pets for days'
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="styles/app.css"/>
+    <link rel="stylesheet" href="scripts/splash/splash.css"/>
+    <link rel="stylesheet" href="scripts/components/navbar/navbar.css"/>
+    <link rel="stylesheet" href="scripts/search/search.css"/>
+    <link rel="stylesheet" href="scripts/search_card/search_card.css"/>
+    <link rel="stylesheet" href="scripts/components/popup/popup.css"/>
+    <link rel="stylesheet" href="scripts/private_profile/private_profile.css"/>
+
+  </head>
+  <body ng-app="app">
+
+    <div ui-view></div>
+    
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+      <script src="scripts/splash/splash.controller.js"></script>
+      <script src="scripts/splash/splash.services.js"></script>
+      <script src="scripts/components/navbar/navbar.controller.js"></script>
+      <script src="scripts/components/navbar/navbar.services.js"></script>
+      <script src="scripts/search/search.controller.js"></script>
+      <script src="scripts/search/search.services.js"></script>
+      <script src="scripts/search_card/search_card.controller.js"></script>
+      <script src="scripts/search_card/search_card.services.js"></script>
+      <script src="scripts/components/popup/popup.controller.js"></script>
+      <script src="scripts/components/popup/popup.services.js"></script>
+      <script src="scripts/private_profile/private_profile.controller.js"></script>
+      <script src="scripts/private_profile/private_profile.services.js"></script>
+
+  </body>
+</html>
