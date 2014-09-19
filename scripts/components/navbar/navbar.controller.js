@@ -1,5 +1,4 @@
-angular.module('app', [])
+angular.module('app')
   .controller('NavbarController', function($scope, $state){
 
   });
-  
