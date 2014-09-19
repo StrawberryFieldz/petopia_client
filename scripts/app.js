@@ -11,31 +11,31 @@ angular.module('app', ['ui.router'])
     // Home/splash page state
     .state('splash', {
       url: '/',
-      templateUrl: 'splash/splash.html',
+      templateUrl: 'scripts/splash/splash.html',
       controller: 'SplashController'
     })
 
     .state('search', {
       url: '/search',
-      templateUrl: 'search/search.html',
+      templateUrl: 'scripts/search/search.html',
       controller: 'SearchController'
     })
 
     .state('searchCard', {
       url: '/search_card',
-      templateUrl: 'search_card/search_card.html',
+      templateUrl: 'scripts/search_card/search_card.html',
       controller: 'SearchCardController'
     })
 
-    state('privateProfile', {
+    .state('privateProfile', {
       url: '/private_profile',
-      templateUrl: 'private_profile/private_profile.html',
+      templateUrl: 'scripts/private_profile/private_profile.html',
       controller: 'PrivateProfileController'
     })
 
     .state('popup', {
       url: '/popup',
-      templateUrl: 'components/popup/popup.html',
+      templateUrl: 'scripts/components/popup/popup.html',
       controller: 'PopupController'
     });
 
