@@ -1,5 +1,8 @@
-// Basic structure for a factory
-// angular.module('app')
-//   .factory('FactoryName', function(){
-
-//   });
+angular.module('app')
+  .factory('GetCityFactory', function(){
+    return{
+      getCity: function(cityName){
+        console.log(cityName);
+      }
+    }
+  });
