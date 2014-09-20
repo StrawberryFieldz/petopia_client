@@ -98,32 +98,36 @@ selectNodeVersion () {
 # Deployment
 # ----------
 
-echo 1. Selecting node version:  
+echo Handling node.js gulp deployment.  
+  
+# 1. Select node version  
 selectNodeVersion  
-
-echo 2. Installing npm packages:  
+  
+# 2. Install npm packages  
 if [ -e "$DEPLOYMENT_SOURCE/package.json" ]; then  
   eval $NPM_CMD install  
   exitWithMessageOnError "npm failed"  
 fi  
-
-echo 3. Installing bower packages:  
+  
+# 3. Install bower packages  
 if [ -e "$DEPLOYMENT_SOURCE/bower.json" ]; then  
   eval $NPM_CMD install bower  
   exitWithMessageOnError "installing bower failed"  
   ./node_modules/.bin/bower install  
   exitWithMessageOnError "bower failed"  
 fi  
-
-echo 4. Running gulp:  
-if [ -e "$DEPLOYMENT_SOURCE/gulpfile.js" ]; then    
-  ./node_modules/gulp/bin/gulp.js [serve]  
+  
+# 4. Run grunt  
+if [ -e "$DEPLOYMENT_SOURCE/gulpfile.js" ]; then  
+  eval $NPM_CMD install --global gulp  
+  exitWithMessageOnError "installing gulp failed"  
+  ./node_modules/.bin/gulp 
   exitWithMessageOnError "gulp failed"  
 fi  
-
-echo 5. KuduSyncing to Target:  
-"$KUDU_SYNC_CMD" -v 500 -f "$DEPLOYMENT_SOURCE/dist" -t "$DEPLOYMENT_TARGET" -n "$NEXT_MANIFEST_PATH" -p "$PREVIOUS_MANIFEST_PATH" -i ".git;.hg;.deployment;deploy.sh"  
-exitWithMessageOnError "Kudu Sync to Target failed"
+  
+# 5. KuduSync to Target  
+"$KUDU_SYNC_CMD" -v 500 -f "$DEPLOYMENT_SOURCE" -t "$DEPLOYMENT_TARGET" -n "$NEXT_MANIFEST_PATH" -p "$PREVIOUS_MANIFEST_PATH" -i ".git;.hg;.deployment;deploy.sh"  
+exitWithMessageOnError "Kudu Sync to Target failed" 
 
 ##################################################################################################################################
 
