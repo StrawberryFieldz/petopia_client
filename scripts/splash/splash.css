@@ -1,0 +1,42 @@
+.splashBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  background-image: url('../../assets/images/puppiesBackground.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.splashHeader {
+  position: absolute;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 100;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 75px;
+}
+
+.splashTagline {
+  position: absolute;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 100;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+.cityInputForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

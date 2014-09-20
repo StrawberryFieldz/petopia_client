@@ -1,4 +1,17 @@
 <div ng-include=" 'scripts/components/navbar/navbar.html' "></div>
 <div ng-controller="SplashController">
-  <p>This is the home/splash page</p>
+
+  <div class="splashBackground">
+    <p class="splashHeader">petopia</p>
+    <p class="splashTagline">pit sitters right meow<p>
+
+    <div class="cityInputForm">
+      <form name="cityInput" ng-submit="getCity(cityName)">
+        <input type="text" ng-model="cityName" placeholder="San Francisco, CA">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+  </div>
+
 </div>
