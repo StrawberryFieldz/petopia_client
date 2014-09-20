@@ -2,6 +2,11 @@
   "name": "petopia_client",
   "version": "0.0.0",
   "description": "pet sitters right meow",
+  "dependencies": {
+    "express": "^4.9.3",
+    "gulp": "^3.8.8",
+    "gulp-nodemon": "^1.0.4"
+  },
   "devDependencies": {
     "chai": "^1.9.1",
     "express": "^4.9.3",
