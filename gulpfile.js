@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var shell = require('gulp-shell');
 var jshint = require('gulp-jshint');
 var nodemon = require('gulp-nodemon');
-var karma = require('gulp-karma');
+var karma = require('karma').server;
 
 var paths = {
 	scripts: ['scripts/**/*.js'],
@@ -14,10 +14,11 @@ gulp.task('default', function() {
 
 });
 
-gulp.task('test', function(){
-	return gulp
-	  .src(paths.karmaTestFiles)
-	  .pipe(karma({configFile: paths.karmaConfigFile, action: 'run'}));
+gulp.task('test', function (done) {
+ karma.start({
+  configFile: __dirname + '/karma.conf.js',
+  singleRun: true
+ }, done);
 });
 
 gulp.task('lint', function(){
