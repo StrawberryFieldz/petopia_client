@@ -5,6 +5,9 @@
   width: 100%;
   height: 48px;
   border-bottom: 2px solid black;
+  background-color: white;
+  opacity: .7;
+  font-family: sans-serif;
 }
 
 .nav1, .nav2, .nav3 {
