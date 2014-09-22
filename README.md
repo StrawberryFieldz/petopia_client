@@ -45,11 +45,26 @@
 
 From within the root directory:
 
+Install gulp to run tests and perform specific tasks:
+```
+npm install -g gulp
+```
+
+Install a global module for karma-cli:
+```
+npm install -g karma-cli
+```
+
+Install all npm and bower components:
+
 ```sh
 sudo npm install -g bower
 npm install
 bower install
 ```
+
+
+
 
 ### Roadmap
 
