@@ -12,22 +12,20 @@ var paths = {
 	scripts: ['scripts/**/*.js'],
 	karmaTestFiles: 'scripts/**/*.spec.js',
 	karmaConfigFile: 'karma.conf.js',
-	compressFiles: '<what files to uglify>',
 	concatFiles: ['scripts/app.js', 'scripts/**/*.controller.js', 'scripts/**/*.services.js']
+	// concatFiles: ['dist/app.js', 'dist/**/*.controller.js', 'dist/**/*.services.js']
 }
 
 gulp.task('default', function() {
 
 });
 
-// rename
-gulp.task('compress', function() {
-  gulp.src(paths.compressFiles)
+gulp.task('uglify', function() {
+  gulp.src(paths.uglifyFiles)
     .pipe(uglify())
     .pipe(gulp.dest('dist'))
 });
 
-// rename
 gulp.task('concat', function() {
   gulp.src(paths.concatFiles)
     .pipe(concat('all.js'))
