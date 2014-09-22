@@ -9,6 +9,8 @@ var opn = require('opn');
 var karma = require('karma').server;
 var minifyCSS = require('gulp-minify-css');
 
+process.env.CHROME_BIN=/usr/local/bin/my-chrome-build
+
 var paths = {
 	scripts: ['scripts/**/*.js'],
 	karmaTestFiles: 'scripts/**/*.spec.js',
