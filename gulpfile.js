@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var g = require('gulp-load-plugins')({lazy: false});
 var shell = require('gulp-shell');
 var jshint = require('gulp-jshint');
 var nodemon = require('gulp-nodemon');
@@ -12,7 +13,7 @@ var paths = {
 	scripts: ['scripts/**/*.js'],
 	karmaTestFiles: 'scripts/**/*.spec.js',
 	karmaConfigFile: 'karma.conf.js',
-	concatFiles: ['scripts/app.js', 'scripts/**/*.controller.js', 'scripts/**/*.services.js']
+	concatFiles: ['./scripts/app.js', './scripts/**/*.controller.js', './scripts/**/*.services.js']
 	// concatFiles: ['dist/app.js', 'dist/**/*.controller.js', 'dist/**/*.services.js']
 }
 
@@ -20,20 +21,31 @@ gulp.task('default', function() {
 
 });
 
+gulp.task('inject', function(){
+	var target = gulp.src('./index.html');
+	var js = gulp.src(paths.concatFiles, {read: false});
+	return target
+	.pipe(g.inject(js, {
+		addRootSlash: false,
+		name: 'angularfiles'
+	}))
+	.pipe(gulp.dest('./'))
+})
+
 gulp.task('uglify', function() {
-  gulp.src(paths.uglifyFiles)
+  return gulp.src(paths.uglifyFiles)
     .pipe(uglify())
     .pipe(gulp.dest('dist'))
 });
 
 gulp.task('concat', function() {
-  gulp.src(paths.concatFiles)
+  return gulp.src(paths.concatFiles)
     .pipe(concat('all.js'))
     .pipe(gulp.dest('./dist/'))
 });
 
 gulp.task('openbrowser', function() {
-  opn( 'http://localhost:8000/' );
+  return opn( 'http://localhost:8000/' );
 });
 
 gulp.task('test', function (done) {
@@ -60,4 +72,4 @@ gulp.task('watch', function(){
 	gulp.watch(paths.scripts, ['lint'])
 });
 
-gulp.task('build', ['concat', 'serve', 'openbrowser']);
+gulp.task('build', ['inject', 'concat', 'serve', 'watch', 'openbrowser']);

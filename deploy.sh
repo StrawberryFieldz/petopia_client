@@ -121,7 +121,7 @@ fi
 if [ -e "$DEPLOYMENT_SOURCE/gulpfile.js" ]; then  
   eval $NPM_CMD install --global gulp  
   exitWithMessageOnError "installing gulp failed"  
-  ./node_modules/.bin/gulp build
+  ./node_modules/.bin/gulp
   exitWithMessageOnError "gulp failed"  
 fi  
   
