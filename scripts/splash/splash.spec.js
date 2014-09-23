@@ -16,16 +16,12 @@ describe('SplashController', function () {
 
   }));
 
-  it('should exist', function() {
+  it('SplashController should exist', function() {
     expect(ctrl).to.not.equal(undefined);
   });
 
-  it('should store city search input in scope', function() {
-    expect(scope.citySearch).to.be.a('string');
-  });
-
-  it('should have a search function', function() {
-    expect(scope.search).to.be.a('function');
+  it('SplashController should have a getCity function', function() {
+    expect(scope.getCity).to.be.a('function');
   });
 
 });
