@@ -12,6 +12,8 @@ before_install:
   - npm install -g karma-cli
   - bower install
 
-script:
+before_script:
   - gulp travis
+
+script:
   - gulp test
