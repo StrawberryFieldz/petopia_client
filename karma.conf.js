@@ -3,13 +3,6 @@
 
 module.exports = function(config) {
 
-  //Set default browser to Chrome
-  var testBrowser = 'Chrome';
-  //TravisCI does not use Chrome so we must change the testBrowser
-  if(travisCI){
-      testBrowser = 'PhantomJS'
-  }
-
   config.set({
 
 
@@ -70,13 +63,20 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    // testBrowser will be Chrome unless running TravisCI (then it will be PhantomJS)
-    browsers: [testBrowser],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: true,
+    
+    plugins: [
+        'karma-mocha',
+        'karma-chai',
+        'karma-chrome-launcher',
+        'karma-nyan-reporter',
+        'karma-phantomjs-launcher'
+    ]
 
   });
 };
