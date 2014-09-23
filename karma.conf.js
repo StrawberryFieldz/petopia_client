@@ -71,7 +71,7 @@ module.exports = function(config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     // testBrowser will be Chrome unless running TravisCI (then it will be PhantomJS)
-    browsers: [testBrowser],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode
