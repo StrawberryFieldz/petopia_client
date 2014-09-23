@@ -1,4 +1,4 @@
 angular.module('app')
-  .controller('SearchController', function($scope, $state) {
+  .controller('SearchController', ['$scope', '$state', function($scope, $state){
 
-  });
+  }]);

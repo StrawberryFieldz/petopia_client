@@ -4,5 +4,5 @@ angular.module('app')
       getCity: function(cityName){
         console.log(cityName);
       }
-    }
+    };
   });

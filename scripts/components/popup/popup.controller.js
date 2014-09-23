@@ -1,4 +1,4 @@
 angular.module('app')
-  .controller('PopupController', function($scope, $state){
+  .controller('PopupController', ['$scope', '$state', function($scope, $state){
 
-  });
+  }]);
