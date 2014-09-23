@@ -2,7 +2,16 @@
 // Generated on Fri Sep 19 2014 11:38:23 GMT-0700 (PDT)
 
 module.exports = function(config) {
+
+  //Set default browser to Chrome
+  var testBrowser = 'Chrome';
+  //TravisCI does not use Chrome so we must change the testBrowser
+  if(process.env.NODE_ENV === 'travis'){
+      testBrowser = 'PhantomJS'
+  }
+
   config.set({
+
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -19,7 +28,9 @@ module.exports = function(config) {
         'bower_components/angular-mocks/angular-mocks.js',
         'bower_components/angular-ui-router/release/angular-ui-router.js',
         'scripts/**/*.js',
-        'scripts/**/*.spec.js'
+        'scripts/**/*.spec.js',
+        'scripts/**/*.html',
+        'scripts/**/*.css'
     ],
 
 
@@ -59,19 +70,13 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    // testBrowser will be Chrome unless running TravisCI (then it will be PhantomJS)
+    browsers: [testBrowser],
 
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: true,
-
-    plugins: [
-        'karma-mocha',
-        'karma-chai',
-        'karma-chrome-launcher',
-        'karma-nyan-reporter'
-    ]
 
   });
 };
