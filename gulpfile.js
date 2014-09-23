@@ -32,18 +32,6 @@ gulp.task('inject', function(){
 		name: 'angularfiles'
 	}))
 	.pipe(gulp.dest('./'))
-})
-
-gulp.task('uglify', function() {
-  return gulp.src(paths.uglifyFiles)
-    .pipe(uglify())
-    .pipe(gulp.dest('dist'))
-});
-
-gulp.task('concat', function() {
-  return gulp.src(paths.concatFiles)
-    .pipe(concat('all.js'))
-    .pipe(gulp.dest('./dist/'))
 });
 
 gulp.task('openbrowser', function() {
@@ -85,7 +73,7 @@ gulp.task('inject_prod', function(){
   .pipe(gulp.dest('./'))
 });
 
-gulp.task('testDeploy', function(){
+gulp.task('flatten', function(){
 
   return gulp.src(paths.concatFiles)
     .pipe(concat('all.js'))
@@ -95,8 +83,9 @@ gulp.task('testDeploy', function(){
 });
 
 
-gulp.task('deploy', ['testDeploy'], function(callback){
+gulp.task('deploy', ['flatten'], function(callback){
   g.runSequence('inject_prod', callback);
 });
 
-gulp.task('build', ['inject', 'serve', 'watch', 'openbrowser']);
+
+gulp.task('build', ['lint', 'inject', 'serve', 'test', 'openbrowser', 'watch']);
