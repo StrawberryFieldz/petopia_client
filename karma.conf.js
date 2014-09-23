@@ -6,7 +6,7 @@ module.exports = function(config) {
   //Set default browser to Chrome
   var testBrowser = 'Chrome';
   //TravisCI does not use Chrome so we must change the testBrowser
-  if(process.env.NODE_ENV === 'travis'){
+  if(travisCI){
       testBrowser = 'PhantomJS'
   }
 
@@ -71,7 +71,7 @@ module.exports = function(config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     // testBrowser will be Chrome unless running TravisCI (then it will be PhantomJS)
-    browsers: ['PhantomJS'],
+    browsers: [testBrowser],
 
 
     // Continuous Integration mode

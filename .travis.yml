@@ -13,4 +13,5 @@ before_install:
   - bower install
 
 script:
+  - gulp travis
   - gulp test

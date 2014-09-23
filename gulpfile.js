@@ -48,6 +48,10 @@ gulp.task('openbrowser', function() {
   return opn( 'http://localhost:8000/' );
 });
 
+gulp.task('travis', function () {
+	travisCI = true;
+});
+
 gulp.task('test', function (done) {
  karma.start({
   configFile: __dirname + '/karma.conf.js',
