@@ -1,11 +1,11 @@
 angular.module('app')
-  .controller('SplashController', ['$scope', '$state', 'GetCityFactory', function($scope, $state, GetCityFactory) {
+  .controller('SplashController', ['$scope', '$state', 'CityFactory', function($scope, $state, CityFactory) {
     $scope.setCity = function(){
-      GetCityFactory.setCity($scope.cityName);
-      if(GetCityFactory.getCity()){
+      CityFactory.setCity($scope.cityName);
+      if(CityFactory.getCity()){
         $state.go('search');
       }
 
-    }
+    };
 
   }]);

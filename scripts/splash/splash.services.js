@@ -1,15 +1,10 @@
 angular.module('app')
-  .factory('GetCityFactory', function(){
+  .factory('CityFactory', function(){
     var currentCity = null;
     return{
 
       getCity: function(){
-        console.log('getCity');
-        if(currentCity){
-          return currentCity;          
-        }
-
-        return null
+        return currentCity;          
       },
 
       setCity: function(cityName){
