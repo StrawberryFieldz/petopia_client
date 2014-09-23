@@ -1,16 +1,21 @@
 <div ng-include=" 'scripts/components/navbar/navbar.html' "></div>
 <div ng-controller="SplashController">
 
-  <div class="splashBackground">
-    <p class="splashHeader">petopia</p>
-    <p class="splashTagline">pet sitters right meow<p>
+  <div class="splashBackground"></div>
 
-    <div class="cityInputForm">
-      <form name="cityInput" ng-submit="setCity(cityName)">
-        <input type="text" ng-model="cityName" placeholder="San Francisco, CA">
-        <input type="submit" value="Submit">
-      </form>
-    </div>
+    <div>
+
+      <div layout="vertical" layout-align="center center" layout-padding>
+        <div flex class="splashHeader">petopia</div flex>
+        <div flex class="splashTagline">pet sitters right meow</div flex>
+      </div>
+
+      <div class="cityInputForm">
+        <form name="cityInput" ng-submit="setCity(cityName)">
+          <input class="inputFormText" type="text" ng-model="cityName" placeholder="San Francisco, CA">
+          <material-button class="material-button-raised material-button-colored">Submit</material-button>
+        </form>
+      </div>
 
   </div>
 
