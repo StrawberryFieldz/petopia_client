@@ -1,4 +1,4 @@
 angular.module('app')
-  .controller('SplashController', function($scope, $state, GetCityFactory) {
+  .controller('SplashController', ['$scope', '$state', 'GetCityFactory', function($scope, $state, GetCityFactory) {
     $scope.getCity = GetCityFactory.getCity;
-  });
+  }]);

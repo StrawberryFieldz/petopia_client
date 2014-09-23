@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('NavbarController', function($scope, $state, Navbar){
+  .controller('NavbarController',[ '$scope', '$state', 'Navbar', function($scope, $state, Navbar){
     // User login status
     $scope.loggedIn = Navbar.loggedIn;
 
@@ -20,4 +20,4 @@ angular.module('app')
       $state.go('popup');
     };
 
-  });
+  }]);

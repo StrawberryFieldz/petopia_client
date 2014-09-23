@@ -1,4 +1,4 @@
 angular.module('app')
-  .controller('PrivateProfileController', function($scope, $state){
+  .controller('PrivateProfileController', ['$scope', '$state', function($scope, $state){
 
-  });
+  }]);

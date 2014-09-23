@@ -1,6 +1,6 @@
 angular.module('app', ['ui.router'])
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   // Routes to home page on default
   $urlRouterProvider 
     .otherwise('/');
@@ -42,4 +42,4 @@ angular.module('app', ['ui.router'])
     // Login popup
     // Signup popup
 
-});
+}]);

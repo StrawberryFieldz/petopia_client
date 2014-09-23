@@ -1,4 +1,4 @@
 angular.module('app')
-  .controller('SearchCardController', function($scope, $state) {
+  .controller('SearchCardController', ['$scope', '$state', function($scope, $state){
 
-  });
+  }]);
