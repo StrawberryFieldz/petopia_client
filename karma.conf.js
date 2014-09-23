@@ -2,7 +2,9 @@
 // Generated on Fri Sep 19 2014 11:38:23 GMT-0700 (PDT)
 
 module.exports = function(config) {
+
   config.set({
+
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
@@ -19,7 +21,9 @@ module.exports = function(config) {
         'bower_components/angular-mocks/angular-mocks.js',
         'bower_components/angular-ui-router/release/angular-ui-router.js',
         'scripts/**/*.js',
-        'scripts/**/*.spec.js'
+        'scripts/**/*.spec.js',
+        'scripts/**/*.html',
+        'scripts/**/*.css'
     ],
 
 
@@ -59,18 +63,19 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: true,
-
+    
     plugins: [
         'karma-mocha',
         'karma-chai',
         'karma-chrome-launcher',
-        'karma-nyan-reporter'
+        'karma-nyan-reporter',
+        'karma-phantomjs-launcher'
     ]
 
   });
