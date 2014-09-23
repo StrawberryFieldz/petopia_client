@@ -20,8 +20,8 @@ describe('SplashController', function () {
     expect(ctrl).to.not.equal(undefined);
   });
 
-  it('SplashController should have a getCity function', function() {
-    expect(scope.getCity).to.be.a('function');
+  it('SplashController should have a setCity function', function() {
+    expect(scope.setCity).to.be.a('function');
   });
 
 });

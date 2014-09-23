@@ -1,4 +1,4 @@
 angular.module('app')
-  .controller('SearchController', ['$scope', '$state', function($scope, $state){
-
+  .controller('SearchController', ['$scope', '$state', 'CityFactory', function($scope, $state, CityFactory){
+    $scope.cityName = CityFactory.getCity();
   }]);
