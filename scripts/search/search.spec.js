@@ -24,23 +24,17 @@ describe('SearchController', function () {
     expect(scope.sitters).to.not.equal(undefined);
   });
 
-  it('should handle if no sitters are present', function(){
-    // if no sitters are present display a message to the user
-    // and 
-    
-  });
-
 
 });
 
-describe('SitterManager', function(){
+xdescribe('SitterManager', function(){
   'use strict';
 
   beforeEach(module('app'));
 
 
-  it('should contain GetSitters function', function(){});
-  it('should return a list of sitters when GetSitters is called', function(){});
+  xit('should contain GetSitters function', function(){});
+  xit('should return a list of sitters when GetSitters is called', function(){});
 
 
 
