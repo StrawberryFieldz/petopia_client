@@ -4,19 +4,17 @@
   <div class="splashBackground"></div>
 
     <div>
+      <section layout="vertical" layout-sm="vertical" layout-align="center center">
+        <div class="splashHeader">petopia</div>
+        <div class="splashTagline">pet sitters right meow</div>
 
-      <div layout="vertical" layout-align="center center" layout-padding>
-        <div flex class="splashHeader">petopia</div flex>
-        <div flex class="splashTagline">pet sitters right meow</div flex>
-      </div>
-
-      <div class="cityInputForm">
-        <form name="cityInput" ng-submit="setCity(cityName)">
-          <input class="inputFormText" type="text" ng-model="cityName" placeholder="San Francisco, CA">
-          <material-button class="material-button-raised material-button-colored">Submit</material-button>
-        </form>
-      </div>
-
+        <div class="cityInputForm">
+          <form name="cityInput" ng-submit="setCity(cityName)">
+            <input class="inputFormText" type="text" ng-model="cityName" placeholder="San Francisco, CA">
+            <material-button class="material-button-raised material-button-colored">Submit</material-button>
+          </form>
+        </div>
+      </section>
   </div>
 
 </div>

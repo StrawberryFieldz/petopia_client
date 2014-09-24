@@ -13,36 +13,24 @@
 }
 
 .splashHeader {
-  /*position: absolute;*/
   color: white;
   font-family: sans-serif;
   font-weight: 100;
-/*  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);*/
   font-size: 75px;
 }
 
 .splashTagline {
-  /*position: absolute;*/
   color: white;
   font-family: sans-serif;
   font-weight: 100;
-/*  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);*/
   font-size: 20px;
 }
 
 .cityInputForm {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
 }
 
 .inputFormText {
+  text-align: center;
   color: white;
 }
-
