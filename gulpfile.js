@@ -9,6 +9,7 @@ var opn = require('opn');
 var karma = require('karma').server;
 var minifyCSS = require('gulp-minify-css');
 var rename = require('gulp-rename');
+var install = require('gulp-install');
 
 var paths = {
 	scripts: ['scripts/**/*.js'],
@@ -59,7 +60,7 @@ gulp.task('serve', function(){
 });
 
 gulp.task('watch', function(){
-	gulp.watch(paths.scripts, ['lint'])
+	gulp.watch('./scripts/**', ['lint', 'test'])
 });
 
 gulp.task('inject_prod', function(){
@@ -82,10 +83,18 @@ gulp.task('flatten', function(){
 
 });
 
+gulp.task('installer', function(){
+	return gulp.src(['./bower.json', './package.json'])
+  		.pipe(install());
+})
+
 
 gulp.task('deploy', ['flatten'], function(callback){
   g.runSequence('inject_prod', callback);
 });
 
+gulp.task('build', ['installer'], function(callback){
+  g.runSequence('main', callback);
+});
 
-gulp.task('build', ['lint', 'inject', 'serve', 'test', 'openbrowser', 'watch']);
+gulp.task('main', ['lint', 'inject', 'serve', 'test', 'openbrowser', 'watch']);
