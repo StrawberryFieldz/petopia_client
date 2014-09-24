@@ -19,13 +19,13 @@
   height: 100%;
 }
 
-.nav2 h1 {
+.nav1 h1 {
   margin-top: 4px;
+  margin-left: 10%;
   padding: 0;
-  text-align: center;
 }
 
-.nav2 h1:hover {
+.nav1 h1:hover {
   cursor: pointer;
 }
 
@@ -33,9 +33,13 @@
   display: inline-block;
   margin: 0;
   padding: 0;
-  width: 33.3%;
+  width: 20%;
   height: 100%;
   text-align: center;
+}
+
+.signUpNavbar, .userNavbar {
+  margin-left: 50%;
 }
 
 .signUpNavbar:hover, .logInNavbar:hover, .userNavbar:hover, .logOutNavbar:hover {
