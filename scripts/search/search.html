@@ -1,7 +1,8 @@
 <div ng-include=" 'scripts/components/navbar/navbar.html' "></div>
 <div ng-controller="SearchController">
   <p>This is the search page</p>
-  <p> you're from {{cityName}} </p>
+
+  <p ng-show="sitters.length <= 0">Sitters are unavailable</p>
 <!--   <p>Stub Data is: {{data}}</p>
   <div class="sittercard" ng-repeat="sitter in data">
   	<p>Name: {{sitter.name}}</p>

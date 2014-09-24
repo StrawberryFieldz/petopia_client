@@ -53,12 +53,8 @@ angular.module('app')
 		]
   	return {
   		GetSitters: function(callback){
-  			return $http({
-  				method: 'GET',
-  				url: '/<whatever the api is>?' + CityFactory.getCity
-  			}).success(function(data){
-  				callback(data);
-  			})
+        //use stub data until rest api is implemented.
+        return this.GetStubData();
   		},
   		GetStubData: function(callback){
   			return stub;
