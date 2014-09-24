@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('NavbarController',[ '$scope', '$state', 'Navbar', function($scope, $state, Navbar){
+  .controller('NavbarController',[ '$scope', '$state', 'Navbar', '$materialDialog', 'PopUp', function($scope, $state, Navbar, $materialDialog, PopUp){
     // User login status
     $scope.loggedIn = Navbar.loggedIn;
 
@@ -28,6 +28,14 @@ angular.module('app')
       // Also, will likely need some way to delineate the fact that they are actively wanting to
       //   become a sitter, not just wanting to see their profile page
       $state.go('privateProfile');
+    };
+
+    $scope.signup = function(e) {
+      PopUp.PopUpCall(e, './scripts/components/navbar/navbar-popup-templates/signup.tmpl.html');
+    };
+
+    $scope.login = function(e) {
+      PopUp.PopUpCall(e, './scripts/components/navbar/navbar-popup-templates/login.tmpl.html');
     };
 
   }]);
