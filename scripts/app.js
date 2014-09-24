@@ -1,4 +1,4 @@
-angular.module('app', ['ui.router', 'ngMaterial'])
+angular.module('app', ['ui.router'])
 
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   // Routes to home page on default
