@@ -14,10 +14,20 @@ angular.module('app')
       $state.go('splash');
     };
 
+    // Calls sign up/log in popup view
     $scope.callPopup = function(context) {
       // Will need to include Popup factory and pass context to Popup function that handles
-      // sign up vs. log in views
+      //   sign up vs. log in views
       $state.go('popup');
+    };
+
+    // Directs users to private profile page with context of becoming a sitter
+    $scope.becomeSitter = function() {
+      // If users are not authenticated, will need to callPopup to sign them up or log them in
+      // Otherwise, direct users to their private profile page
+      // Also, will likely need some way to delineate the fact that they are actively wanting to
+      //   become a sitter, not just wanting to see their profile page
+      $state.go('privateProfile');
     };
 
   }]);

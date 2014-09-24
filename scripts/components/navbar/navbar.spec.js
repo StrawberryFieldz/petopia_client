@@ -38,4 +38,8 @@ describe('NavbarController', function () {
     expect(scope.loggedIn).to.equal(true);
   });
 
+  it('should direct users to private profile page when "Become A Sitter" button is clicked', function() {
+    expect(scope.becomeSitter).to.be.a('function');
+  });
+
 });

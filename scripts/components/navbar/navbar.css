@@ -30,7 +30,7 @@
 }
 
 .signUpNavbar, .logInNavbar, .userNavbar, .logOutNavbar {
-  display: inline-block;
+  float: left;
   margin: 0;
   padding: 0;
   width: 20%;
@@ -39,7 +39,34 @@
 }
 
 .signUpNavbar, .userNavbar {
-  margin-left: 50%;
+  margin-left: 10%;
+}
+
+.sitterContainer {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 40%;
+  height: 100%;
+}
+
+.becomeSitterNavbar {
+  display: block;
+  margin-top: 9px;
+  margin-left: 12.5%;
+  padding: 0;
+  width: 75%;
+  height: 30px;
+  text-align: center;
+  background-color: #4b7b91;
+  border-radius: 5px;
+  color: white;
+}
+
+.becomeSitterNavbar p {
+  padding-top: 6px;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
 }
 
 .signUpNavbar:hover, .logInNavbar:hover, .userNavbar:hover, .logOutNavbar:hover {
@@ -47,3 +74,13 @@
   background-color: gray;
   color: white;
 }
+
+.becomeSitterNavbar:hover {
+  cursor: pointer;
+  background-color: #bcd7e5;
+  color: black;
+}
+
+
+
+
