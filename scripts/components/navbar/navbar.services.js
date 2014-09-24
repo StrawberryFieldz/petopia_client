@@ -8,17 +8,22 @@ angular.module('app')
     };
   })
 
-  // .factory('PopUp', function(pathToTemplate){
-  // 	$materialDialog({
-  // 	  templateUrl: './scripts/components/navbar/my-dialog.tmpl.html',
-  // 	  targetEvent: e,
-  // 	  controller: ['$scope', '$hideDialog', function($scope, $hideDialog) {
-  // 	    $scope.close = function() {
-  // 	      $hideDialog();
-  // 	    };
-  // 	  }]
-  // 	});
-  // })
+  .factory('PopUp', ['$materialDialog', function($materialDialog){
+  	return {
+  		PopUpCall: function(e, pathToTemplate){
+ 			$materialDialog({
+ 			  templateUrl: pathToTemplate,
+ 			  targetEvent: e,
+ 			  controller: ['$scope', '$hideDialog', function($scope, $hideDialog) {
+ 			    $scope.close = function() {
+ 			      $hideDialog();
+ 			    };
+ 			  }]
+ 			}); 			
+  		}
+  	}
+
+  }])
 
   .directive('ig', function() {
     return {

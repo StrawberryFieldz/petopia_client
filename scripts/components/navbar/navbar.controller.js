@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('NavbarController',[ '$scope', '$state', 'Navbar', '$materialDialog', function($scope, $state, Navbar, $materialDialog){
+  .controller('NavbarController',[ '$scope', '$state', 'Navbar', '$materialDialog', 'PopUp', function($scope, $state, Navbar, $materialDialog, PopUp){
     // User login status
     $scope.loggedIn = Navbar.loggedIn;
 
@@ -31,15 +31,7 @@ angular.module('app')
     };
 
     $scope.dialog = function(e) {
-        $materialDialog({
-          templateUrl: './scripts/components/navbar/my-dialog.tmpl.html',
-          targetEvent: e,
-          controller: ['$scope', '$hideDialog', function($scope, $hideDialog) {
-            $scope.close = function() {
-              $hideDialog();
-            };
-          }]
-        });
-      };
+      PopUp.PopUpCall(e, './scripts/components/navbar/my-dialog.tmpl.html')
+    };
 
   }]);
