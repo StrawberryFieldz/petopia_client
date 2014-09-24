@@ -30,8 +30,12 @@ angular.module('app')
       $state.go('privateProfile');
     };
 
-    $scope.dialog = function(e) {
-      PopUp.PopUpCall(e, './scripts/components/navbar/my-dialog.tmpl.html')
+    $scope.signup = function(e) {
+      PopUp.PopUpCall(e, './scripts/components/navbar/signup.tmpl.html')
+    };
+
+    $scope.login = function(e) {
+      PopUp.PopUpCall(e, './scripts/components/navbar/login.tmpl.html')
     };
 
   }]);
