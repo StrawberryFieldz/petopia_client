@@ -1,6 +1,6 @@
 // Basic structure for a factory
 angular.module('app')
-  .factory('SitterManager', function($http, CityFactory){
+  .factory('SitterManager', ['$http', 'CityFactory', function($http, CityFactory){
   	var stub = [
 			{
 				name: "Tyler",
@@ -64,5 +64,5 @@ angular.module('app')
   			return stub;
   		}
   	}
-  });
+  }]);
 
