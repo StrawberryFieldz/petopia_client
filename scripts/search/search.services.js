@@ -50,7 +50,7 @@ angular.module('app')
 				cost: 65,
 				rating: 3.5
 			},
-		]
+		];
   	return {
   		GetSitters: function(callback){
         //use stub data until rest api is implemented.
@@ -59,6 +59,6 @@ angular.module('app')
   		GetStubData: function(callback){
   			return stub;
   		}
-  	}
+  	};
   }]);
 
