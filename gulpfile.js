@@ -59,7 +59,7 @@ gulp.task('serve', function(){
 });
 
 gulp.task('watch', function(){
-	gulp.watch(paths.scripts, ['lint'])
+	gulp.watch('scripts/**', ['lint', 'test'])
 });
 
 gulp.task('inject_prod', function(){
@@ -86,6 +86,5 @@ gulp.task('flatten', function(){
 gulp.task('deploy', ['flatten'], function(callback){
   g.runSequence('inject_prod', callback);
 });
-
 
 gulp.task('build', ['lint', 'inject', 'serve', 'test', 'openbrowser', 'watch']);

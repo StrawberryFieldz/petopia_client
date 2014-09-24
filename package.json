@@ -25,13 +25,12 @@
     "karma": "^0.12.23",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.1.4",
-    "karma-phantomjs-launcher": "~0.1",
     "karma-mocha": "^0.1.9",
     "karma-nyan-reporter": "0.0.47",
-    "mocha": "^1.21.4",
-    "opn": "^1.0.0",
+    "karma-phantomjs-launcher": "~0.1",
     "karma-script-launcher": "~0.1.0",
     "mocha": "^1.21.4",
+    "opn": "^1.0.0",
     "protractor": "^1.2.0",
     "selenium-webdriver": "^2.43.5"
   }
