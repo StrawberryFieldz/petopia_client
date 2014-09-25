@@ -20,4 +20,24 @@ describe('private_profile', function () {
     expect(ctrl).to.not.equal(undefined);
   });
 
+  xit('Name should be a string', function(){
+    expect(scope.petSitter['name']).to.be.a('string');
+  });
+
+  xit('Location should be a string', function(){
+    expect(scope.petSitter['userLocation']).to.be.a('string');
+  });
+
+  xit('Bio should be a string', function(){
+    expect(scope.petSitter['bio']).to.be.a('string');
+  });
+
+  xit('Cost should be a number', function(){
+    expect(scope.petSitter['cost']).to.be.a('number');
+  });
+
+  xit('petToWatchArray should be an array', function(){
+    expect(Array.isArray(scope.petSitter['petToWatchArray'])).to.equal(true);
+  });
+
 });

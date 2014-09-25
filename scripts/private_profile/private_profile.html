@@ -1,4 +1,25 @@
 <div ng-include=" 'scripts/components/navbar/navbar.html' "></div>
 <div ng-controller="PrivateProfileController">
-  <p>This is the private profile</p>
+
+
+  <div layout="vertical" layout-align="center" class="pet-sitter-header">
+    <div>
+      <h1>Become a pet sitter.</h1>
+    </div>
+    <div>
+      Petopia allows you to make money by watching pets in your area.
+    </div>
+  </div>
+
+  <div layout="vertical" class="pet-sitter-body">
+    <material-content>
+    <form>
+      <ig fid="t1" label="Name" class="material-input-group-theme-light material-input-group-inverted"></ig>
+      <ig fid="t2" label="Location" class="material-input-group-theme-light material-input-group-inverted"></ig>
+      <ig fid="t3" label="Bio" class="material-input-group-theme-light material-input-group-inverted"></ig>
+      <ig fid="t4" label="Daily Rate" class="material-input-group-theme-light material-input-group-inverted"></ig>
+    </form>
+    </material-content>
+  </div>
+
 </div>
