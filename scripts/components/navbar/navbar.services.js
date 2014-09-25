@@ -28,16 +28,15 @@ angular.module('app')
   .directive('ig', function() {
     return {
       restrict: 'E',
-      replace: true,
       scope: {
         fid: '@',
-        label: '@'
+        label: '@',
+        value: '=ngModel'
       },
       template: 
         '<material-input-group>' +
           '<label for="{{fid}}">{{label}}</label>' +
-          '<material-input id="{{fid}}" type="text" ng-model="data.description">' +
+          '<material-input id="{{fid}}" type="text" ng-model="value">' +
         '</material-input-group>'
     };
   });
-
