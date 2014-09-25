@@ -1,10 +1,16 @@
 angular.module('app')
-  .controller('PrivateProfileController', ['$scope', '$state', function($scope, $state){
+  .controller('PrivateProfileController', ['$scope', '$state', 'PrivateProfileService', function($scope, $state, PrivateProfileService){
     $scope.petSitter = {
       name: '',
       userLocation: '',
       bio: '',
-      cost: 0,
-      petToWatchArray: []
+      dailyRate: '',
+      petToWatchObject: {
+        dog: false,
+        cat: false
+      }
     };
+
+    $scope.setPetSitterInfo = PrivateProfileService.setPetSitterInfo;
+
   }]);

@@ -11,15 +11,28 @@
     </div>
   </div>
 
-  <div layout="vertical" class="pet-sitter-body">
-    <material-content>
-    <form>
-      <ig fid="t1" label="Name" class="material-input-group-theme-light material-input-group-inverted"></ig>
-      <ig fid="t2" label="Location" class="material-input-group-theme-light material-input-group-inverted"></ig>
-      <ig fid="t3" label="Bio" class="material-input-group-theme-light material-input-group-inverted"></ig>
-      <ig fid="t4" label="Daily Rate" class="material-input-group-theme-light material-input-group-inverted"></ig>
-    </form>
+  <div class="pet-sitter-body">
+
+    <material-content layout="horizontal" layout-align="center">
+      <form ng-submit="setPetSitterInfo(petSitter)">
+        <ig fid="t1" label="Name" value="{{petSitter.name}}" ng-model="petSitter.name" class="material-input-group-theme-light material-input-group-inverted"></ig>
+        <ig fid="t2" label="Location" value="{{petSitter.userLocation}}" ng-model="petSitter.userLocation" label="Location" class="material-input-group-theme-light material-input-group-inverted"></ig>
+        <ig fid="t3" label="Bio" value="{{petSitter.bio}}" ng-model="petSitter.bio" label="Bio" class="material-input-group-theme-light material-input-group-inverted"></ig>
+        <ig fid="t4" label="Daily Rate" value="{{petSitter.dailyRate}}" ng-model="petSitter.dailyRate" label="Daily Rate" class="material-input-group-theme-light material-input-group-inverted"></ig>
+      
+        <div class="pet-sitter-select">Select the type of pet(s) you want to watch:</div>
+        <material-checkbox ng-click="petSitter.petToWatchObject.dog=!petSitter.petToWatchObject.dog" aria-label="Checkbox 1">
+          Dog
+        </material-checkbox>
+
+        <material-checkbox ng-click="petSitter.petToWatchObject.cat=!petSitter.petToWatchObject.cat" aria-label="Checkbox 2">
+          Cat
+        </material-checkbox>
+        <material-button class="material-button-raised material-button-colored">Submit</material-button>
+      </form>
     </material-content>
+
+
   </div>
 
 </div>
