@@ -33,11 +33,11 @@ describe('private_profile', function () {
   });
 
   xit('Cost should be a number', function(){
-    expect(scope.petSitter['cost']).to.be.a('number');
+    expect(scope.petSitter['dailyRate']).to.be.a('number');
   });
 
-  xit('petToWatchArray should be an array', function(){
-    expect(Array.isArray(scope.petSitter['petToWatchArray'])).to.equal(true);
+  xit('petToWatchObject should be an object', function(){
+    expect(scope.petSitter['petToWatchObject']).to.be.a('object');
   });
 
 });
