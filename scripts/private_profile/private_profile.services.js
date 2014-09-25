@@ -1,5 +1,9 @@
-// Basic structure for a factory
-// angular.module('app')
-//   .factory('FactoryName', function(){
-
-//   });
+angular.module('app')
+  .factory('PrivateProfileService', function(){
+    return {
+      setPetSitterInfo: function(info){
+        //this will ultimately send the info to the database
+        console.log(info);
+      }
+    }
+  });

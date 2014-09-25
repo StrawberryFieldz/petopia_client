@@ -4,6 +4,11 @@
   margin-bottom: 30px;
 }
 
-.pet-sitter-body{
+.pet-sitter-body {
   background-color: #CEE2E5;
+}
+
+.pet-sitter-select {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
