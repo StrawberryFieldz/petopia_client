@@ -20,23 +20,23 @@ describe('private_profile', function () {
     expect(ctrl).to.not.equal(undefined);
   });
 
-  it('Name should be a string', function(){
+  xit('Name should be a string', function(){
     expect(scope.petSitter['name']).to.be.a('string');
   });
 
-  it('Location should be a string', function(){
+  xit('Location should be a string', function(){
     expect(scope.petSitter['userLocation']).to.be.a('string');
   });
 
-  it('Bio should be a string', function(){
+  xit('Bio should be a string', function(){
     expect(scope.petSitter['bio']).to.be.a('string');
   });
 
-  it('Cost should be a number', function(){
+  xit('Cost should be a number', function(){
     expect(scope.petSitter['cost']).to.be.a('number');
   });
 
-  it('petToWatchArray should be an array', function(){
+  xit('petToWatchArray should be an array', function(){
     expect(Array.isArray(scope.petSitter['petToWatchArray'])).to.equal(true);
   });
 
