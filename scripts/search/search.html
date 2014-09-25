@@ -7,13 +7,20 @@
   </material-toolbar>
   <div layout="vertical" layout-fill>
     <material-toolbar>
-      <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+      <section layout="vertical" layout-sm="vertical" layout-align="center center">
         <form name="cityInput" ng-submit="setCity(cityName)">
-            <input class="inputFormText" type="text" ng-model="cityName" placeholder="A city">
+            <input class="searchFormText" type="text" ng-model="cityName" placeholder="A city">
             <material-button class="material-button-raised material-button-colored">Submit</material-button>
         </form>
       </section>
     </material-toolbar>
+    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+      <material-card ng-repeat="sitter in sitters">
+            <img class="image-style" ng-src="{{sitter.photo}}">
+            <h2>{{sitter.name}}</h2>
+            <span>Location: {{sitter.location}}<span><span> Cost: {{sitter.cost}}</span> <span> Rating: {{sitter.rating}} </span>
+    </material-card>
+  </section>
   </div>
   <p>
     The city is: {{city}}
