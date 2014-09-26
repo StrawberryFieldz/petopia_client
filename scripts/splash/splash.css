@@ -17,7 +17,7 @@
   font-family: sans-serif;
   font-weight: 100;
   font-size: 75px;
-  margin-top: 200px;
+  margin-top: 75px;
 }
 
 .splashTagline {
@@ -29,9 +29,29 @@
 
 .cityInputForm {
   text-align: center;
+  margin-top: 150px;
 }
 
 .inputFormText {
   text-align: center;
   color: white;
+  width: 310px;
+  height: 60px;
+  background-color: #131313;
+  opacity: 0.7;
+  border-radius: 4px;
+  margin-bottom: 9px;
+}
+
+input[type="text"].inputFormText {
+  font-size: 1.15em;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.9;
+}
+
+input[type="text"].inputFormText {
+  border-width: 0 0 0 0;
 }
