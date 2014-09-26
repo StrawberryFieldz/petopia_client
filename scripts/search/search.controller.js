@@ -9,7 +9,7 @@ angular.module('app')
 
     $scope.getRating = function(sitter){
       return new Array(sitter.rating);
-    }
+    };
 
     $scope.city = CityFactory.getCity();
   }]);

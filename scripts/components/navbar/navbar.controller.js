@@ -37,5 +37,4 @@ angular.module('app')
     $scope.login = function(e) {
       PopUp.PopUpCall(e, './scripts/components/navbar/navbar-popup-templates/popup.tmpl.html', false);
     };
-
   }]);

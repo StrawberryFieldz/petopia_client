@@ -18,6 +18,26 @@
   -webkit-margin-after: 0;
 }
 
+.login-button-customize {
+  background-color: #3D7899;
+  width: 150px;
+  height: 40px;
+  color: white;
+  margin-top: 15px;
+  padding-top: 10px;
+}
+
+.otherbar {
+  background: blue;
+}
+
+.facebook-icon {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 5px;
+}
+
 .materialButton {
   margin: 0;
   padding: 0;

@@ -60,8 +60,14 @@
   min-width: 200px;
   min-height: 200px;  
   float: left;
-  background:white;
+  background: #EFEFEF;;
 }
+
+.searchHolder {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 .searchFormText {
   color: black;
 }
