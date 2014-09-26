@@ -5,48 +5,28 @@
       <p>Sitters are unavailable</p>
     </section>
   </material-toolbar>
-  <div layout="vertical" layout-fill>
+  <!-- <div layout="vertical" layout-fill> -->
     <material-toolbar>
-      <section layout="vertical" layout-sm="vertical" layout-align="center center">
+      <section layout="horizontal" layout-sm="vertical" layout-align="center center">
         <form name="cityInput" ng-submit="setCity(cityName)">
-            <input class="searchFormText" type="text" ng-model="cityName" placeholder="A city">
-            <material-button class="material-button-raised material-button-colored">Submit</material-button>
+            <input class="searchFormText" type="text" ng-model="cityName" placeholder="Search a city">
         </form>
       </section>
     </material-toolbar>
-    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
-      <material-card ng-repeat="sitter in sitters">
-            <img class="image-style" ng-src="{{sitter.photo}}">
-            <h2>{{sitter.name}}</h2>
-            <span>Location: {{sitter.location}}<span><span> Cost: {{sitter.cost}}</span> <span> Rating: {{sitter.rating}} </span>
+    <!-- <section layout="vertical" layout-sm="horizontal" layout-align="left center"> -->
+      <material-card class="sitter-card" ng-repeat="sitter in sitters">
+      <div layout="vertical">
+      <div layout="horizontal" flex>
+        <div flex><img class="image-style" ng-src="{{sitter.photo}}"></div>
+        <div flex><span><h2>{{sitter.name}}</h2>{{sitter.location}}</span></div>
+      </div>
+      <div layout="horizontal" flex>
+        <div flex><h2>${{sitter.cost}}</h2></div>
+        <div flex><h2>{{sitter.rating}}</h2></div>
+      </div>
+    </div>
+            <!-- <span>{{sitter.location}}<span><span> Cost: ${{sitter.cost}}</span> <span> Rating: {{sitter.rating}} </span> -->
     </material-card>
-  </section>
+    <!-- </section> -->
   </div>
-  <p>
-    The city is: {{city}}
-  </p>
-<!--   <p>Stub Data is: {{data}}</p>
-  <div class="sittercard" ng-repeat="sitter in data">
-  	<p>Name: {{sitter.name}}</p>
-  	<p>Location: {{sitter.location}}</p>
-  	<img class="image-style" ng-src={{sitter.photo}}>
-  	<p>Cost: {{sitter.cost}}</p>
-  	<p>Rating: {{sitter.rating}}</p>
-  </div>
-  <table>
-  	<tr>
-  		<th>Name</th>
-  		<th>Location</th>
-  		<th>Photo</th>
-  		<th>Cost</th>
-  		<th>Rating</th>  		
-  	</tr>
-  	<tr ng-repeat="sitter in data">
-	  	<td>{{sitter.name}}</td>
-	  	<td>{{sitter.location}}</td>
-	  	<td>{{sitter.photo}}</td>
-	  	<td>{{sitter.cost}}</td>
-	  	<td>{{sitter.rating}}</td>
-  	</tr>
-  </table> -->
-</div>
+<!-- </div> -->

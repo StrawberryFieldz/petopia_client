@@ -3,16 +3,33 @@
 	height: 300px;
 	border: 1px solid black;
 }
-
-.image-style {
-	width: 50px;
-	height: 50px;
+.face {
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 50px;
+  height: 50;
+  margin: 16px; 
 }
 
 .toolbar_fill{
   background: #EFEFEF;
 }
 
+.image-style {
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 100px;
+  height: 100;
+  margin: 16px;
+  box-shadow: black 3px 3px 3px;
+}
+.sitter-card {
+  width: 300px;
+  height: 300px;
+  min-width: 200px;
+  min-height: 200px;  
+  float: left;
+}
 .searchFormText {
   color: black;
 }
