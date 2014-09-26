@@ -64,6 +64,19 @@
   color: black;
 }
 
+.popupP {
+  text-align: center;
+}
+
+.popupSpan {
+  color: #4285f4;
+  text-decoration: underline;
+}
+
+.popupSpan:hover {
+  cursor:pointer;
+}
+
 
 
 

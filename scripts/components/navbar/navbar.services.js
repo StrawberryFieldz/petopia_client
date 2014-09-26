@@ -10,11 +10,17 @@ angular.module('app')
 
   .factory('PopUp', ['$materialDialog', function($materialDialog){
   	return {
-  		PopUpCall: function(e, pathToTemplate){
+  		PopUpCall: function(e, pathToTemplate, context){
  			$materialDialog({
  			  templateUrl: pathToTemplate,
  			  targetEvent: e,
  			  controller: ['$scope', '$hideDialog', function($scope, $hideDialog) {
+          $scope.showSignUp = context;
+
+          $scope.toggleSignUp = function() {
+            $scope.showSignUp = !$scope.showSignUp;
+          };
+
  			    $scope.close = function() {
  			      $hideDialog();
  			    };

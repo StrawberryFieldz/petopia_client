@@ -31,11 +31,11 @@ angular.module('app')
     };
 
     $scope.signup = function(e) {
-      PopUp.PopUpCall(e, './scripts/components/navbar/navbar-popup-templates/signup.tmpl.html');
+      PopUp.PopUpCall(e, './scripts/components/navbar/navbar-popup-templates/popup.tmpl.html', true);
     };
 
     $scope.login = function(e) {
-      PopUp.PopUpCall(e, './scripts/components/navbar/navbar-popup-templates/login.tmpl.html');
+      PopUp.PopUpCall(e, './scripts/components/navbar/navbar-popup-templates/popup.tmpl.html', false);
     };
 
   }]);
