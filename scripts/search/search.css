@@ -11,6 +11,17 @@
   margin: 16px; 
 }
 
+.inputFormSearchPage {
+  text-align: center;
+  color: white;
+  width: 300px;
+  height: 60px;
+  background-color: #134545;
+  opacity: 0.7;
+  border-radius: 4px;
+  margin-bottom: 9px;
+}
+
 .sitter-container{
   background: #EFEFEF;
 }
