@@ -1,4 +1,4 @@
-<material-dialog aria-label="Signup Form" ng-controller="NavbarController" ng-if="showSignUp">
+<material-dialog aria-label="Signup Form" ng-if="showSignUp">
   <div class="dialog-content">
     <section layout="vertical" layout-sm="horizontal" layout-align="center center">
       <material-button class="material-button-raised material-button-colored"><img class="facebook-icon" src="../../assets/images/facebook.png">Sign up with Facebook</material-button>
@@ -7,17 +7,18 @@
     <p class="popupP">Create an account below</p>
     <material-content>
      <form style="padding-left: 20px;">
-        <ig fid="i1" label="Username" class="material-input-group-theme-light"></ig>
-        <ig fid="i2" label="Password" class="material-input-group-theme-light-blue"></ig>
+        <ig fid="i1" label="Username" type="text" class="material-input-group-theme-light" ng-model="newUser.username"></ig>
+        <ig fid="i2" label="Password" type="password" class="material-input-group-theme-light-blue" ng-model="newUser.password"></ig>
       </form>
     </material-content>
     <section layout="vertical" layout-sm="horizontal" layout-align="center center">
-     <material-button class="login-button-customize" ng-click="close()">Login</material-button>
+     <material-button class="login-button-customize" ng-click="close()">Sign Up</material-button>
     </section>
     <p class="popupP">Already have an account?<span class="popupSpan" ng-click="toggleSignUp()"> Log in</span></p>
   </div>
 </material-dialog>
-<material-dialog aria-label="Login Form" ng-controller="NavbarController" ng-if="!showSignUp">
+
+<material-dialog aria-label="Login Form" ng-if="!showSignUp">
   <div class="dialog-content">
     <section layout="vertical" layout-sm="horizontal" layout-align="center center">
       <material-button class="material-button-raised material-button-colored"><img class="facebook-icon" src="../../assets/images/facebook.png">Log in with Facebook</material-button>
@@ -26,12 +27,12 @@
     <p class="popupP">Login with your account below</p>
     <material-content>
      <form style="padding-left: 20px;">
-        <ig fid="i1" label="Username" class="material-input-group-theme-light"></ig>
-        <ig fid="i2" label="Password" class="material-input-group-theme-light-blue"></ig>
+        <ig fid="i1" label="Username" type="text" class="material-input-group-theme-light" ng-model="existingUser.username"></ig>
+        <ig fid="i2" label="Password" type="password" class="material-input-group-theme-light-blue" ng-model="existingUser.password"></ig>
       </form>
     </material-content>
     <section layout="vertical" layout-sm="horizontal" layout-align="center center">
-      <material-button class="login-button-customize" ng-click="close()">Okay</material-button>
+      <material-button class="login-button-customize" ng-click="close()">Log In</material-button>
     </section>
     <p class="popupP">Don't have an account yet?<span class="popupSpan" ng-click="toggleSignUp()"> Sign up</span></p>
   </div>
