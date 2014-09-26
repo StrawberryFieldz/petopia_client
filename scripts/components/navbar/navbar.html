@@ -1,16 +1,26 @@
-<div ng-controller="NavbarController" class="navbar">
-  <div class="nav1">
-    <h1 ng-click="goHome()">petopia</h1>
-  </div>
-  <div class="nav2">
-  </div>
-  <div class="nav3">
-    <div class="signUpNavbar" ng-if="!loggedIn" ng-click="signup($event)"><p>Sign Up</p></div>
-    <div class="logInNavbar" ng-if="!loggedIn" ng-click="login($event)"><p>Log In</p></div>
-    <div class="userNavbar" ng-if="loggedIn"><p>*Username*</p></div>
-    <div class="logOutNavbar" ng-if="loggedIn"><p>Log Out</p></div>
-    <div class="sitterContainer">
-      <div class="becomeSitterNavbar" ng-click="becomeSitter()"><p>Become A Sitter</p></div>
+<div ng-controller="NavbarController" class="navbar" layout="vertical" layout-fill>
+  <material-toolbar class="materialToolbar">
+    <div class="material-toolbar-tools">
+      <h1 class="navbarTitle" ng-click="goHome()">petopia</h1>
+      <!-- fill up the space between left and right area -->
+      <span flex></span>
+      <material-button class="materialButton" ng-if="!loggedIn" ng-click="signup($event)">
+        <p>Sign Up</p>
+      </material-button>
+      <material-button class="materialButton" ng-if="!loggedIn" ng-click="login($event)">
+        <p>Log In</p>
+      </material-button>
+      <material-button class="materialButton" ng-if="loggedIn">
+        <p>*Username*</p>
+      </material-button>
+      <material-button class="materialButton" ng-if="loggedIn">
+        <p>Log Out</p>
+      </material-button>
+      <material-content class="navbarMaterialContent">
+        <div class="becomeSitterNavbar" ng-click="becomeSitter()">
+          <p>Become A Sitter</p>
+        </div>
+      </material-content>
     </div>
-  </div>
+  </material-toolbar>
 </div>
