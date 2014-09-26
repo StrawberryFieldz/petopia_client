@@ -42,4 +42,12 @@ describe('NavbarController', function () {
     expect(scope.becomeSitter).to.be.a('function');
   });
 
+  it('should display sign up popup when "Sign Up" button is clicked', function() {
+    expect(scope.signup).to.be.a('function');
+  });
+
+  it('should display log in popup when "Log In" button is clicked', function() {
+    expect(scope.login).to.be.a('function');
+  });
+
 });
