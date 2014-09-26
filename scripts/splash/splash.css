@@ -12,7 +12,6 @@
   color: white;
   font-family: 'Francois One', sans-serif;
   font-size: 135px;
-  opacity: 0.90;
   margin-top: 10px;
   text-shadow: 0 0 2px #000; /* horizontal-offset vertical-offset 'blur' colour */
   -moz-text-shadow: 0 0 2px #000;
@@ -23,7 +22,6 @@
   color: white;
   font-family: 'Francois One', sans-serif;
   font-weight: 100;
-  opacity: 0.75;
   font-size: 30px;
   text-shadow: 0 0 2px #000; /* horizontal-offset vertical-offset 'blur' colour */
   -moz-text-shadow: 0 0 2px #000;
