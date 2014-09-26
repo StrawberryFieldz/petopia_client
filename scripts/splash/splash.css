@@ -55,3 +55,19 @@ input[type="text"]::-webkit-input-placeholder {
 input[type="text"].inputFormText {
   border-width: 0 0 0 0;
 }
+
+.button-customize {
+  background-color: #3D7899;
+  width: 150px;
+  height: 40px;
+  color: white;
+  padding-top: 10px;
+}
+
+.button-customize:hover {
+  background-color: #5BB4E5;
+}
+
+.button-customize .material-button-inner {
+  color: #00FFD2;
+}
