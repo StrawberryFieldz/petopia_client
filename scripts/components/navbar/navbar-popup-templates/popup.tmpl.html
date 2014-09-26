@@ -1,0 +1,37 @@
+<material-dialog aria-label="Signup Form" ng-controller="NavbarController" ng-if="showSignUp">
+  <div class="dialog-content">
+    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+      <material-button class="material-button-raised material-button-colored">Sign up with Facebook</material-button>
+    </section>
+    <p class="popupP"><strong>or</strong></p>
+    <p class="popupP">Create an account below</p>
+    <material-content>
+     <form style="padding-left: 20px;">
+        <ig fid="i1" label="Username" class="material-input-group-theme-light"></ig>
+        <ig fid="i2" label="Password" class="material-input-group-theme-light-blue"></ig>
+      </form>
+    </material-content>
+    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+      <material-button ng-click="close()">Okay</material-button>
+    </section>
+    <p class="popupP">Already have an account?<span class="popupSpan" ng-click="toggleSignUp()"> Log in</span></p>
+  </div>
+</material-dialog>
+<material-dialog aria-label="Login Form" ng-controller="NavbarController" ng-if="!showSignUp">
+  <div class="dialog-content">
+    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+      <material-button class="material-button-raised material-button-colored">Log in with Facebook</material-button>
+    </section>
+    <p class="popupP"><strong>or</strong></p>
+    <material-content>
+     <form style="padding-left: 20px;">
+        <ig fid="i1" label="Username" class="material-input-group-theme-light"></ig>
+        <ig fid="i2" label="Password" class="material-input-group-theme-light-blue"></ig>
+      </form>
+    </material-content>
+    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+      <material-button ng-click="close()">Okay</material-button>
+    </section>
+    <p class="popupP">Don't have an account yet?<span class="popupSpan" ng-click="toggleSignUp()"> Sign up</span></p>
+  </div>
+</material-dialog>
