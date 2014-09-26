@@ -7,5 +7,9 @@ angular.module('app')
       $scope.city = CityFactory.getCity();
     };
 
+    $scope.getRating = function(sitter){
+      return new Array(sitter.rating);
+    }
+
     $scope.city = CityFactory.getCity();
   }]);

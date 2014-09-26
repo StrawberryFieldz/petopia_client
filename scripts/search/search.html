@@ -6,13 +6,13 @@
     </section>
   </material-toolbar>
   <!-- <div layout="vertical" layout-fill> -->
-    <material-toolbar>
+    <div style="padding-top: 20px"><material-toolbar>
       <section layout="horizontal" layout-sm="vertical" layout-align="center center">
         <form name="cityInput" ng-submit="setCity(cityName)">
             <input class="searchFormText" type="text" ng-model="cityName" placeholder="Search a city">
         </form>
       </section>
-    </material-toolbar>
+    </material-toolbar></div>
     <!-- <section layout="vertical" layout-sm="horizontal" layout-align="left center"> -->
       <material-card class="sitter-card" ng-repeat="sitter in sitters">
       <div layout="vertical">
@@ -22,7 +22,8 @@
       </div>
       <div layout="horizontal" flex>
         <div flex><p class="sitter-card-rate">${{sitter.cost}}</p></div>
-        <div flex><h2>{{sitter.rating}}</h2></div>
+        <div flex><img ng-repeat="item in getRating(sitter) track by $index" class="sitter-card-rating" src="../../assets/images/paw.png"></div>
+        <!-- {{sitter.rating}} -->
       </div>
     </div>
             <!-- <span>{{sitter.location}}<span><span> Cost: ${{sitter.cost}}</span> <span> Rating: {{sitter.rating}} </span> -->

@@ -8,15 +8,15 @@ angular.module('app')
 				zip: 94103,
 				photo: "https://avatars1.githubusercontent.com/u/7740415?v=2&s=400",
 				cost: 35,
-				rating: '* * * *'
+				rating: 4
 			},
 			{
 				name: "Wil",
 				location: "San Bruno",
 				zip: 94103,
 				photo: "https://avatars2.githubusercontent.com/u/7147319?v=2&s=400",
-				cost: 1,
-				rating: '* * * * *'
+				cost: 99,
+				rating: 5
 			},
 			{
 				name: "Dominic",
@@ -24,7 +24,7 @@ angular.module('app')
 				zip: 84732,
 				photo: "https://avatars2.githubusercontent.com/u/6237873?v=2&s=400",
 				cost: 60,
-				rating: '* * * *'
+				rating: 4
 			},
 			{
 				name: "Jeff",
@@ -32,7 +32,7 @@ angular.module('app')
 				zip: 03062,
 				photo: "https://avatars2.githubusercontent.com/u/7004952?v=2&s=400",
 				cost: 40,
-				rating: '* *'
+				rating: 1
 			},
 			{
 				name: "Bob",
@@ -40,7 +40,7 @@ angular.module('app')
 				zip: 12345,
 				photo: "http://www.mateoj.com/bayside/wp-content/uploads/2014/07/521013543_1385596410.jpg",
 				cost: 15,
-				rating: '*'
+				rating: 2
 			},
 			{
 				name: "Sam",
@@ -48,7 +48,7 @@ angular.module('app')
 				zip: 94103,
 				photo: "http://static.ddmcdn.com/gif/dog-breed-dog-breed-pictures1.jpg",
 				cost: 65,
-				rating: '* *'
+				rating: 3
 			},
 		];
   	return {
