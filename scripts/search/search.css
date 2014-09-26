@@ -3,8 +3,65 @@
 	height: 300px;
 	border: 1px solid black;
 }
+.face {
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 50px;
+  height: 50;
+  margin: 16px; 
+}
+
+.sitter-container{
+  background: #EFEFEF;
+}
+
+.toolbar_fill{
+  height:100%;
+  background: #899F9F;/*(0-255,0-255,0-255)*/
+}
+
+.sitter-card-name{
+  text-align:center;
+  font-size: 35px;
+  font-weight: bold;
+  margin: 20px 0 0 0;
+}
+
+.sitter-card-city{
+  text-align: center;
+  font-size: 15px;
+  margin-top: 0;
+}
+
+.sitter-card-rate{
+  text-align:center;
+  font-size: 60px;
+  font-weight: bold;
+  margin: 20px 0 0 0;
+}
+
+.sitter-card-rating{
+  margin-top: 40px;
+  height: 25px;
+  width: 25px;
+}
 
 .image-style {
-	width: 50px;
-	height: 50px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 125px;
+  height: 125px;
+  box-shadow: black 3px 3px 3px;
+  margin: 0;
+}
+.sitter-card {
+  width: 300px;
+  height: 250px;
+  min-width: 200px;
+  min-height: 200px;  
+  float: left;
+  background:white;
+}
+.searchFormText {
+  color: black;
 }
