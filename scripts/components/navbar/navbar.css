@@ -18,6 +18,10 @@
   -webkit-margin-after: 0;
 }
 
+.material-toolbar-tools .navbarTitle {
+  font-size: 28px;
+}
+
 .login-button-customize {
   background-color: #3D7899;
   width: 150px;
