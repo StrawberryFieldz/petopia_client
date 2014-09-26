@@ -13,12 +13,12 @@
 
   <div class="pet-sitter-body">
 
-    <material-content layout="horizontal" layout-align="center">
+    <material-divider layout="horizontal" layout-align="center">
       <form ng-submit="setPetSitterInfo(petSitter)" class="formClass">
-        <ig fid="t1" label="Name" value="{{petSitter.name}}" ng-model="petSitter.name" class="material-input-group-theme-light material-input-group-inverted"></ig>
-        <ig fid="t2" label="Location" value="{{petSitter.userLocation}}" ng-model="petSitter.userLocation" label="Location" class="material-input-group-theme-light material-input-group-inverted"></ig>
-        <ig fid="t3" label="Bio" value="{{petSitter.bio}}" ng-model="petSitter.bio" label="Bio" class="material-input-group-theme-light material-input-group-inverted"></ig>
-        <ig fid="t4" label="Daily Rate" value="{{petSitter.dailyRate}}" ng-model="petSitter.dailyRate" label="Daily Rate" class="material-input-group-theme-light material-input-group-inverted"></ig>
+        <ig fid="t1" label="Name" type="text" value="{{petSitter.name}}" ng-model="petSitter.name" class="material-input-group-theme-light material-input-group-inverted"></ig>
+        <ig fid="t2" label="Location" type="text" value="{{petSitter.userLocation}}" ng-model="petSitter.userLocation" label="Location" class="material-input-group-theme-light material-input-group-inverted"></ig>
+        <ig fid="t3" label="Bio" type="text" value="{{petSitter.bio}}" ng-model="petSitter.bio" label="Bio" class="material-input-group-theme-light material-input-group-inverted"></ig>
+        <ig fid="t4" label="Daily Rate" type="text" value="{{petSitter.dailyRate}}" ng-model="petSitter.dailyRate" label="Daily Rate" class="material-input-group-theme-light material-input-group-inverted"></ig>
       
         <div class="pet-sitter-select">Select the type of pet(s) you want to watch:</div>
         <material-checkbox ng-click="petSitter.petToWatchObject.dog=!petSitter.petToWatchObject.dog" aria-label="Checkbox 1">
@@ -31,7 +31,7 @@
         <material-button class= "private-button-customize">Submit</material-button>
         <!-- <material-button class="material-button-raised material-button-colored" layout="horizontal">Submit</material-button> -->
       </form>
-    </material-content>
+    </material-divider>
 
 
   </div>
