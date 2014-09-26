@@ -11,8 +11,13 @@
   margin: 16px; 
 }
 
-.toolbar_fill{
+.sitter-container{
   background: #EFEFEF;
+}
+
+.toolbar_fill{
+  height:100%;
+  background: #899F9F;/*(0-255,0-255,0-255)*/
 }
 
 .sitter-card-name{
@@ -55,6 +60,7 @@
   min-width: 200px;
   min-height: 200px;  
   float: left;
+  background:white;
 }
 .searchFormText {
   color: black;
