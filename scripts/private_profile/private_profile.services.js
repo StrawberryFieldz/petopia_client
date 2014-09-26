@@ -5,5 +5,5 @@ angular.module('app')
         //this will ultimately send the info to the database
         console.log(info);
       }
-    }
+    };
   });

@@ -1,9 +1,9 @@
 <material-dialog aria-label="Signup Form" ng-controller="NavbarController" ng-if="showSignUp">
   <div class="dialog-content">
     <section layout="vertical" layout-sm="horizontal" layout-align="center center">
-      <material-button class="material-button-raised material-button-colored">Sign up with Facebook</material-button>
+      <material-button class="material-button-raised material-button-colored"><img class="facebook-icon" src="../../assets/images/facebook.png">Sign up with Facebook</material-button>
     </section>
-    <p class="popupP"><strong>or</strong></p>
+    <p class="popupP"><strong>---or---</strong></p>
     <p class="popupP">Create an account below</p>
     <material-content>
      <form style="padding-left: 20px;">
@@ -12,7 +12,7 @@
       </form>
     </material-content>
     <section layout="vertical" layout-sm="horizontal" layout-align="center center">
-      <material-button ng-click="close()">Okay</material-button>
+     <material-button class="login-button-customize" ng-click="close()">Login</material-button>
     </section>
     <p class="popupP">Already have an account?<span class="popupSpan" ng-click="toggleSignUp()"> Log in</span></p>
   </div>
@@ -20,9 +20,10 @@
 <material-dialog aria-label="Login Form" ng-controller="NavbarController" ng-if="!showSignUp">
   <div class="dialog-content">
     <section layout="vertical" layout-sm="horizontal" layout-align="center center">
-      <material-button class="material-button-raised material-button-colored">Log in with Facebook</material-button>
+      <material-button class="material-button-raised material-button-colored"><img class="facebook-icon" src="../../assets/images/facebook.png">Log in with Facebook</material-button>
     </section>
-    <p class="popupP"><strong>or</strong></p>
+    <p class="popupP"><strong>---or---</strong></p>
+    <p class="popupP">Login with your account below</p>
     <material-content>
      <form style="padding-left: 20px;">
         <ig fid="i1" label="Username" class="material-input-group-theme-light"></ig>
@@ -30,7 +31,7 @@
       </form>
     </material-content>
     <section layout="vertical" layout-sm="horizontal" layout-align="center center">
-      <material-button ng-click="close()">Okay</material-button>
+      <material-button class="login-button-customize" ng-click="close()">Okay</material-button>
     </section>
     <p class="popupP">Don't have an account yet?<span class="popupSpan" ng-click="toggleSignUp()"> Sign up</span></p>
   </div>

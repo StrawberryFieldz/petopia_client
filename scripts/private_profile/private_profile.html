@@ -14,7 +14,7 @@
   <div class="pet-sitter-body">
 
     <material-content layout="horizontal" layout-align="center">
-      <form ng-submit="setPetSitterInfo(petSitter)">
+      <form ng-submit="setPetSitterInfo(petSitter)" class="formClass">
         <ig fid="t1" label="Name" value="{{petSitter.name}}" ng-model="petSitter.name" class="material-input-group-theme-light material-input-group-inverted"></ig>
         <ig fid="t2" label="Location" value="{{petSitter.userLocation}}" ng-model="petSitter.userLocation" label="Location" class="material-input-group-theme-light material-input-group-inverted"></ig>
         <ig fid="t3" label="Bio" value="{{petSitter.bio}}" ng-model="petSitter.bio" label="Bio" class="material-input-group-theme-light material-input-group-inverted"></ig>
@@ -28,7 +28,8 @@
         <material-checkbox ng-click="petSitter.petToWatchObject.cat=!petSitter.petToWatchObject.cat" aria-label="Checkbox 2">
           Cat
         </material-checkbox>
-        <material-button class="material-button-raised material-button-colored">Submit</material-button>
+        <material-button class= "private-button-customize">Submit</material-button>
+        <!-- <material-button class="material-button-raised material-button-colored" layout="horizontal">Submit</material-button> -->
       </form>
     </material-content>
 
