@@ -3,6 +3,21 @@ body {
   padding: 0;
 }
 
+/*Call to action pastel red color*/
+.button-call-to-action-color {
+  background-color: #EC6F72;
+}
+
+/*Change color on hover*/
+.button-call-to-action-color:hover {
+  background-color: #FA9397;
+}
+
+/*Change ripple color on click*/
+.button-call-to-action-color .material-button-inner {
+  color: #FFD0A6;
+}
+
 /*Pastel dark blue-gray button color = #3D7899 */
 /*Bright blue hover over color = #5BB4E5 */
 /*Button animate color = #FFD0A6 */
