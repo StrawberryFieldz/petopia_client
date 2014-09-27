@@ -58,17 +58,21 @@ input[type="text"].inputFormText {
 }
 
 .button-customize {
-  background-color: #3D7899;
   width: 150px;
   height: 40px;
   color: white;
   padding-top: 10px;
 }
 
-.button-customize:hover {
-  background-color: #5BB4E5;
+.meetTheTeamToolBar {
+  margin-top:60px;
+  background-color: #3D7899;
+  color: white;
 }
 
-.button-customize .material-button-inner {
-  color: #00FFD2;
+.meetTheTeamSection {
+  background-color: #CEE2E5;
 }
+
+
+

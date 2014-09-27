@@ -71,7 +71,7 @@
   height: 30px;
   text-align: center;
   background-color: #4b7b91;
-  border-radius: 5px;
+  border-radius: 3px;
   color: white;
 }
 
@@ -84,8 +84,12 @@
 
 .becomeSitterNavbar:hover {
   cursor: pointer;
-  background-color: #bcd7e5;
-  color: black;
+  background-color: #5BB4E5;
+  color: white;
+}
+
+.becomeSitterNavbar .material-button-inner {
+  color: #00FFD2;
 }
 
 .popupP {
@@ -100,7 +104,3 @@
 .popupSpan:hover {
   cursor:pointer;
 }
-
-
-
-
