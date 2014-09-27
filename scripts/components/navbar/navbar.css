@@ -23,7 +23,6 @@
 }
 
 .login-button-customize {
-  background-color: #3D7899;
   width: 150px;
   height: 40px;
   color: white;
@@ -48,6 +47,11 @@
   max-height: 48px;
   min-height: 48px;
   text-transform: none;
+}
+
+.materialButton:hover {
+  background-color: #131313;
+  opacity: 0.5;
 }
 
 .material-toolbar-tools .navbarMaterialContent {
