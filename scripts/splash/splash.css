@@ -14,6 +14,9 @@
   font-size: 135px;
   opacity: 0.90;
   margin-top: 10px;
+  text-shadow: 0 0 2px #000; /* horizontal-offset vertical-offset 'blur' colour */
+  -moz-text-shadow: 0 0 2px #000;
+  -webkit-text-shadow: 0 0 2px #000;
 }
 
 .splashTagline {
@@ -22,6 +25,9 @@
   font-weight: 100;
   opacity: 0.75;
   font-size: 30px;
+  text-shadow: 0 0 2px #000; /* horizontal-offset vertical-offset 'blur' colour */
+  -moz-text-shadow: 0 0 2px #000;
+  -webkit-text-shadow: 0 0 2px #000;
 }
 
 .cityInputForm {
@@ -63,6 +69,9 @@ input[type="text"].inputFormText {
 .meetTheTeamToolBar {
   background-color: #3D7899;
   color: white;
+  text-shadow: 0 0 2px #000; /* horizontal-offset vertical-offset 'blur' colour */
+  -moz-text-shadow: 0 0 2px #000;
+  -webkit-text-shadow: 0 0 2px #000;
 }
 
 .meetTheTeamSection {
