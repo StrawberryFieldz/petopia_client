@@ -1,15 +1,11 @@
 .splashBackground {
-  position: absolute;
+  margin-top:-50px;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-  padding: 0;
-  z-index: -1;
   background-image: url('../../assets/images/puppiesBackground.gif');
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .splashHeader {
@@ -65,7 +61,6 @@ input[type="text"].inputFormText {
 }
 
 .meetTheTeamToolBar {
-  margin-top:60px;
   background-color: #3D7899;
   color: white;
 }
