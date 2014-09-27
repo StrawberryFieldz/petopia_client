@@ -13,7 +13,7 @@
 
   <div class="pet-sitter-body">
 
-    <material-divider layout="horizontal" layout-align="center">
+    <material-content layout="horizontal" layout-align="center" style="overflow-y: hidden">
       <form ng-submit="setPetSitterInfo(petSitter)" class="formClass">
         <ig fid="t1" label="Name" type="text" value="{{petSitter.name}}" ng-model="petSitter.name" class="material-input-group-theme-light material-input-group-inverted"></ig>
         <ig fid="t2" label="Location" type="text" value="{{petSitter.userLocation}}" ng-model="petSitter.userLocation" label="Location" class="material-input-group-theme-light material-input-group-inverted"></ig>
@@ -31,7 +31,7 @@
         <material-button class= "private-button-customize">Submit</material-button>
         <!-- <material-button class="material-button-raised material-button-colored" layout="horizontal">Submit</material-button> -->
       </form>
-    </material-divider>
+    </material-content>
 
 
   </div>
