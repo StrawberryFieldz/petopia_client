@@ -4,10 +4,63 @@
   margin-bottom: 30px;
 }
 
-.pet-sitter-body {
+.private-image-style {
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 350px;
+  height: 350px;
+  box-shadow: black 3px 3px 3px;
+  margin: 0px auto;
+}
+
+.firstRow {
+  width: 350px;
+  margin: 10px auto;
+  padding: 10px;
+  background: #E0F0F2;
+}
+
+.secondRow {
+  background: #E0F0F2;
+}
+
+.petImage {  
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 50px;
+  height: 50px;
+  box-shadow: black 3px 3px 3px;
+  margin: 0px auto;
+}
+
+.tableHeader {
+  background: #3e82f8;
+  border-radius: 5px;
+}
+
+.personImage {  
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 75px;
+  height: 75px;
+  box-shadow: black 3px 3px 3px;
+  margin: 0px auto;
+}
+
+.profile-logo {
+  padding-bottom: 10%;
+  height: 90vh;
+}
+
+.petsTable {
+  width: 350px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.profile-body {
   background-color: #CEE2E5;
-  padding-top: 5px;
-  height: 500px;
+  height: 100vh;
 }
 
 .pet-sitter-select {

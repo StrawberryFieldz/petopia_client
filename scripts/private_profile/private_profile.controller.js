@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('PrivateProfileController', ['$scope', '$state', 'PrivateProfileService', function($scope, $state, PrivateProfileService){
+  .controller('PrivateProfileController', ['$scope', '$state', 'SitterManager', 'PrivateProfileService', function($scope, $state, SitterManager, PrivateProfileService){
     $scope.petSitter = {
       name: '',
       userLocation: '',
@@ -12,5 +12,10 @@ angular.module('app')
     };
 
     $scope.setPetSitterInfo = PrivateProfileService.setPetSitterInfo;
+
+    $scope.userPhoto = (function(){
+      var user = SitterManager.GetStubData()[0];
+      return user.photo;
+    })();
 
   }]);

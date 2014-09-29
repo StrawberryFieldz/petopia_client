@@ -1,0 +1,37 @@
+.pet-sitter-header {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.become-sitter-body {
+  background-color: #CEE2E5;
+  padding-top: 5px;
+  height: 500px;
+}
+
+.pet-sitter-select {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.private-button-customize {
+  margin: auto 125px;
+  width: 100px;
+  height: 40px;
+  color: white;
+  padding-top: 10px;
+}
+
+.formClass label {
+  margin-left: 10px;
+  font-size: 1.5em;
+  color: gray;
+}
+
+.formClass input {
+  padding: 5px;
+  /*border-radius: 5px;*/
+  /*background: #BED8E5;*/
+  width: 300px;
+}
