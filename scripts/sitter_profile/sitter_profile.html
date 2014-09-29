@@ -1,0 +1,60 @@
+<div ng-include=" 'scripts/components/navbar/navbar.html' "></div>
+<div ng-controller="SitterProfileController">
+  <!-- Layout has a 3 column layout, that when made small will turn into a 3 row layout -->
+  <div flex>
+    <div flex layout="vertical" layout-sm="horizontal" layout-align="space-around">
+      <div class="sitter-profile-left" layout="vertical" flex style="height:550px">
+        <material-content class="sitter-profile-list">
+          <material-list>
+            <material-item>
+              <material-item-content>
+                <div class="material-tile-content">
+                  <img src="https://avatars2.githubusercontent.com/u/7147319?v=2&s=400">
+                  <span class="sitter-profile-name">Wil Andrade</span>
+                </div>
+              </material-item-content>
+              <material-divider inset ng-if="!$last"></material-divider>
+            </material-item>
+          </material-list>
+        </material-content>
+
+        <material-content>
+          <material-list>
+            <material-item>
+              <material-item-content>
+                <div class="material-tile-content">
+                   <div layout="horizontal">
+                      <img class="sitter-profile-rating" src="../../assets/images/paw.png">
+                      <img class="sitter-profile-rating" src="../../assets/images/paw.png">
+                      <img class="sitter-profile-rating" src="../../assets/images/paw.png">
+                      <img class="sitter-profile-rating" src="../../assets/images/paw.png">
+                      <img class="sitter-profile-rating" src="../../assets/images/paw.png">
+                    </div>
+                </div>
+              </material-item-content>
+              <material-divider inset ng-if="!$last"></material-divider>
+            </material-item>
+          </material-list>
+        </material-content>
+
+      </div>
+      <div flex style="background:blue; height:550px">Uno</div>
+      <div flex style="background:yellow; height:550px">Uno</div>
+    </div>
+  </div>
+
+  <!-- <material-content class="sitter-profile-list">
+          <material-list>
+            <material-item>
+              <material-item-content>
+                <div class="material-tile-content">
+                  <img src="https://avatars2.githubusercontent.com/u/7147319?v=2&s=400">
+                  <span class="sitter-profile-name">Wil Andrade</span>
+                </div>
+              </material-item-content>
+              <material-divider inset ng-if="!$last"></material-divider>
+            </material-item>
+          </material-list>
+        </material-content> -->
+
+</div>

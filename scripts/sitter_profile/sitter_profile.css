@@ -1,0 +1,17 @@
+.sitter-profile-left{
+}
+
+.sitter-profile-list{
+  margin: 0px;
+}
+.sitter-profile-name{
+  font-size: 30px;
+  font-weight: bold;
+  margin-top:10px;
+  margin-bottom:0px;
+}
+.sitter-profile-rating{
+  margin-top: 0px;
+  height: 30px;
+  width: 30px;
+}
