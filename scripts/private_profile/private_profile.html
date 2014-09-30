@@ -22,12 +22,12 @@
     <div class="animate-switch-container" ng-switch on="data.selectedIndex">
       <div class="animate-switch tab1" ng-switch-when="0">
         <div layout="vertical" layout-sm="horizontal" layout-padding layout-align="center" class="customLayout">
-
+          
           <div flex layout="vertical" layout-align="center">
             <img class="private-image-style" ng-src="{{userPhoto}}">
             <material-content class="firstRow">
               <material-toolbar class="tableHeader">
-                <h1 class="material-toolbar-tools">
+                <h1 class="material-toolbar-tools" layout-align="center">
                   <span>My Pets</span>
                 </h1>
               </material-toolbar>
@@ -37,9 +37,9 @@
                     <div flex="33">
                       <img src="http://static.ddmcdn.com/gif/dog-breed-dog-breed-pictures1.jpg" class="petImage">
                     </div>
-                    <div flex>
-                      <p>Bob</p>
-                      <p>Golden Retriever</p>
+                    <div flex layout="vertical" layout-align="center"> 
+                      <span class="dogname">Bob</span>
+                      <span class="dogbreed">Golden Retriever</span>
                     </div>
                   </div>
                 </div>
@@ -51,9 +51,9 @@
                     <div flex="33">
                       <img src="http://upload.wikimedia.org/wikipedia/commons/4/43/Timba%2B1.jpg" class="petImage">
                     </div>
-                    <div flex>
-                      <p>Sam</p>
-                      <p>Lab</p>
+                    <div flex layout="vertical" layout-align="center"> 
+                      <span class="dogname">Sam</span>
+                      <span class="dogbreed">Lab</span>
                     </div>
                   </div>
                 </div>
@@ -65,9 +65,9 @@
                     <div flex="33">
                       <img src="http://kcen.images.worldnow.com/images/23411805_BG1.jpg" class="petImage">
                     </div>
-                    <div flex>
-                      <p>Charlie</p>
-                      <p>Collie</p>
+                    <div flex layout="vertical" layout-align="center"> 
+                      <span class="dogname">Charlie</span>
+                      <span class="dogbreed">Collie</span>
                     </div>
                   </div>
                 </div>
@@ -77,7 +77,7 @@
 
           <div flex class="secondRow">
             <material-toolbar class="tableHeader">
-              <h1 class="material-toolbar-tools">
+                <h1 class="material-toolbar-tools" layout-align="center">
                 <span>Recent Acitivty</span>
               </h1>
             </material-toolbar>
