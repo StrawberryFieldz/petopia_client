@@ -25,7 +25,6 @@ angular.module('app')
     }
 
     $scope.rating = 1;
-    
 
     $scope.rateUser = function(e){
       $materialDialog({

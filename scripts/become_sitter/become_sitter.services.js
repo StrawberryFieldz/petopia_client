@@ -1,4 +1,4 @@
 angular.module('app')
-  .factory('PrivateProfileService', function(){
+  .factory('BecomeSitterService', function(){
    
   });
