@@ -23,6 +23,11 @@
   font-size: 28px;
 }
 
+.rating-popup-content {
+  width: 500px;
+  height: 500px;
+} 
+
 .login-button-customize {
   width: 150px;
   height: 40px;

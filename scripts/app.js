@@ -33,6 +33,12 @@ angular.module('app', ['ui.router', 'ngMaterial'])
       controller: 'PrivateProfileController'
     })
 
+    .state('becomeSitter', {
+      url: '/become_sitter',
+      templateUrl: 'scripts/become_sitter/become_sitter.html',
+      controller: 'BecomeSitterController'
+    })
+
     .state('popup', {
       url: '/popup',
       templateUrl: 'scripts/components/popup/popup.html',

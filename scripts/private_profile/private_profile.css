@@ -4,15 +4,122 @@
   margin-bottom: 30px;
 }
 
-.pet-sitter-body {
+.customLayout {
+  min-width: 350px;
+}
+
+.private-image-style {
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 80%;
+  /*width: 350px;*/
+  height: 350px;
+  box-shadow: black 3px 3px 3px;
+  margin: 0px auto;
+}
+
+.firstRow {
+  width: 80%;
+  /*width: 350px;*/
+  margin: 10px auto;
+  padding: 10px;
+  background: #E0F0F2;
+}
+
+.secondRow {
+  background: #E0F0F2;
+  min-width: 350px;
+}
+
+.privte-profile-button {
+  margin-top: 2%;
+  width: 80%;
+  /*width: 350px;*/
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.petImage {  
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 50px;
+  height: 50px;
+  box-shadow: black 3px 3px 3px;
+  margin-left:20%;
+}
+
+.dogname {
+  font-size: 1.75em;
+  font-weight: bold;
+}
+
+.datestyle {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.dogbreed {
+  font-size: 1em;
+  font-style: italic;
+}
+
+.activityStlye {
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+.rating-popup-style {
+  width: 500px;
+}
+
+.innerRating {
+  padding: 20px;
+}
+
+.tableHeader {
+  background: #3d7899;
+  border-radius: 5px;
+  color: white;
+  text-decoration: underline;
+}
+
+.personImage {  
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  width: 75px;
+  height: 75px;
+  box-shadow: black 3px 3px 3px;
+  margin-left:20%;
+}
+
+.profile-logo {
+  padding-bottom: 10%;
+  height: 90vh;
+}
+
+.petsTable {
+  width: 350px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.profile-body {
   background-color: #CEE2E5;
-  padding-top: 5px;
-  height: 500px;
+  height: 150vh;
 }
 
 .pet-sitter-select {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.rate-button {
+  margin: 5px 125px;
+  width: 60%;
+  font-size: 0.75em;
+  font-weight: bold;
+  color: white;
 }
 
 .private-button-customize {
@@ -24,6 +131,7 @@
 }
 
 .formClass label {
+  margin-top: 5%;
   margin-left: 10px;
   font-size: 1.5em;
   color: gray;

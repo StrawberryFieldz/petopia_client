@@ -27,7 +27,7 @@ angular.module('app')
       // Otherwise, direct users to their private profile page
       // Also, will likely need some way to delineate the fact that they are actively wanting to
       //   become a sitter, not just wanting to see their profile page
-      $state.go('privateProfile');
+      $state.go('becomeSitter');
     };
 
     $scope.signup = function(e) {
