@@ -1,14 +1,24 @@
+.sitter-profile-container{
+  padding-top:0;
+  padding:30px;
+  background:#CEE2E5;
+  min-width: 700px;
+}
 .sitter-profile-center {
   padding:30px;
+  padding-top:0px;
   width:100%;
-  /*border: 1px solid black;*/
 }
 
 .sitter-profile-left{
   padding:30px;
   width:100%;
-  min-width: 400px;
-  max-width: 450px;
+  min-width:300px;
+  max-width:300px;
+  background-color: #E0F0F2;
+  border: 1px solid #3D7899;
+  /*min-width: 300px;
+  max-width: 300px;*/
 }
 
 .sitter-profile-right{
@@ -20,7 +30,8 @@
 .sitter-bio-container{
   margin-bottom: 20px; 
   background-color: #E0F0F2; 
-  max-height:40vh
+  max-height:50vh;
+  border: 1px solid #3D7899;
 }
 
 .center-bio-toolbar{
@@ -35,14 +46,10 @@
   width: 100%;
   box-shadow: black 3px 3px 3px;
   border: 4px solid black; 
-  border-radius: 100px;
 }
 
-.sitter-profile-list{
-  margin: 0px;
-}
 .sitter-profile-name{
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
   margin-top:10px;
   margin-bottom:0px;

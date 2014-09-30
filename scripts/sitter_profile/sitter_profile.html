@@ -1,18 +1,27 @@
 <div ng-include=" 'scripts/components/navbar/navbar.html' "></div>
-<div ng-controller="SitterProfileController" style="background:#CEE2E5">
+<div ng-controller="SitterProfileController">
+  <div layout="vertical" layout-align="center center" style="padding:10px; background-color: #3D7899; color:white;">
+    <div>
+      Find pet sitters in your area, 24/7!
+    </div>
+  </div>
   <!-- Profile container -->
-  <div flex>
+  <div class="sitter-profile-container" flex>
     <!-- 3 Column Layout-->
-    <div flex layout="vertical" layout-sm="horizontal" layout-align="center">
+    <div flex layout="horizontal" layout-sm="horizontal" layout-align="center">
 
 
         <!--###### Left Column Layout #####-->
 
-        <div class="sitter-profile-left" layout="vertical" layout-align="start" flex>
+        <div class="sitter-profile-left" layout="vertical" layout-sm="vertical" layout-align="start" flex="33">
+          <span class="sitter-profile-name">$50/night!</span>
+          <span> San Francisco </span>
+          <material-button class= "button-call-to-action-color" style="color:white; margin-bottom:40px">
+            Schedule Now
+          </material-button>
           <img class="sitter-profile-photo" src="https://avatars2.githubusercontent.com/u/7147319?v=2&s=400">
 
             <span class="sitter-profile-name">Wil Andrade</span>
-            <span> San Francisco </span>
             <div layout="horizontal">
               <img class="sitter-profile-rating" src="../../assets/images/paw.png">
               <img class="sitter-profile-rating" src="../../assets/images/paw.png">
@@ -33,7 +42,7 @@
                 <span>Bio</span>
               </h2>
             </material-toolbar>
-            <material-content style="margin-top:20px" class="material-content-padding">
+            <material-content class="material-content-padding">
               Lorem ipsum dolor sit amet, ne quod novum mei. Sea omnium invenire mediocrem at, in lobortis conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At vix sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem lucilius in, eam praesent reformidans no. Sed laudem aliquam ne.
               <p>Lorem ipsum dolor sit amet, ne quod novum mei. Sea omnium invenire mediocrem at, in lobortis conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At vix sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem lucilius in, eam praesent reformidans no. Sed laudem aliquam ne.</p>
               <p>Lorem ipsum dolor sit amet, ne quod novum mei. Sea omnium invenire mediocrem at, in lobortis conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At vix sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem lucilius in, eam praesent reformidans no. Sed laudem aliquam ne.</p>
