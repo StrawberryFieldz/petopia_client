@@ -54,9 +54,19 @@
   font-weight: bold;
 }
 
+.datestyle {
+  font-size: 1em;
+  font-weight: bold;
+}
+
 .dogbreed {
   font-size: 1em;
   font-style: italic;
+}
+
+.activityStlye {
+  font-size: 0.75em;
+  font-weight: bold;
 }
 
 .tableHeader {
@@ -94,6 +104,14 @@
 .pet-sitter-select {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.rate-button {
+  margin: 5px 125px;
+  width: 60%;
+  font-size: 0.75em;
+  font-weight: bold;
+  color: white;
 }
 
 .private-button-customize {

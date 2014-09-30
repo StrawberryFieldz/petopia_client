@@ -11,6 +11,10 @@
   margin: 16px; 
 }
 
+.rating-popup-style {
+  width: 500px;
+}
+
 .inputFormSearchPage {
   text-align: center;
   color: white;

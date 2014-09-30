@@ -1,9 +1,9 @@
 angular.module('app')
-  .controller('PrivateProfileController', ['$scope', '$state', 'SitterManager', 'PrivateProfileService', function($scope, $state, SitterManager, PrivateProfileService){
+  .controller('PrivateProfileController', ['$scope', '$state', 'SitterManager', 'PopUp', 'PrivateProfileService', function($scope, $state, SitterManager, PopUp, PrivateProfileService){
     
     // change this to call the database and pull in any information for the user
     $scope.petSitter = {
-      name: 'Jeff',
+      name: 'Tyler',
       userLocation: 'San Francisco',
       bio: '',
       dailyRate: '$10',
@@ -22,6 +22,16 @@ angular.module('app')
 
     $scope.uploadImage = function(){
       console.log("placeholder")
+    }
+
+    $scope.rating = 3;
+    
+    $scope.submitRating = function(number){
+      console.log(number);
+    }
+
+    $scope.rateUser = function(e){
+      PopUp.PopUpCall(e, './scripts/components/navbar/navbar-popup-templates/rating_popup.tmpl.html', true);
     }
 
   }]);
