@@ -49,7 +49,7 @@ gulp.task('test', function (done) {
 gulp.task('lint', function(){
 	return gulp.src(paths.scripts)
 		.pipe(jshint())
-		.pipe(jshint.reporter('default'));
+		.pipe(jshint.reporter('jshint-stylish'));
 });
 
 gulp.task('serve', function(){
