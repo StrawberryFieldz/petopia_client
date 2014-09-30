@@ -21,8 +21,8 @@ angular.module('app')
     })();
 
     $scope.uploadImage = function(){
-      console.log("placeholder")
-    }
+      console.log("placeholder");
+    };
 
     $scope.rating = 1;
 
@@ -38,9 +38,9 @@ angular.module('app')
             $scope.rating = number;
             console.log($scope.rating);
             $scope.close();
-          }
+          };
         }]
       });       
-    }
+    };
 
   }]);
