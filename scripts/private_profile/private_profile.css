@@ -69,6 +69,14 @@
   font-weight: bold;
 }
 
+.rating-popup-style {
+  width: 500px;
+}
+
+.innerRating {
+  padding: 20px;
+}
+
 .tableHeader {
   background: #3d7899;
   border-radius: 5px;

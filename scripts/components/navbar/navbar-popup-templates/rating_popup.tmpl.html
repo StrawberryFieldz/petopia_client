@@ -1,17 +1,19 @@
 <div ng-controller="PrivateProfileController">
   <div class="rating-popup-style">
-    <material-dialog aria-label="Rating Form">
-        Rating: {{rating}}
+    <material-dialog aria-label="Rating Form" class="innerRating">
+      <section layout="horizontal" layout-align="center center">
+        <h1>Rating:</h1>
+      </section>
       <section layout="vertical" layout-sm="horizontal" layout-align="center center">
-        <material-button ng-click="submitRating(1)" class="material-button-fab">1
+        <material-button ng-click="submitRating(1)" style="background: #ed484c" class="material-button-fab">1
         </material-button>
-        <material-button ng-click="submitRating(2)" class="material-button-fab">2
+        <material-button ng-click="submitRating(2)" style="background: #ee6e70" class="material-button-fab">2
         </material-button>
-        <material-button ng-click="submitRating(3)" class="material-button-fab">3
+        <material-button ng-click="submitRating(3)" style="background: #d2f8d3" class="material-button-fab">3
         </material-button>
-        <material-button ng-click="submitRating(4)" class="material-button-fab">4
+        <material-button ng-click="submitRating(4)" style="background: #72ed75" class="material-button-fab">4
         </material-button>
-        <material-button ng-click="submitRating(5)" class="material-button-fab">5
+        <material-button ng-click="submitRating(5)" style="background: #65d068" class="material-button-fab">5
         </material-button>
     </section>
     </material-dialog>

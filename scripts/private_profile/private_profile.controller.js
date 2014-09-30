@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('PrivateProfileController', ['$scope', '$state', 'SitterManager', 'PopUp', 'PrivateProfileService', function($scope, $state, SitterManager, PopUp, PrivateProfileService){
+  .controller('PrivateProfileController', ['$scope', '$state', 'SitterManager', 'PopUp', '$materialDialog', 'PrivateProfileService', function($scope, $state, SitterManager, PopUp, $materialDialog, PrivateProfileService){
     
     // change this to call the database and pull in any information for the user
     $scope.petSitter = {
@@ -24,14 +24,24 @@ angular.module('app')
       console.log("placeholder")
     }
 
-    $scope.rating = 3;
+    $scope.rating = 1;
     
-    $scope.submitRating = function(number){
-      console.log(number);
-    }
 
     $scope.rateUser = function(e){
-      PopUp.PopUpCall(e, './scripts/components/navbar/navbar-popup-templates/rating_popup.tmpl.html', true);
+      $materialDialog({
+        templateUrl: './scripts/components/navbar/navbar-popup-templates/rating_popup.tmpl.html',
+        targetEvent: e,
+        controller: ['$scope', '$hideDialog', 'Navbar', function($scope, $hideDialog, Navbar) {
+          $scope.close = function() {
+            $hideDialog();
+          };
+          $scope.submitRating = function(number){
+            $scope.rating = number;
+            console.log($scope.rating);
+            $scope.close();
+          }
+        }]
+      });       
     }
 
   }]);
