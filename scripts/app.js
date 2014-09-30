@@ -43,6 +43,12 @@ angular.module('app', ['ui.router', 'ngMaterial'])
       url: '/popup',
       templateUrl: 'scripts/components/popup/popup.html',
       controller: 'PopupController'
+    })
+
+    .state('sitterProfile', {
+      url: '/sitter_profile',
+      templateUrl: 'scripts/sitter_profile/sitter_profile.html',
+      controller: 'SitterProfileController'
     });
 
     // Login popup

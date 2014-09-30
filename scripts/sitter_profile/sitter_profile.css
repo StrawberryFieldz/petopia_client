@@ -1,0 +1,62 @@
+.sitter-profile-container{
+  padding-top:0;
+  padding:30px;
+  background:#CEE2E5;
+  min-width: 800px;
+}
+.sitter-profile-center {
+  padding:30px;
+  padding-top:0px;
+  width:100%;
+}
+
+.sitter-profile-left{
+  padding:10px;
+  width:100%;
+  min-width:300px;
+  max-width:300px;
+  background-color: #E0F0F2;
+  border: 1px solid #3D7899;
+  /*min-width: 300px;
+  max-width: 300px;*/
+}
+
+.sitter-profile-right{
+  padding:30px;
+  width:100%;
+  /*min-width: 300px;*/
+}
+
+.sitter-bio-container{
+  margin-bottom: 20px; 
+  background-color: #E0F0F2; 
+  max-height:50vh;
+  border: 1px solid #3D7899;
+}
+
+.center-bio-toolbar{
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #3D7899;
+  color: white;
+  text-align: center;
+}
+
+.sitter-profile-photo{
+  width: 100%;
+  box-shadow: black 3px 3px 3px;
+  border: 2px solid black; 
+}
+
+.sitter-profile-name{
+  font-size: 40px;
+  font-weight: bold;
+  margin-top:10px;
+  margin-bottom:0px;
+}
+.sitter-profile-rating{
+  margin-top: 0px;
+  margin-bottom:0px;
+  height: 30px;
+  width: 30px;
+}
