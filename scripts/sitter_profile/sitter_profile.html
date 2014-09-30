@@ -1,44 +1,55 @@
 <div ng-include=" 'scripts/components/navbar/navbar.html' "></div>
 <div ng-controller="SitterProfileController">
-  <!-- Layout has a 3 column layout, that when made small will turn into a 3 row layout -->
+  <!-- Profile container -->
   <div flex>
-    <div flex layout="vertical" layout-sm="horizontal" layout-align="space-around">
-      <div class="sitter-profile-left" layout="vertical" flex style="height:550px">
-        <material-content class="sitter-profile-list">
-          <material-list>
-            <material-item>
-              <material-item-content>
-                <div class="material-tile-content">
-                  <img src="https://avatars2.githubusercontent.com/u/7147319?v=2&s=400">
-                  <span class="sitter-profile-name">Wil Andrade</span>
-                </div>
-              </material-item-content>
-              <material-divider inset ng-if="!$last"></material-divider>
-            </material-item>
-          </material-list>
-        </material-content>
-
-        <material-content>
-          <material-list>
-            <material-item>
-              <material-item-content>
-                <div class="material-tile-content">
-                   <div layout="horizontal">
-                      <img class="sitter-profile-rating" src="../../assets/images/paw.png">
-                      <img class="sitter-profile-rating" src="../../assets/images/paw.png">
-                      <img class="sitter-profile-rating" src="../../assets/images/paw.png">
-                      <img class="sitter-profile-rating" src="../../assets/images/paw.png">
-                      <img class="sitter-profile-rating" src="../../assets/images/paw.png">
-                    </div>
-                </div>
-              </material-item-content>
-              <material-divider inset ng-if="!$last"></material-divider>
-            </material-item>
-          </material-list>
-        </material-content>
+    <!-- 3 Column Layout-->
+    <div flex layout="vertical" layout-md="horizontal" layout-align="space-around">
+      <!-- Left Column Layout -->
+      <div class="sitter-profile-left" layout="vertical" flex>
+        <img src="https://avatars2.githubusercontent.com/u/7147319?v=2&s=400">
+        <span class="sitter-profile-name">Wil Andrade</span>
+        <div layout="horizontal">
+          <img class="sitter-profile-rating" src="../../assets/images/paw.png">
+          <img class="sitter-profile-rating" src="../../assets/images/paw.png">
+          <img class="sitter-profile-rating" src="../../assets/images/paw.png">
+          <img class="sitter-profile-rating" src="../../assets/images/paw.png">
+          <img class="sitter-profile-rating" src="../../assets/images/paw.png">
+        </div>
 
       </div>
-      <div flex style="background:blue; height:550px">Uno</div>
+      <!-- Middle Column Layout -->
+      <div flex layout="vertical" layout-align="center center">
+        <material-toolbar class="center-toolbar">Bio:</material-toolbar>
+        <div flex>
+          <material-content class="material-content-padding sitter-profile-center">
+            Lorem ipsum dolor sit amet, ne quod novum mei. Sea omnium invenire mediocrem at, in lobortis conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At vix sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem lucilius in, eam praesent reformidans no. Sed laudem aliquam ne.
+
+            <p>
+        Facete delenit argumentum cum at. Pro rebum nostrum contentiones ad. Mel exerci tritani maiorum at, mea te audire phaedrum, mel et nibh aliquam. Malis causae equidem vel eu. Noster melius vis ea, duis alterum oporteat ea sea. Per cu vide munere fierent.
+            </p>
+
+            <p>
+        Ad sea dolor accusata consequuntur. Sit facete convenire reprehendunt et. Usu cu nonumy dissentiet, mei choro omnes fuisset ad. Te qui docendi accusam efficiantur, doming noster prodesset eam ei. In vel posse movet, ut convenire referrentur eum, ceteros singulis intellegam eu sit.
+            </p>
+
+            <p>
+        Sit saepe quaestio reprimique id, duo no congue nominati, cum id nobis facilisi. No est laoreet dissentias, idque consectetuer eam id. Clita possim assueverit cu his, solum virtute recteque et cum. Vel cu luptatum signiferumque, mel eu brute nostro senserit. Blandit euripidis consequat ex mei, atqui torquatos id cum, meliore luptatum ut usu. Cu zril perpetua gubergren pri. Accusamus rationibus instructior ei pro, eu nullam principes qui, reque justo omnes et quo.
+            </p>
+
+            <p>
+        Sint unum eam id. At sit fastidii theophrastus, mutat senserit repudiare et has. Atqui appareat repudiare ad nam, et ius alii incorrupte. Alii nullam libris his ei, meis aeterno at eum. Ne aeque tincidunt duo. In audire malorum mel, tamquam efficiantur has te.
+            </p>
+
+            <p>
+        Qui utamur tacimates quaestio ad, quod graece omnium ius ut. Pri ut vero debitis interpretaris, qui cu mentitum adipiscing disputationi. Voluptatum mediocritatem quo ut. Fabulas dolorem ei has, quem molestie persequeris et sit.
+            </p>
+
+          </material-content>
+        </div>
+        <div flex>
+          <h1>Something</h1>
+        </div>
+      </div>
       <div flex style="background:yellow; height:550px">Uno</div>
     </div>
   </div>
