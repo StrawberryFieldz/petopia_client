@@ -18,4 +18,8 @@ angular.module('app')
       return user.photo;
     })();
 
+    $scope.uploadImage = function(){
+      console.log("placeholder")
+    }
+
   }]);

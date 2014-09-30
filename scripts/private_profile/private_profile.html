@@ -21,10 +21,11 @@
   <div class="profile-body">
     <div class="animate-switch-container" ng-switch on="data.selectedIndex">
       <div class="animate-switch tab1" ng-switch-when="0">
-        <div layout="vertical" layout-sm="horizontal" layout-padding layout-align="center" class="customLayout">
+        <div layout="vertical" layout-md="horizontal" layout-padding layout-align="center">
           
-          <div flex layout="vertical" layout-align="center">
+          <div flex layout="vertical" layout-align="center" class="customLayout">
             <img class="private-image-style" ng-src="{{userPhoto}}">
+            <material-button class="privte-profile-button button-call-to-action-color private" ng-click="uploadImage()">Upload Image</material-button>
             <material-content class="firstRow">
               <material-toolbar class="tableHeader">
                 <h1 class="material-toolbar-tools" layout-align="center">
@@ -85,15 +86,15 @@
               <material-list>
                 <div class="material-tile-content">
                   <div flex layout="horizontal" layout-align="center center">
-                    <div flex>
+                    <div flex="30">
                       <img src="https://avatars2.githubusercontent.com/u/7147319?v=2&s=400" class="personImage">
                     </div>
-                    <div flex>
-                      <p>Bob</p>
-                      <p>Golden Retriever</p>
+                    <div flex="20" layout="horizontal" layout-align="center">
+                      <p>9/25/2014</p>
                     </div>
-                    <div flex>
-                      <p>You watched a dog and made $50</p>
+                    <div flex layout="horizontal" layout-align="center">
+                      <p>You watched (Insert Pet)</p>
+                      <p>Earned: $50</p>
                     </div>
                   </div>
                 </div>

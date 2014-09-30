@@ -4,17 +4,23 @@
   margin-bottom: 30px;
 }
 
+.customLayout {
+  min-width: 350px;
+}
+
 .private-image-style {
   border-radius: 30px;
   border: 1px solid #ddd;
-  width: 350px;
+  width: 80%;
+  /*width: 350px;*/
   height: 350px;
   box-shadow: black 3px 3px 3px;
   margin: 0px auto;
 }
 
 .firstRow {
-  width: 350px;
+  width: 80%;
+  /*width: 350px;*/
   margin: 10px auto;
   padding: 10px;
   background: #E0F0F2;
@@ -22,6 +28,16 @@
 
 .secondRow {
   background: #E0F0F2;
+  min-width: 350px;
+}
+
+.privte-profile-button {
+  margin-top: 2%;
+  width: 80%;
+  /*width: 350px;*/
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .petImage {  
@@ -44,7 +60,7 @@
 }
 
 .tableHeader {
-  background: #3e82f8;
+  background: #3d7899;
   border-radius: 5px;
   color: white;
   text-decoration: underline;
@@ -56,7 +72,7 @@
   width: 75px;
   height: 75px;
   box-shadow: black 3px 3px 3px;
-  margin: 0px auto;
+  margin-left:20%;
 }
 
 .profile-logo {
