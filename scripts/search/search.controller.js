@@ -22,7 +22,7 @@ angular.module('app')
 
     $scope.GoToProfile = function(sitter){
       $state.go('sitterProfile', {username:sitter.name});
-    }
+    };
 
     $scope.city = CityFactory.getCity();
   }]);

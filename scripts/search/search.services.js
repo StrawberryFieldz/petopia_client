@@ -167,7 +167,7 @@ angular.module('app')
   			  url: 'http://localhost:8080/api/search' 
   			}).success(function(data){
   			  callback(data);
-  			})
+  			});
         //use stub data until rest api is implemented.
 
   		},

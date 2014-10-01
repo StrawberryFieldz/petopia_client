@@ -1,6 +1,5 @@
 angular.module('app')
   .controller('SitterProfileController', ['$scope', '$state', 'SitterManager', function($scope, $state, SitterManager){
-    console.log($state.params)
     SitterManager.FindSitter($state.params.username, function(sitter){
       if(sitter)
         $scope.sitter = sitter;
