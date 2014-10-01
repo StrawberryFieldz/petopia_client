@@ -46,7 +46,7 @@ angular.module('app', ['ui.router', 'ngMaterial'])
     })
 
     .state('sitterProfile', {
-      url: '/sitter_profile',
+      url: '/sitter_profile?username',
       templateUrl: 'scripts/sitter_profile/sitter_profile.html',
       controller: 'SitterProfileController'
     });

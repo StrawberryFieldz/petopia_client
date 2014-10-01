@@ -20,5 +20,9 @@ angular.module('app')
       return new Array(sitter.rating);
     };
 
+    $scope.GoToProfile = function(sitter){
+      $state.go('sitterProfile', {username:sitter.name});
+    };
+
     $scope.city = CityFactory.getCity();
   }]);
