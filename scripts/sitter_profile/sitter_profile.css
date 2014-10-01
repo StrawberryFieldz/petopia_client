@@ -21,6 +21,10 @@
   max-width: 300px;*/
 }
 
+.sitter-map-container{
+  border: 1px solid #3D7899;
+}
+
 .sitter-profile-right{
   padding:30px;
   width:100%;

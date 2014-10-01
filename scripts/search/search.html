@@ -64,7 +64,7 @@
     </div>
     <div class="toolbar_fill">
       <material-card class="sitter-card" ng-repeat="sitter in sitters">
-        <div layout="vertical">
+        <div ng-click="GoToProfile(sitter.name)" layout="vertical">
           <div layout="horizontal" flex>
             <div flex><img class="image-style" ng-src="{{sitter.photo}}"></div>
             <div flex>
