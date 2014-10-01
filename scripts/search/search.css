@@ -3,6 +3,77 @@
 	height: 300px;
 	border: 1px solid black;
 }
+
+/*.search-layout {
+  padding: 1% 5%;
+  position: relative;
+  background-color: #CEE2E5;
+  height: 100vh;
+}*/
+.search-layout {
+  padding: 1% 5%;
+  position: relative;
+  background-color: #f8f9fa;
+
+}
+
+
+.image-center { 
+  width: 100%;
+}
+
+.outsideContainer {
+  margin-bottom: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  clear: both;
+  overflow:hidden
+}
+
+.box2 {
+  /*background:#E0F0F2;*/
+  background:#eff1f3;
+}
+
+.box1 {
+  margin: 10px;
+  /*width: 25%;*/
+  width: 250px;
+  float: left;
+  min-width:250px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid #d7d7d7;
+  /*border: 1px solid #3D7899;*/
+  border-radius: 5px;
+  box-shadow: gray 1px 1px 5px;
+}
+
+.flexClass {
+  width: 100%
+}
+
+.sitter-cards {
+  padding:10px;
+  width:300px;
+  /*min-width: 40%;*/
+  float: left;
+  box-sizing: border-box;
+  display: block;
+  clear: both;
+
+  /*
+  display: block;
+  position: relative;
+  min-width: 250px;*/
+  /*min-width:300px;
+  max-width:300px;*/
+  background-color: #E0F0F2;
+  border: 1px solid #3D7899;
+}
+
 .face {
   border-radius: 30px;
   border: 1px solid #ddd;
@@ -31,24 +102,60 @@
   background: #899F9F;/*(0-255,0-255,0-255)*/
 }
 
+.pet {
+  height: 50px;
+  margin-left: 20%;
+  opacity: 0.6;
+  width: 50px;
+}
+
 .sitter-card-name{
+  border-top: 1px solid #d7d7d7;
+  /*border-top: 1px solid black;*/
   text-align:center;
-  font-size: 35px;
-  font-weight: bold;
-  margin: 20px 0 0 0;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 10px;
+  margin: 10px 0;
 }
 
 .sitter-card-city{
   text-align: center;
+  font-size: 35px;
+
+  font-weight: bold;
+
+/*  opacity: 0.5;
+  color: gray;*/
+  margin: 0;
+}
+
+.divider {
+  /*height:5px;*/
+  height: 3px;
+  /*border:none;*/
+  border-radius: 20px;
+  color: #455A98;
+  margin: 10px 10px;
+  background-color: #c4c6c8;
+  /*background-color:#455A98;*/
+}
+
+.perday{
+  text-align:center;
   font-size: 15px;
-  margin-top: 0;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 0px;
 }
 
 .sitter-card-rate{
   text-align:center;
-  font-size: 60px;
-  font-weight: bold;
-  margin: 20px 0 0 0;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+  padding: 3px 0;
 }
 
 .sitter-card-rating{
@@ -58,12 +165,12 @@
 }
 
 .image-style {
-  border-radius: 30px;
+  border-radius: 50%;
   border: 1px solid #ddd;
-  width: 125px;
-  height: 125px;
-  box-shadow: black 3px 3px 3px;
-  margin: 0;
+  width: 150px;
+  height: 150px;
+  margin: 10px auto;
+  box-shadow: black 1px 1px 5px;
 }
 .sitter-card {
   width: 300px;

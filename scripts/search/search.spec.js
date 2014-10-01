@@ -20,10 +20,6 @@ describe('SearchController', function () {
     expect(ctrl).to.not.equal(undefined);
   });
 
-  it('should load sitters', function(){
-    expect(scope.sitters).to.not.equal(undefined);
-  });
-
 
 });
 

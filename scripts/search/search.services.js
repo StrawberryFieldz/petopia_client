@@ -147,8 +147,14 @@ angular.module('app')
 		];
   	return {
   		GetSitters: function(callback){
+  			$http({
+  			  method: 'GET',
+  			  url: 'http://localhost:8080/api/search' 
+  			}).success(function(data){
+  			  callback(data);
+  			})
         //use stub data until rest api is implemented.
-        return this.GetStubData();
+
   		},
   		GetStubData: function(callback){
   			return stub;
