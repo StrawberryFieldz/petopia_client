@@ -22,7 +22,7 @@
       <!-- <div flex layout-sm="horizontal"> -->
         <div class="box1" ng-repeat="sitter in sitters">
           <center>
-            <img class="image-style" ng-src="{{sitter.photo}}">
+            <img ng-click="GoToProfile(sitter)" class="image-style" ng-src="{{sitter.photo}}">
           </center>
           <p class="sitter-card-city">{{sitter.name}}</p>
         <div class="box2">

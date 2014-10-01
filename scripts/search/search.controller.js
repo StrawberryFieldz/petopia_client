@@ -21,8 +21,7 @@ angular.module('app')
     };
 
     $scope.GoToProfile = function(sitter){
-      console.log("shut up jeff");
-      $state.go('sitterProfile');
+      $state.go('sitterProfile', {username:sitter.name});
     }
 
     $scope.city = CityFactory.getCity();
