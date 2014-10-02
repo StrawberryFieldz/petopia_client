@@ -11,16 +11,33 @@
       </material-toolbar>
       <material-toolbar>
         <section layout="horizontal" layout-sm="vertical" layout-align="center center">
-          <form name="cityInput" ng-submit="setCity(cityName)">
-              <input class="inputFormSearchPage" type="text" placeholder="Enter your city">
-          </form>
+          <div layout="horizontal">
+            <div class="filterStyle" flex layout="vertical" layout-align="center center">
+              City:
+              <form name="cityInput" ng-submit="setCity(cityName)">
+                  <input class="inputFormSearchPage" type="text" ng-model="filterCity" placeholder="Enter your city">
+              </form>
+            </div>
+            <div class="filterStyle" flex layout="vertical" layout-align="center center">
+              Price:
+              <form name="cityInput" ng-submit="setCity(cityName)">
+                  <input class="inputFormSearchPage" type="text" ng-model="filterPrice" placeholder="Enter your city">
+              </form>
+            </div>
+            <div class="filterStyle" flex layout="vertical" layout-align="center center">
+              Rating:
+              <form name="cityInput" ng-submit="setCity(cityName)">
+                  <input class="inputFormSearchPage" type="text" ng-model="filterRating" placeholder="Enter your city">
+              </form>
+            </div>
+          </div>
         </section>
       </material-toolbar>
     </div>
     <div id="wrapper" style="overflow: hidden; width: 100%">
     <!-- <div class="outsideContainer"> -->
       <!-- <div flex layout-sm="horizontal"> -->
-        <div class="box1" ng-repeat="sitter in sitters">
+        <div class="box1" ng-repeat="sitter in sitters | filter:filterCity | filter:filterPrice | filter:filterRating">
           <center>
             <img ng-click="GoToProfile(sitter)" class="image-style" ng-src="{{sitter.photo}}">
           </center>
