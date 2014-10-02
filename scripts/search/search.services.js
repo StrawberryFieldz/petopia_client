@@ -36,7 +36,7 @@ angular.module('app')
 		        cats: true
 			},
 			{
-				name: "SomeBozo",
+				name: "Jeff",
 				location: "Boston",
 				zip: 03062,
 				photo: "https://avatars2.githubusercontent.com/u/7004952?v=2&s=400",
