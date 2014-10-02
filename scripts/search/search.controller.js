@@ -17,7 +17,14 @@ angular.module('app')
     };
 
     $scope.getRating = function(sitter){
-      return new Array(sitter.rating);
+      var array = [];
+      for(var i = 0; i < sitter.rating; i++){
+        array.push("../../assets/images/pawprint.png");
+      }
+      while(array.length < 5){
+        array.push("../../assets/images/graypaw.png")
+      }
+      return array;
     };
 
     $scope.GoToProfile = function(sitter){

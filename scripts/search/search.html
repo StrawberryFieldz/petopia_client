@@ -38,12 +38,13 @@
     <!-- <div class="outsideContainer"> -->
       <!-- <div flex layout-sm="horizontal"> -->
         <div class="box1 repeated-item" ng-repeat="sitter in sitters | matchCity:letter | matchMaxPrice:maxPrice | minRating:minRating">
+
+          <p class="sitter-card-city">{{sitter.name}}</p>
           <center>
             <img ng-click="GoToProfile(sitter)" class="image-style" ng-src="{{sitter.photo}}">
           </center>
-          <p class="sitter-card-city">{{sitter.name}}</p>
-          <div style="text-align: center">
-            <img style="margin: 0 1px" ng-repeat="item in getRating(sitter) track by $index" src="../../assets/images/pawprint.png">
+          <div style="text-align: center;">
+            <img style="margin: 3px" ng-repeat="item in getRating(sitter) track by $index" ng-src={{item}}>
           </div>
         <div class="box2">
           <p class="sitter-card-name">{{sitter.location}}</p>

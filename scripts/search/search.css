@@ -4,6 +4,10 @@
 	border: 1px solid black;
 }
 
+.wrapper {
+  margin: auto;
+}
+
 /*.search-layout {
   padding: 1% 5%;
   position: relative;
@@ -146,7 +150,8 @@
 
 /*  opacity: 0.5;
   color: gray;*/
-  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .divider {
