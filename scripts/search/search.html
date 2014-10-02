@@ -37,7 +37,7 @@
     <div id="wrapper" style="overflow: hidden; width: 100%">
     <!-- <div class="outsideContainer"> -->
       <!-- <div flex layout-sm="horizontal"> -->
-        <div class="box1" ng-repeat="sitter in sitters | matchCity:letter | matchMaxPrice:maxPrice | minRating:minRating">
+        <div class="box1 repeated-item" ng-repeat="sitter in sitters | matchCity:letter | matchMaxPrice:maxPrice | minRating:minRating">
           <center>
             <img ng-click="GoToProfile(sitter)" class="image-style" ng-src="{{sitter.photo}}">
           </center>
