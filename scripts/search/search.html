@@ -15,19 +15,19 @@
             <div class="filterStyle" flex layout="vertical" layout-align="center center">
               City:
               <form name="cityInput" ng-submit="setCity(cityName)">
-                  <input class="inputFormSearchPage" type="text" ng-model="filterCity" placeholder="Enter your city">
+                  <input class="inputFormSearchPage" type="text" ng-model="letter" placeholder="Enter your city">
               </form>
             </div>
             <div class="filterStyle" flex layout="vertical" layout-align="center center">
-              Price:
+              Max Price:
               <form name="cityInput" ng-submit="setCity(cityName)">
-                  <input class="inputFormSearchPage" type="text" ng-model="filterPrice" placeholder="Enter your city">
+                  <input class="inputFormSearchPage" type="text" ng-model="maxPrice" placeholder="Enter your city">
               </form>
             </div>
             <div class="filterStyle" flex layout="vertical" layout-align="center center">
               Rating:
               <form name="cityInput" ng-submit="setCity(cityName)">
-                  <input class="inputFormSearchPage" type="text" ng-model="filterRating" placeholder="Enter your city">
+                  <input class="inputFormSearchPage" type="text" ng-model="minRating" placeholder="Enter your city">
               </form>
             </div>
           </div>
@@ -37,7 +37,7 @@
     <div id="wrapper" style="overflow: hidden; width: 100%">
     <!-- <div class="outsideContainer"> -->
       <!-- <div flex layout-sm="horizontal"> -->
-        <div class="box1" ng-repeat="sitter in sitters | filter:filterCity | filter:filterPrice | filter:filterRating">
+        <div class="box1" ng-repeat="sitter in sitters | matchCity:letter | matchMaxPrice:maxPrice | minRating:minRating">
           <center>
             <img ng-click="GoToProfile(sitter)" class="image-style" ng-src="{{sitter.photo}}">
           </center>

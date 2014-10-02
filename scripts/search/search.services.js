@@ -186,5 +186,56 @@ angular.module('app')
   			return stub;
   		}
   	};
-  }]);
+  }])
+
+  .filter('matchCity', function () {
+	  return function (items, letter) {
+	  	if(letter === undefined){
+	  	  return items;
+	  	}
+	    var filtered = [];
+	    var letterMatch = new RegExp(letter, 'i');
+	    for (var i = 0; i < items.length; i++) {
+	      var item = items[i];
+	      if (letterMatch.test(item.location.substring(0, letter.length))) {
+	        filtered.push(item);
+	      }
+	    }
+	    console.log(filtered);
+	    return filtered;
+	  };
+	})
+
+  .filter('matchMaxPrice', function () {
+	  return function (items, maxPrice) {
+	  	console.log(maxPrice);
+	  	if(maxPrice === undefined || maxPrice === ''){
+	  	  return items;
+	  	}
+	    var filtered = [];
+	    for (var i = 0; i < items.length; i++) {
+	      var item = items[i];
+	      if (maxPrice > item.cost) {
+	        filtered.push(item);
+	      }
+	    }
+	    return filtered;
+	  };
+	})
+
+   .filter('minRating', function () {
+  	  return function (items, minRating) {
+  	  	if(minRating === undefined){
+  	  	  return items;
+  	  	}
+  	    var filtered = [];
+  	    for (var i = 0; i < items.length; i++) {
+  	      var item = items[i];
+  	      if (minRating <= item.rating) {
+  	        filtered.push(item);
+  	      }
+  	    }
+  	    return filtered;
+  	  };
+  	})
 
