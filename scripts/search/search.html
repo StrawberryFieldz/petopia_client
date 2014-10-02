@@ -51,14 +51,16 @@
           <div class="divider"></div>
           <div layout="horizontal">
             <div flex>
-              <img class="pet" src="../assets/images/redcat.png">
+              <img class="pet" src="../assets/images/greencat.png" ng-show="{{sitter.cats}}">
+              <img class="pet" src="../assets/images/redcat.png" ng-hide="{{sitter.cats}}">
             </div>
             <div flex>
               <p class="sitter-card-rate">${{sitter.cost}}</p>
               <p class="perday">purr day</p>
             </div>
             <div flex>
-              <img class="pet" src="../assets/images/greendog.png">
+              <img class="pet" src="../assets/images/greendog.png" ng-show="{{sitter.dogs}}">
+              <img class="pet" src="../assets/images/reddog.png" ng-hide="{{sitter.dogs}}">
             </div>
           </div>
         </div>
