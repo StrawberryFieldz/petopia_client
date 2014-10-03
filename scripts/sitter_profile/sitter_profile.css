@@ -17,8 +17,6 @@
   max-width:300px;
   background-color: #E0F0F2;
   border: 1px solid #3D7899;
-  /*min-width: 300px;
-  max-width: 300px;*/
 }
 
 .sitter-map-container{
@@ -28,7 +26,6 @@
 .sitter-profile-right{
   padding:30px;
   width:100%;
-  /*min-width: 300px;*/
 }
 
 .sitter-bio-container{
