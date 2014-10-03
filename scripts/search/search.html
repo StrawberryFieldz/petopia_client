@@ -1,46 +1,67 @@
 <div ng-include=" 'scripts/components/navbar/navbar.html' "></div>
 <div ng-controller="SearchController">
 
+  <div class="tabsBackground" flex layout="horizontal" layout-sm="horizontal" layout-align="center">
+    <material-toolbar>
+      <section layout="horizontal" layout-sm="vertical" layout-align="center center">
+        <span style="font-size: 35px; font-weight: bold; font-style: italic; margin-top: 10px; margin-bottom: 10px">Narrow Your Search Results:</span>
+        <div layout="horizontal">
+          <div class="filterStyle" flex layout="vertical" layout-align="center center">
+            City:
+            <form name="cityInput" ng-submit="setCity(cityName)">
+                <input class="inputFormSearchPage" type="text" ng-model="letter" placeholder="Enter your city">
+            </form>
+          </div>
+          <div class="filterStyle" flex layout="vertical" layout-align="center center">
+            Max Price:
+            <form name="cityInput" ng-submit="setCity(cityName)">
+                <input class="inputFormSearchPage" type="text" ng-model="maxPrice" placeholder="Enter your city">
+            </form>
+          </div>
+          <div class="filterStyle" flex layout="vertical" layout-align="center center">
+            Minimum Rating:
+            <form name="cityInput" ng-submit="setCity(cityName)">
+                <input class="inputFormSearchPage" type="text" ng-model="minRating" placeholder="Enter your city">
+            </form>
+          </div>
+        </div>
+      </section>
+    </material-toolbar>
+  </div>
 
   <div flex class="search-layout">
-    <div flex layout="horizontal" layout-sm="horizontal" layout-align="center">
-      <material-toolbar class="material-theme-light-blue" ng-show="sitters.length <= 0">
-        <section layout="vertical" layout-sm="horizontal" layout-align="center center">
-          <p>Sitters are unavailable</p>
-        </section>
-      </material-toolbar>
-      <material-toolbar>
-        <section layout="horizontal" layout-sm="vertical" layout-align="center center">
-          <form name="cityInput" ng-submit="setCity(cityName)">
-              <input class="inputFormSearchPage" type="text" placeholder="Enter your city">
-          </form>
-        </section>
-      </material-toolbar>
-    </div>
+
     <div id="wrapper" style="overflow: hidden; width: 100%">
     <!-- <div class="outsideContainer"> -->
       <!-- <div flex layout-sm="horizontal"> -->
-        <div class="box1" ng-repeat="sitter in sitters">
-          <center>
-            <img ng-click="GoToProfile(sitter)" class="image-style" ng-src="{{sitter.photo}}">
-          </center>
+        <div class="box1 repeated-item" ng-repeat="sitter in sitters | matchCity:letter | matchMaxPrice:maxPrice | minRating:minRating">
+          <div ng-click="GoToProfile(sitter)" style="width: 100%; height: 100%">
           <p class="sitter-card-city">{{sitter.name}}</p>
+          <center>
+            <img class="image-style" ng-src="{{sitter.photo}}">
+          </center>
+          <div style="text-align: center;">
+            <img style="margin: 3px" ng-repeat="item in getRating(sitter) track by $index" ng-src={{item}}>
+          </div>
         <div class="box2">
           <p class="sitter-card-name">{{sitter.location}}</p>
           <div class="divider"></div>
           <div layout="horizontal">
             <div flex>
-              <img class="pet" src="../assets/images/redcat.png">
+              <img class="pet" src="../assets/images/greencat.png" ng-show="{{sitter.cats}}">
+              <img class="pet" src="../assets/images/redcat.png" ng-hide="{{sitter.cats}}">
             </div>
             <div flex>
               <p class="sitter-card-rate">${{sitter.cost}}</p>
               <p class="perday">purr day</p>
             </div>
             <div flex>
-              <img class="pet" src="../assets/images/greendog.png">
+              <img class="pet" src="../assets/images/greendog.png" ng-show="{{sitter.dogs}}">
+              <img class="pet" src="../assets/images/reddog.png" ng-hide="{{sitter.dogs}}">
             </div>
           </div>
         </div>
+      </div>
       <!-- </div> -->
     <!-- </div> -->
   </div>

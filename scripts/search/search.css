@@ -4,6 +4,10 @@
 	border: 1px solid black;
 }
 
+.wrapper {
+  margin: auto;
+}
+
 /*.search-layout {
   padding: 1% 5%;
   position: relative;
@@ -11,12 +15,21 @@
   height: 100vh;
 }*/
 .search-layout {
-  padding: 1% 5%;
+  padding: 1% 10%;
   position: relative;
   background-color: #f8f9fa;
 
 }
 
+.tabsBackground {
+  background: #4f84a4;
+  padding-bottom: 20px;
+  color: white;
+}
+
+.filterStyle {
+  margin: 0px 10px;
+}
 
 .image-center { 
   width: 100%;
@@ -83,14 +96,29 @@
 }
 
 .inputFormSearchPage {
-  text-align: center;
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  /*text-align: center;
   color: white;
   width: 300px;
   height: 60px;
-  background-color: #134545;
+  background-color: white;
   opacity: 0.7;
-  border-radius: 4px;
-  margin-bottom: 9px;
+  border-radius: 4px solid black;
+  margin-bottom: 9px;*/
 }
 
 .sitter-container{
@@ -128,7 +156,8 @@
 
 /*  opacity: 0.5;
   color: gray;*/
-  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .divider {
@@ -189,3 +218,50 @@
 .searchFormText {
   color: black;
 }
+
+
+/* Animation for filters on search page */
+.repeated-item.ng-enter, .repeated-item.ng-move {
+ -webkit-transition:0.5s linear all;
+ -moz-transition:0.5s linear all;
+ -o-transition:0.5s linear all;
+ transition:0.5s linear all;
+ opacity:0;
+}
+
+.repeated-item.ng-enter.ng-enter-active,
+.repeated-item.ng-move.ng-move-active {
+ opacity:1;
+}
+
+.repeated-item.ng-leave {
+ -webkit-animation:0.5s my_animation;
+ -moz-animation:0.5s my_animation;
+ -o-animation:0.5s my_animation;
+ animation:0.5s my_animation;
+}
+
+@keyframes my_animation {
+ from { opacity:1; }
+ to { opacity:0; }
+}
+
+/*
+ Unfortunately each browser vendor requires
+ its own definition of keyframe animation code...
+*/
+@-webkit-keyframes my_animation {
+ from { opacity:1; }
+ to { opacity:0; }
+}
+
+@-moz-keyframes my_animation {
+ from { opacity:1; }
+ to { opacity:0; }
+}
+
+@-o-keyframes my_animation {
+ from { opacity:1; }
+ to { opacity:0; }
+}
+/* End Animation CSS */

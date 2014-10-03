@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('SearchController', ['$scope', '$state', 'CityFactory', 'SitterManager', function($scope, $state, CityFactory, SitterManager){
+  .controller('SearchController', ['$scope', '$state', 'CityFactory', 'SitterManager', 'PawIconManager', function($scope, $state, CityFactory, SitterManager, PawIconManager){
 
     $scope.sitters = SitterManager.GetStubData();
 
@@ -17,7 +17,7 @@ angular.module('app')
     };
 
     $scope.getRating = function(sitter){
-      return new Array(sitter.rating);
+      return PawIconManager.GetIcons(sitter.rating);
     };
 
     $scope.GoToProfile = function(sitter){
