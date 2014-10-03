@@ -15,10 +15,16 @@
   height: 100vh;
 }*/
 .search-layout {
-  padding: 1% 5%;
+  padding: 1% 10%;
   position: relative;
   background-color: #f8f9fa;
 
+}
+
+.tabsBackground {
+  background: #4f84a4;
+  padding-bottom: 20px;
+  color: white;
 }
 
 .filterStyle {
