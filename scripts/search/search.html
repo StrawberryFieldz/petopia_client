@@ -33,7 +33,7 @@
 
     <div id="wrapper" style="overflow: hidden; width: 100%">
         <div class="box1 repeated-item" ng-repeat="sitter in sitters | matchCity:letter | matchMaxPrice:maxPrice | minRating:minRating">
-          <div ng-click="GoToProfile(sitter)" style="width: 100%; height: 100%">
+          <div ng-click="GoToProfile(sitter)" style="width: 100%; height: 100%; cursor: pointer;">
           <p class="sitter-card-city">{{sitter.name}}</p>
           <center>
             <img class="image-style" ng-src="{{sitter.photo}}">
