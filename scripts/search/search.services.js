@@ -19,7 +19,7 @@ angular.module('app')
 				zip: 94103,
 				photo: "https://avatars2.githubusercontent.com/u/7147319?v=2&s=400",
 				cost: 99,
-				rating: 1,
+				rating: 5,
 				bio: "Lorem ipsum dolor sit amet, ne quod novum mei.Sea omnium invenire mediocrem at, in lobortis conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At vix sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem lucilius in, eam praesent reformidans no. Sed laudem aliquam ne.",
 		        dogs:true,
 		        cats: false
