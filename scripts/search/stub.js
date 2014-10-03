@@ -183,3 +183,14 @@ var stub = [
             cats: false
       },
     ];
+
+    var stubSitter = {
+      name: 'Tyler',
+      userLocation: 'San Francisco',
+      bio: '',
+      dailyRate: '$10',
+      petToWatchObject: {
+        dog: false,
+        cat: false
+      }
+    };
