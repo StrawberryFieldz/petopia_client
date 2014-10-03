@@ -46,7 +46,6 @@ angular.module('app')
 
   .filter('matchCity', function () {
 	  return function (items, letter) {
-	  	console.log(typeof letter);
 	  	if(letter === undefined || parseInt(letter)){
 	  	  return items;
 	  	}
