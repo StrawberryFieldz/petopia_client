@@ -20,6 +20,13 @@ describe('SearchController', function () {
     expect(ctrl).to.not.equal(undefined);
   });
 
+  it('should have a getRating function', function(){
+    expect(scope.getRating).to.be.a('function');
+  });
+
+  it('should have a GoToProfile function', function(){
+    expect(scope.GoToProfile).to.be.a('function');
+  });
 
 });
 

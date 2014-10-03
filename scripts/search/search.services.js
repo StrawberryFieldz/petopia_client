@@ -231,7 +231,8 @@ angular.module('app')
 
   .filter('matchCity', function () {
 	  return function (items, letter) {
-	  	if(letter === undefined){
+	  	console.log(typeof letter);
+	  	if(letter === undefined || parseInt(letter)){
 	  	  return items;
 	  	}
 	    var filtered = [];
@@ -248,7 +249,7 @@ angular.module('app')
 
   .filter('matchMaxPrice', function () {
 	  return function (items, maxPrice) {
-	  	if(maxPrice === undefined || maxPrice === ''){
+	  	if(maxPrice === undefined || maxPrice === '' || !parseInt(maxPrice)){
 	  	  return items;
 	  	}
 	    var filtered = [];
@@ -264,7 +265,7 @@ angular.module('app')
 
    .filter('minRating', function () {
   	  return function (items, minRating) {
-  	  	if(minRating === undefined){
+  	  	if(minRating === undefined || minRating < 1 || minRating > 5){
   	  	  return items;
   	  	}
   	    var filtered = [];
