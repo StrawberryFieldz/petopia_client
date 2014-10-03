@@ -214,6 +214,21 @@ angular.module('app')
   	};
   }])
 
+  .factory('PawIconManager', function(){
+  	return {
+  		GetIcons: function(num){
+  			var array = [];
+  			for(var i = 0; i < num; i++){
+  			  array.push("../../assets/images/pawprint.png");
+  			}
+  			while(array.length < 5){
+  			  array.push("../../assets/images/graypaw.png")
+  			}
+  			return array;
+  		}
+  	}
+  })
+
   .filter('matchCity', function () {
 	  return function (items, letter) {
 	  	if(letter === undefined){

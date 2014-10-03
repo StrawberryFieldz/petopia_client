@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('SearchController', ['$scope', '$state', 'CityFactory', 'SitterManager', function($scope, $state, CityFactory, SitterManager){
+  .controller('SearchController', ['$scope', '$state', 'CityFactory', 'SitterManager', 'PawIconManager', function($scope, $state, CityFactory, SitterManager, PawIconManager){
 
     $scope.sitters = SitterManager.GetStubData();
 
@@ -17,14 +17,7 @@ angular.module('app')
     };
 
     $scope.getRating = function(sitter){
-      var array = [];
-      for(var i = 0; i < sitter.rating; i++){
-        array.push("../../assets/images/pawprint.png");
-      }
-      while(array.length < 5){
-        array.push("../../assets/images/graypaw.png")
-      }
-      return array;
+      return PawIconManager.GetIcons(sitter.rating);
     };
 
     $scope.GoToProfile = function(sitter){
