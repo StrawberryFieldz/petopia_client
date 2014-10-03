@@ -10,7 +10,6 @@ angular.module('app')
   			}).success(function(data){
   			  callback(data);
   			});
-        //use stub data until rest api is implemented.
 
   		},
 
