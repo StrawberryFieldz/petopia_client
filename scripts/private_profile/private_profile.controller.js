@@ -2,16 +2,7 @@ angular.module('app')
   .controller('PrivateProfileController', ['$scope', '$state', 'SitterManager', 'PopUp', '$materialDialog', 'PrivateProfileService', '$http', function($scope, $state, SitterManager, PopUp, $materialDialog, PrivateProfileService, $http){
 
     // change this to call the database and pull in any information for the user
-    $scope.petSitter = {
-      name: 'Tyler',
-      userLocation: 'San Francisco',
-      bio: '',
-      dailyRate: '$10',
-      petToWatchObject: {
-        dog: false,
-        cat: false
-      }
-    };
+    $scope.petSitter = stubSitter;
 
     $scope.setPetSitterInfo = PrivateProfileService.setPetSitterInfo;
 

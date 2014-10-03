@@ -51,7 +51,4 @@ angular.module('app', ['ui.router', 'ngMaterial'])
       controller: 'SitterProfileController'
     });
 
-    // Login popup
-    // Signup popup
-
 }]);

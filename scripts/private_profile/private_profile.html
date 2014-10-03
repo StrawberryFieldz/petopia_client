@@ -1,16 +1,6 @@
 <div ng-include=" 'scripts/components/navbar/navbar.html' "></div>
 <div ng-controller="PrivateProfileController">
 
-<!-- 
-  <div layout="vertical" layout-align="center" class="pet-sitter-header">
-    <div>
-      <h1>Become a pet sitter.</h1>
-    </div>
-    <div>
-      Petopia allows you to make money by watching pets in your area.
-    </div>
-  </div> -->
-
 <material-content ng-view scroll-y flex class="material-content">
   <material-tabs selected="data.selectedIndex" center>
     <material-tab label="Dashboard"></material-tab>
@@ -199,7 +189,7 @@
               Cat
             </material-checkbox>
             <material-button class= "button-call-to-action-color private-button-customize">Submit</material-button>
-            <!-- <material-button class="material-button-raised material-button-colored" layout="horizontal">Submit</material-button> -->
+            
           </form>
         </material-content>
       </div>

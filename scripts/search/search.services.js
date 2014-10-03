@@ -10,7 +10,6 @@ angular.module('app')
   			}).success(function(data){
   			  callback(data);
   			});
-        //use stub data until rest api is implemented.
 
   		},
 
@@ -47,7 +46,6 @@ angular.module('app')
 
   .filter('matchCity', function () {
 	  return function (items, letter) {
-	  	console.log(typeof letter);
 	  	if(letter === undefined || parseInt(letter)){
 	  	  return items;
 	  	}
