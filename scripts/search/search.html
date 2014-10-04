@@ -20,9 +20,13 @@
           </div>
           <div class="filterStyle" flex layout="vertical" layout-align="center center">
             Minimum Rating:
-            <form name="cityInput" ng-submit="setCity(cityName)">
-                <input class="inputFormSearchPage" type="text" ng-model="minRating" placeholder="Enter your city">
-            </form>
+            <material-checkbox ng-model="dogFilter" ng-click="petSitter.petToWatchObject.dog=!petSitter.petToWatchObject.dog" aria-label="Checkbox 1">
+              Dog
+            </material-checkbox>
+
+            <material-checkbox ng-model="catFilter" ng-click="petSitter.petToWatchObject.cat=!petSitter.petToWatchObject.cat" aria-label="Checkbox 2">
+              Cat
+            </material-checkbox>
           </div>
         </div>
       </section>
@@ -32,7 +36,7 @@
   <div flex class="search-layout">
 
     <div id="wrapper" style="overflow: hidden; width: 100%">
-        <div class="box1 repeated-item" ng-repeat="sitter in sitters | matchCity:letter | matchMaxPrice:maxPrice | minRating:minRating">
+        <div class="box1 repeated-item" ng-repeat="sitter in sitters | matchCity:letter | matchMaxPrice:maxPrice | dogFilterer:dogFilter:catFilter">
           <div ng-click="GoToProfile(sitter)" style="width: 100%; height: 100%; cursor: pointer;">
           <p class="sitter-card-city">{{sitter.name}}</p>
           <center>

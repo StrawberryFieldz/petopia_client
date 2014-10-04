@@ -77,19 +77,53 @@ angular.module('app')
 	  };
 	})
 
-   .filter('minRating', function () {
-  	  return function (items, minRating) {
-  	  	if(minRating === undefined || minRating < 1 || minRating > 5){
-  	  	  return items;
-  	  	}
-  	    var filtered = [];
-  	    for (var i = 0; i < items.length; i++) {
-  	      var item = items[i];
-  	      if (minRating <= item.rating) {
-  	        filtered.push(item);
-  	      }
-  	    }
-  	    return filtered;
+   .filter('dogFilterer', function () {
+  	  return function (items, dogFilter, catFilter) {
+        var filtered = [];
+        if(!dogFilter && !catFilter){
+          return items;
+        }
+        if(dogFilter && catFilter){
+          for (var i = 0; i < items.length; i++) {
+            var item = items[i];
+            if (item.dogs === true && item.cats === true) {
+              filtered.push(item);
+            }
+          }
+          return filtered;
+        } else if(dogFilter && !catFilter){
+          for (var i = 0; i < items.length; i++) {
+            var item = items[i];
+            if (item.dogs === true) {
+              filtered.push(item);
+            }
+          }
+          return filtered;
+        } else if(!dogFilter && catFilter){
+          for (var i = 0; i < items.length; i++) {
+            var item = items[i];
+            if (item.cats === true) {
+              filtered.push(item);
+            }
+          }
+          return filtered;
+        }
   	  };
   	})
+
+    .filter('catFilterer', function () {
+      return function (items, catFilter) {
+        if(catFilter === false || catFilter === undefined){
+          return items;
+        }
+        var filtered = [];
+        for (var i = 0; i < items.length; i++) {
+          var item = items[i];
+          if (item.dogs === true) {
+            filtered.push(item);
+          }
+        }
+        return filtered;
+      };
+    })
 
