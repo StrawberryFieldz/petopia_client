@@ -42,6 +42,11 @@
   background:#eff1f3;
 }
 
+.box1:hover {
+  background-color: #f1f3f4;
+  box-shadow: #848485 6px 6px 16px;
+}
+
 .box1 {
   margin: 10px;
   width: 250px;
