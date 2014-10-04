@@ -1,6 +1,10 @@
 <div ng-include=" 'scripts/components/navbar/navbar.html' "></div>
 <div ng-controller="SearchController">
 
+          <!-- <material-content class="material-content-padding"> -->
+
+        <!-- </material-content> -->
+
   <div class="tabsBackground" flex layout="horizontal" layout-sm="horizontal" layout-align="center">
     <material-toolbar>
       <section layout="horizontal" layout-sm="vertical" layout-align="center center">
@@ -17,7 +21,7 @@
             <form name="cityInput" ng-submit="setCity(cityName)">
                 <input class="inputFormSearchPage" type="text" ng-model="maxPrice" placeholder="Enter your city">
             </form>
-          </div>
+          </div>    
           <div class="filterStyle" flex layout="vertical" layout-align="center center">
             Minimum Rating:
             <material-checkbox ng-model="dogFilter" ng-click="petSitter.petToWatchObject.dog=!petSitter.petToWatchObject.dog" aria-label="Checkbox 1">
@@ -33,6 +37,10 @@
     </material-toolbar>
   </div>
 
+  <material-slider>
+    <input type="range" ng-model="myValue" min="5" max="500">
+  </material-slider>
+  
   <div flex class="search-layout">
 
     <div id="wrapper" style="overflow: hidden; width: 100%">
