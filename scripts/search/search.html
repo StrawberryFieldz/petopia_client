@@ -17,7 +17,7 @@
             <form name="cityInput" ng-submit="setCity(cityName)">
                 <input class="inputFormSearchPage" type="text" ng-model="maxPrice" placeholder="Enter your city">
             </form>
-          </div>
+          </div>    
           <div class="filterStyle" flex layout="vertical" layout-align="center center">
             Minimum Rating:
             <material-checkbox ng-model="dogFilter" ng-click="petSitter.petToWatchObject.dog=!petSitter.petToWatchObject.dog" aria-label="Checkbox 1">
@@ -33,6 +33,14 @@
     </material-toolbar>
   </div>
 
+  <div class="slider">
+    <div flex="50" offset="25">
+      <material-slider>
+        <input type="range" ng-model="price" min="5" max="300">{{price}}
+      </material-slider>
+    </div>
+  </div>
+  
   <div flex class="search-layout">
 
     <div id="wrapper" style="overflow: hidden; width: 100%">
