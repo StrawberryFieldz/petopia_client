@@ -1,10 +1,6 @@
 <div ng-include=" 'scripts/components/navbar/navbar.html' "></div>
 <div ng-controller="SearchController">
 
-          <!-- <material-content class="material-content-padding"> -->
-
-        <!-- </material-content> -->
-
   <div class="tabsBackground" flex layout="horizontal" layout-sm="horizontal" layout-align="center">
     <material-toolbar>
       <section layout="horizontal" layout-sm="vertical" layout-align="center center">
@@ -37,9 +33,13 @@
     </material-toolbar>
   </div>
 
-  <material-slider>
-    <input type="range" ng-model="myValue" min="5" max="500">
-  </material-slider>
+  <div class="slider">
+    <div flex="50" offset="25">
+      <material-slider>
+        <input type="range" ng-model="price" min="5" max="300">{{price}}
+      </material-slider>
+    </div>
+  </div>
   
   <div flex class="search-layout">
 
