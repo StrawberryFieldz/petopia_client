@@ -15,6 +15,10 @@
 
 }
 
+.searchFormClass label {
+  color: white;
+}
+
 .tabsBackground {
   background: #4f84a4;
   padding-bottom: 20px;
@@ -191,6 +195,37 @@
   color: black;
 }
 
+
+.item-animate.ng-hide {
+  height:55px;
+  opacity:0;
+  padding:0;
+}
+
+.item-animate.ng-show {
+  height:55px;
+  opacity:0;
+  padding:0;
+}
+
+.item-animate.ng-hide-remove {
+  display: block !important;
+  transition: all linear 0ms;
+}
+
+.item-animate.ng-hide-add {
+  transition: all linear 300ms;
+}
+
+.search-button {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #4b7b91;
+}
+
+.search-button:hover {
+  background-color: blue;
+}
 
 /* Animation for filters on search page */
 .repeated-item.ng-enter, .repeated-item.ng-move {
