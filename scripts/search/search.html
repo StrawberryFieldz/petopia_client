@@ -70,7 +70,9 @@
           <div layout="horizontal">
             <div flex>
               <img class="pet" src="../assets/images/greencat.png" ng-show="{{sitter.cats}}">
+              <div ng-show="{{sitter.cats}}" class="petIcon">will watch</div>
               <img class="pet" src="../assets/images/redcat.png" ng-hide="{{sitter.cats}}">
+              <div ng-hide="{{sitter.cats}}" class="petIcon">won't watch</div>
             </div>
             <div flex>
               <p class="sitter-card-rate">${{sitter.cost}}</p>
@@ -78,7 +80,9 @@
             </div>
             <div flex>
               <img class="pet" src="../assets/images/greendog.png" ng-show="{{sitter.dogs}}">
+              <div ng-show="{{sitter.dogs}}" class="petIcon">will watch</div>
               <img class="pet" src="../assets/images/reddog.png" ng-hide="{{sitter.dogs}}">
+              <div ng-hide="{{sitter.dogs}}" class="petIcon">won't watch</div>
             </div>
           </div>
         </div>

@@ -134,6 +134,14 @@
   width: 50px;
 }
 
+.petIcon {
+  font-weight: bold; 
+  font-size: 10px; 
+  margin: 0px auto; 
+  text-align: center;
+  font-style: italic;
+}
+
 .sitter-card-name{
   border-top: 1px solid #d7d7d7;
   text-align:center;
