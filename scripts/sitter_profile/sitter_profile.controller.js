@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('SitterProfileController', ['$scope', '$state', 'SitterManager', function($scope, $state, SitterManager){
+  .controller('SitterProfileController', ['$scope', '$state', 'SitterManager', 'PawIconManager', function($scope, $state, SitterManager, PawIconManager){
     SitterManager.FindSitter($state.params.username, function(sitter){
       if(sitter)
         $scope.sitter = sitter;
@@ -8,8 +8,8 @@ angular.module('app')
       }
     });
 
-    $scope.getRating = function(){
-      return new Array($scope.sitter.rating);
+    $scope.getRating = function(sitter){
+      return PawIconManager.GetIcons(sitter.rating);
     };
 
     $scope.getLatLong = function(sitter){
