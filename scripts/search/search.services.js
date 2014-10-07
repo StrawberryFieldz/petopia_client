@@ -63,6 +63,7 @@ angular.module('app')
 
   .filter('matchMaxPrice', function () {
 	  return function (items, maxPrice) {
+      console.log(maxPrice)
 	  	if(maxPrice === undefined || maxPrice === '' || !parseInt(maxPrice)){
 	  	  return items;
 	  	}

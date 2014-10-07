@@ -17,6 +17,9 @@
 
 .searchFormClass label {
   color: white;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .tabsBackground {
@@ -27,6 +30,10 @@
 
 .filterStyle {
   margin: 0px 10px;
+}
+
+.buttonMargin {
+  margin-top: 20px;
 }
 
 .image-center { 
@@ -209,22 +216,21 @@
 }
 
 .item-animate.ng-hide-remove {
-  display: block !important;
-  transition: all linear 0ms;
+  transition: all linear 500ms;
 }
 
 .item-animate.ng-hide-add {
-  transition: all linear 300ms;
+  transition: all linear 0ms;
 }
 
 .search-button {
-  margin: 20px 0;
-  padding: 10px;
-  background-color: #4b7b91;
+  margin: 10px 0;
+  padding: 5px;
+  background-color: #4f84a4;
 }
 
 .search-button:hover {
-  background-color: blue;
+  background-color: #87bbdc;
 }
 
 /* Animation for filters on search page */
@@ -276,6 +282,7 @@
 .slider {
   background-color: #4f84a4;
   padding-bottom: 20px;
+  width: 100%;
 }
 
 
