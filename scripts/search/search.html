@@ -3,7 +3,7 @@
 
   <div class="tabsBackground" flex layout="horizontal" layout-sm="vertical" layout-align="center">
     <material-toolbar>
-      <section layout="horizontal" layout-sm="vertical" layout-align="center center">
+      <section layout="vertical" layout-sm="vertical" layout-align="center center">
           <div class="filterStyle" flex layout="vertical" layout-align="center center">
             <material-content layout-align="center center" style="overflow-y: hidden">
               <form ng-submit="setPetSitterInfo(petSitter)" class="searchFormClass">
@@ -18,7 +18,7 @@
 
         <material-divider></material-divider>
 
-        <div style="width: 100%" layout="vertical" layout-sm="vertical" ng-show="filters" class="item-animate">
+        <div style="width: 100%" layout="vertical" layout-sm="vertical" layout-align="center" ng-show="filters" class="item-animate">
 
         <!-- <hr width="80%"> -->
           <div class="filterStyle" flex layout="vertical" layout-align="center center">
@@ -47,6 +47,7 @@
             </div>
           </div>
         </div>
+
       </section>
     </material-toolbar>
   </div>
