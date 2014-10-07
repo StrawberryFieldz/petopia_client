@@ -50,4 +50,20 @@ describe('NavbarController', function () {
     expect(scope.login).to.be.a('function');
   });
 
+  xit('should send a post request to Facebook when user clicks Sign Up With Facebook on popup', function() {
+    //
+  });
+
+  xit('should send a post request to Facebook when user clicks Log In With Facebook on popup', function() {
+    //
+  });
+
+  xit('should send a post request to the local-signup route when sign up is clicked with valid inputs', function() {
+
+  });
+
+  xit('should send a post request to the local-login route when log in is clicked with valid inputs', function() {
+  
+  });
+
 });
