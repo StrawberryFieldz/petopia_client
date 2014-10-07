@@ -6,8 +6,8 @@
       <section layout="vertical" layout-sm="vertical" layout-align="center center">
           <div class="filterStyle" flex layout="vertical" layout-align="center center">
             <material-content layout-align="center center" style="overflow-y: hidden">
-              <form ng-submit="setPetSitterInfo(petSitter)" class="searchFormClass">
-                <ig fid="t1" label="Enter your city" type="text" class="material-input-group-theme-light material-input-group-inverted"></ig>
+              <form ng-submit="setPetSitterInfo(petSitter)" class="searchFormParent">
+                <input class="searchFormStyle" type="text" ng-model="cityName" placeholder="Enter your city">
               </form>
             </material-content>
             <material-button class="buttonMargin button-customize button-call-to-action-color">Search</material-button>

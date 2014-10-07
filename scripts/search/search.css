@@ -86,6 +86,12 @@
   border: 1px solid #3D7899;
 }
 
+.searchFormStyle {
+  margin-top: 10px;
+  color: white;
+  text-align: center;
+}
+
 .face {
   border-radius: 30px;
   border: 1px solid #ddd;
