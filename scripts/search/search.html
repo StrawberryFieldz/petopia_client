@@ -4,7 +4,6 @@
   <div class="tabsBackground" flex layout="horizontal" layout-sm="vertical" layout-align="center">
     <material-toolbar>
       <section layout="horizontal" layout-sm="vertical" layout-align="center center">
-        <!--<span style="font-size: 35px; font-weight: bold; font-style: italic; margin-top: 10px; margin-bottom: 10px">Narrow Your Search Results:</span>-->
           <div class="filterStyle" flex layout="vertical" layout-align="center center">
             <material-content layout-align="center center" style="overflow-y: hidden">
               <form ng-submit="setPetSitterInfo(petSitter)" class="searchFormClass">
@@ -12,11 +11,6 @@
               </form>
             </material-content>
             <material-button class="buttonMargin button-customize button-call-to-action-color">Search</material-button>
-            <!-- City:
-            <form name="cityInput" flex-layout="horizontal" ng-submit="setCity(cityName)">
-                <input flex class="inputFormSearchPage" type="text" ng-model="letter" placeholder="Enter your city">
-                <material-button flex class= "button-customize button-call-to-action-color">Search</material-button>
-            </form> -->
           </div>
         <material-button ng-click="filters=!filters" class="search-button button-call-to-action-color">
           <i class="fa fa-arrow-circle-down fa-3x"></i>
@@ -24,7 +18,7 @@
 
         <material-divider></material-divider>
 
-        <div style="width: 100%" layout="vertical" ng-show="filters" class="item-animate">
+        <div style="width: 100%" layout="vertical" layout-sm="vertical" ng-show="filters" class="item-animate">
 
         <!-- <hr width="80%"> -->
           <div class="filterStyle" flex layout="vertical" layout-align="center center">
