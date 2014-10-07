@@ -4,10 +4,10 @@ angular.module('app')
     $scope.loggedIn = Navbar.loggedIn;
 
     // Toggle login status if user is logged in or if user logs out
-    // $scope.toggleLoginStatus = function() {
-    //   Navbar.loggedIn = !Navbar.loggedIn;
-    //   $scope.loggedIn = Navbar.loggedIn;
-    // };
+    $scope.toggleLoginStatus = function() {
+      Navbar.loggedIn = !Navbar.loggedIn;
+      $scope.loggedIn = Navbar.loggedIn;
+    };
 
     // Directs user to home page
     $scope.goHome = function() {
