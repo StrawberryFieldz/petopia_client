@@ -1,50 +1,60 @@
 <div ng-include=" 'scripts/components/navbar/navbar.html' "></div>
 <div ng-controller="SearchController">
 
-  <div class="tabsBackground" flex layout="horizontal" layout-sm="horizontal" layout-align="center">
+  <div class="tabsBackground" flex layout="horizontal" layout-sm="vertical" layout-align="center">
     <material-toolbar>
       <section layout="horizontal" layout-sm="vertical" layout-align="center center">
-        <span style="font-size: 35px; font-weight: bold; font-style: italic; margin-top: 10px; margin-bottom: 10px">Narrow Your Search Results:</span>
-        <div layout="horizontal">
           <div class="filterStyle" flex layout="vertical" layout-align="center center">
-            City:
-            <form name="cityInput" ng-submit="setCity(cityName)">
-                <input class="inputFormSearchPage" type="text" ng-model="letter" placeholder="Enter your city">
-            </form>
+            <material-content layout-align="center center" style="overflow-y: hidden">
+              <form ng-submit="setPetSitterInfo(petSitter)" class="searchFormClass">
+                <ig fid="t1" label="Enter your city" type="text" class="material-input-group-theme-light material-input-group-inverted"></ig>
+              </form>
+            </material-content>
+            <material-button class="buttonMargin button-customize button-call-to-action-color">Search</material-button>
           </div>
+        <material-button ng-click="filters=!filters" class="search-button button-call-to-action-color">
+          <i class="fa fa-arrow-circle-down fa-3x"></i>
+        </material-button>
+
+        <material-divider></material-divider>
+
+        <div style="width: 100%" layout="vertical" layout-sm="vertical" ng-show="filters" class="item-animate">
+
+        <!-- <hr width="80%"> -->
           <div class="filterStyle" flex layout="vertical" layout-align="center center">
-            Max Price:
-            <form name="cityInput" ng-submit="setCity(cityName)">
-                <input class="inputFormSearchPage" type="text" ng-model="maxPrice" placeholder="Enter your city">
-            </form>
+            Maximum Price:
+            <div class="slider">
+              <div flex="50" offset="25">
+                <material-slider>
+                  <input type="range" ng-model="price" min="5" max="300">{{price}}
+                </material-slider>
+              </div>
+            </div>
           </div>    
+          
+          <!-- <hr width="80%"> -->
+
           <div class="filterStyle" flex layout="vertical" layout-align="center center">
             Minimum Rating:
-            <material-checkbox ng-model="dogFilter" ng-click="petSitter.petToWatchObject.dog=!petSitter.petToWatchObject.dog" aria-label="Checkbox 1">
-              Dog
-            </material-checkbox>
+            <div flex layout="horizontal" layout-align="center center">
+              <material-checkbox ng-model="dogFilter" ng-click="petSitter.petToWatchObject.dog=!petSitter.petToWatchObject.dog" aria-label="Checkbox 1">
+                Dog
+              </material-checkbox>
 
-            <material-checkbox ng-model="catFilter" ng-click="petSitter.petToWatchObject.cat=!petSitter.petToWatchObject.cat" aria-label="Checkbox 2">
-              Cat
-            </material-checkbox>
+              <material-checkbox ng-model="catFilter" ng-click="petSitter.petToWatchObject.cat=!petSitter.petToWatchObject.cat" aria-label="Checkbox 2">
+                Cat
+              </material-checkbox>
+            </div>
           </div>
         </div>
       </section>
     </material-toolbar>
   </div>
-
-  <div class="slider">
-    <div flex="50" offset="25">
-      <material-slider>
-        <input type="range" ng-model="price" min="5" max="300">{{price}}
-      </material-slider>
-    </div>
-  </div>
   
   <div flex class="search-layout">
 
     <div id="wrapper" style="overflow: hidden; width: 100%">
-        <div class="box1 repeated-item" ng-repeat="sitter in sitters | matchCity:letter | matchMaxPrice:maxPrice | dogFilterer:dogFilter:catFilter">
+        <div class="box1 repeated-item" ng-repeat="sitter in sitters | matchMaxPrice:price | dogFilterer:dogFilter:catFilter">
           <div ng-click="GoToProfile(sitter)" style="width: 100%; height: 100%; cursor: pointer;">
           <p class="sitter-card-city">{{sitter.name}}</p>
           <center>

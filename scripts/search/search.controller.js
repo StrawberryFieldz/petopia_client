@@ -12,7 +12,7 @@ angular.module('app')
     $scope.getRating = function(sitter){
       return PawIconManager.GetIcons(sitter.rating);
     };
-
+    
     $scope.GoToProfile = function(sitter){
       $state.go('sitterProfile', {username:sitter.name});
     };
