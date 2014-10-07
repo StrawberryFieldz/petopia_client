@@ -50,6 +50,19 @@
   border: 2px solid black; 
 }
 
+.petSitter {
+  height: 75px;
+  opacity: 0.6;
+  width: 75px;
+}
+
+.petIconSitter {
+  font-weight: bold; 
+  font-size: 14px; 
+  margin: 0px auto; 
+  font-style: italic;
+}
+
 .sitter-profile-name{
   font-size: 40px;
   font-weight: bold;

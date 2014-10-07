@@ -26,13 +26,26 @@
 
             <span class="sitter-profile-name">{{sitter.name}}</span>
 
-            <div layout="horizontal" style="margin-top:10px">
-              <material-checkbox disabled aria-label="Dogs" ng-model="sitter.dogs">
+            <div layout="horizontal" style="margin-top:10px" layout-align="center center">
+              <div flex style="margin-left: 20%">
+                <img class="petSitter" src="../assets/images/greendog.png" ng-show="{{sitter.dogs}}">
+                <div ng-show="{{sitter.dogs}}" class="petIconSitter">will watch</div>
+                <img class="petSitter" src="../assets/images/reddog.png" ng-hide="{{sitter.dogs}}">
+                <div ng-hide="{{sitter.dogs}}" class="petIconSitter">won't watch</div>
+              </div>
+
+              <!-- <material-checkbox disabled aria-label="Dogs" ng-model="sitter.dogs">
                 Dogs
-              </material-checkbox>
-              <material-checkbox disabled aria-label="Cats" ng-model="sitter.cats">
+              </material-checkbox> -->
+              <div flex>
+                <img class="petSitter" src="../assets/images/greencat.png" ng-show="{{sitter.cats}}">
+                <div ng-show="{{sitter.cats}}" class="petIconSitter">will watch</div>
+                <img class="petSitter" src="../assets/images/redcat.png" ng-hide="{{sitter.cats}}">
+                <div ng-hide="{{sitter.cats}}" class="petIconSitter">won't watch</div>
+              </div>
+              <!-- <material-checkbox disabled aria-label="Cats" ng-model="sitter.cats">
                 Cats
-              </material-checkbox>
+              </material-checkbox> -->
               
               </material-button>
             </div>
@@ -45,8 +58,13 @@
           <!-- Bio -->
           <div flex layout="vertical" layout-sm="vertical" class="sitter-bio-container">
             <material-toolbar class="center-bio-toolbar">
-              <h2 class="material-toolbar-tools" layout-alight="center center">
-                <span>Bio</span>
+              <h2 class="material-toolbar-tools" layout-alight="center center" layout="horizontal">
+                <span flex="10">Bio</span>
+                <span flex="85">
+                  <material-button ng-click="backToSearch()" class="button-call-to-action-color" style="color:white; float: right">
+                    Back
+                  </material-button>
+                </span>
               </h2>
             </material-toolbar>
             <material-content class="material-content-padding">

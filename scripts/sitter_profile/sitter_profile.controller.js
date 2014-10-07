@@ -16,4 +16,8 @@ angular.module('app')
 
     };
 
+    $scope.backToSearch = function(){
+      $state.go('search');
+    }
+
   }]);
