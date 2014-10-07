@@ -29,7 +29,7 @@ angular.module('app')
 
             $scope.signUp = function(newUser) {
               $http({
-                url: 'http://localhost:8080/signup',
+                url: 'http://petopia-server.azurewebsites.net/signup',
                 method: 'POST',
                 data: JSON.stringify(newUser),
                 headers: {'Content-type': 'application/json'}
@@ -42,21 +42,9 @@ angular.module('app')
 
             $scope.logIn = function(user) {
               $http({
-                url: 'http://localhost:8080/login',
+                url: 'http://petopia-server.azurewebsites.net/login',
                 method: 'POST',
                 data: JSON.stringify(user),
-                headers: {'Content-type': 'application/json'}
-              }).success(function(data, status, headers, config) {
-
-              }).error(function(data, status, headers, config) {
-
-              });
-            };
-
-            $scope.facebookSignUp = function() {
-              $http({
-                url: 'http://localhost:8080/facebook/signup',
-                method: 'POST',
                 headers: {'Content-type': 'application/json'}
               }).success(function(data, status, headers, config) {
 
@@ -68,14 +56,13 @@ angular.module('app')
             $scope.facebookLogIn = function() {
               $http({
                 url: 'http://localhost:8080/facebook/login',
-                method: 'POST',
-                headers: {'Content-type': 'application/json'}
+                method: 'GET'
               }).success(function(data, status, headers, config) {
 
               }).error(function(data, status, headers, config) {
 
               });
-            };   
+            };  
 
             $scope.close = function() {
               $hideDialog();
