@@ -14,13 +14,13 @@
         <!--###### Left Column Layout #####-->
 
         <div class="sitter-profile-left" layout="vertical" layout-sm="vertical" layout-align="start" flex="25">
-          <span class="sitter-profile-name">${{sitter.cost}}/night</span>
+          <span class="sitter-profile-name">${{sitter.cost}} purr day</span>
           <span> {{sitter.location}} </span>
           <material-button class= "button-call-to-action-color" style="color:white;">
             Schedule Now
           </material-button>
           <div layout="horizontal" style="margin-top:10px; margin-bottom:10px">
-              <img ng-repeat="item in getRating(sitter) track by $index" class="sitter-profile-rating" src="../../assets/images/paw.png">
+              <img style="margin: 3px" ng-repeat="item in getRating(sitter) track by $index" ng-src={{item}}>
             </div>
           <img class="sitter-profile-photo" src="{{sitter.photo}}">
 
