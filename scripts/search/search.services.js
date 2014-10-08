@@ -8,7 +8,7 @@ angular.module('app')
   			  method: 'GET',
   			  url: 'http://petopia-server.azurewebsites.net/api/search/location/San%Francisco'
   			}).success(function(data){
-          console.log('http://petopia-server.azurewebsites.net/api/search/location/San%Francisco')
+          console.log('http://petopia-server.azurewebsites.net/api/search/location/San%Francisco');
   			  callback(data);
   			});
 
@@ -38,11 +38,11 @@ angular.module('app')
   			  array.push("../../assets/images/pawprint.png");
   			}
   			while(array.length < 5){
-  			  array.push("../../assets/images/graypaw.png")
+  			  array.push("../../assets/images/graypaw.png");
   			}
   			return array;
   		}
-  	}
+  	};
   })
 
   .filter('matchCity', function () {
@@ -126,5 +126,5 @@ angular.module('app')
         }
         return filtered;
       };
-    })
+    });
 
