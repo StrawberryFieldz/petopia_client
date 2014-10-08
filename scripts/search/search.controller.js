@@ -5,6 +5,7 @@ angular.module('app')
 
     SitterManager.GetSitters(function(data){
       $scope.sitters = data;
+      console.log('all sitters', $scope.sitters);
     });
 
     $scope.newSearchCity = function(cityName){
@@ -21,6 +22,7 @@ angular.module('app')
     };
     
     $scope.GoToProfile = function(sitter){
+      SitterManager.SetSitter(sitter);
       $state.go('sitterProfile', {username:sitter.name});
     };
 

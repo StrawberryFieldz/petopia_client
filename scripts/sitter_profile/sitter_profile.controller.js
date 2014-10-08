@@ -1,12 +1,7 @@
 angular.module('app')
   .controller('SitterProfileController', ['$scope', '$state', 'SitterManager', 'PawIconManager', 'GoogleMapManager', 'PopUp', function($scope, $state, SitterManager, PawIconManager, GoogleMapManager, PopUp){
-    SitterManager.FindSitter($state.params.username, function(sitter){
-      if(sitter)
-        $scope.sitter = sitter;
-      else{
-        console.log("no sitter found");
-      }
-    });
+
+    $scope.sitter = SitterManager.GetSitter();
 
     $scope.getRating = function(sitter){
       return PawIconManager.GetIcons(sitter.rating);
@@ -30,7 +25,8 @@ angular.module('app')
     };
 
   }])
-  .directive('googlemap', ['GoogleMapManager', function(GoogleMapManager){
+
+  .directive('googlemap', ['GoogleMapManager', 'SitterManager', function(GoogleMapManager, SitterManager){
   return {
           restrict: 'E',  // restricts this directive just to elements
           template: '<div id="gmaps"></div>',  // this is what will replace the directive
@@ -41,7 +37,10 @@ angular.module('app')
           link: function ($scope, $element, $attr) {
             function initialize() {
 
-              GoogleMapManager.lookupGeoCode('San Francisco', '94105', function(data){
+              var sitter = SitterManager.GetSitter();
+              console.log(sitter);
+
+              GoogleMapManager.lookupGeoCode(sitter.location, sitter.zip, function(data){
                 console.log("Inside lookupGeoCode callback", data);
                 var latitude = data.results[0].geometry.location.lat;
                 var longitude = data.results[0].geometry.location.lng;
@@ -52,9 +51,8 @@ angular.module('app')
                     mapTypeId: google.maps.MapTypeId.ROADMAP, // google maps option
                     scrollwheel: false // disables scrollwheel functionality on map
                 };
-                console.log('latitude,longitude' + latitude+","+longitude);
+                // console.log('latitude,longitude' + latitude+","+longitude);
                 var map = new google.maps.Map($element[0], mapOptions);  // creates a new map
-                console.log('The map: ', map);
                 $scope.onCreate({map: map}); // links this map to the controller
               });
             }
