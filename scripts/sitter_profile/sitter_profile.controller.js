@@ -18,7 +18,7 @@ angular.module('app')
 
     $scope.backToSearch = function(){
       $state.go('search');
-    }
+    };
 
     $scope.mapCreated = function(map) {
         $scope.map = map;  // this sets the map we just created in our directive to the $scope
