@@ -21,6 +21,7 @@ angular.module('app')
     };
     
     $scope.GoToProfile = function(sitter){
+      SitterManager.SetSitter(sitter);
       $state.go('sitterProfile', {username:sitter.name});
     };
 

@@ -1,6 +1,7 @@
 // Basic structure for a factory
 angular.module('app')
   .factory('SitterManager', ['$http', 'CityFactory', function($http, CityFactory){
+    var currentSitter;
   	return {
   		GetSitters: function(callback){
         var city = CityFactory.getCity();
@@ -13,16 +14,14 @@ angular.module('app')
 
   		},
 
-  		FindSitter: function(username, callback){
-  			for(var i=0; i<stub.length; i++){
-  				if(stub[i].name === username){
-  					callback(stub[i]);
-  					return;
-  				}
-  			}
+      SetSitter: function(sitter){
+        currentSitter = sitter;
+      },
 
-  			callback(null);
-  		},
+      GetSitter: function(sitter){
+        return currentSitter;
+      },
+      
   		GetStubData: function(callback){
   			return stub;
   		}
