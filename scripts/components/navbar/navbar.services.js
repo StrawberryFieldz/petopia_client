@@ -1,12 +1,12 @@
 angular.module('app')
-  .factory('Navbar', function(){
+  .factory('Navbar', [function(){
     // User login status
     var loggedIn = false;
   
     return {
       loggedIn: loggedIn
     };
-  })
+  }])
 
   .factory('PopUp', ['$materialDialog', function($materialDialog){
     return {
@@ -17,7 +17,7 @@ angular.module('app')
           scope: {
             value: '=ngModel'
           },
-          controller: ['$scope', '$http', '$state', '$hideDialog', 'Navbar', function($scope, $http, $state, $hideDialog, Navbar) {
+          controller: ['$scope', '$http', '$state', '$hideDialog', '$storage', function($scope, $http, $state, $hideDialog, $storage) {
             $scope.showSignUp = context;
 
             $scope.toggleSignUp = function() {
@@ -34,9 +34,10 @@ angular.module('app')
                 data: JSON.stringify(newUser),
                 headers: {'Content-type': 'application/json'}
               }).success(function(data, status, headers, config) {
-
+                $storage.set(newUser.username);
+                $scope.close();
               }).error(function(data, status, headers, config) {
-
+                $scope.newUser = {};
               });
             };
 
@@ -47,9 +48,11 @@ angular.module('app')
                 data: JSON.stringify(user),
                 headers: {'Content-type': 'application/json'}
               }).success(function(data, status, headers, config) {
-
+                $storage.set('user', $scope.newUser.username);
+                $scope.close();
+                $state.go($state.current, {}, {reload: true});
               }).error(function(data, status, headers, config) {
-
+                $scope.existingUser = {};
               });
             };
 
