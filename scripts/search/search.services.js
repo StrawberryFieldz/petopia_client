@@ -1,14 +1,16 @@
 // Basic structure for a factory
 angular.module('app')
   .factory('SitterManager', ['$http', 'CityFactory', function($http, CityFactory){
-    var city = CityFactory.getCity();
   	return {
   		GetSitters: function(callback){
+        var city = CityFactory.getCity();
+        // console.log("City in GetSitters", city);
   			$http({
   			  method: 'GET',
-  			  url: 'http://petopia-server.azurewebsites.net/api/search/location/San%Francisco'
+  			  url: 'http://petopia-server.azurewebsites.net/api/search/location/'+city
   			}).success(function(data){
-          console.log('http://petopia-server.azurewebsites.net/api/search/location/San%Francisco')
+          console.log("data in callback", data);
+          console.log("city:", city);
   			  callback(data);
   			});
 
