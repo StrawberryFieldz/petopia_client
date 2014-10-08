@@ -49,4 +49,9 @@ angular.module('app')
     $scope.logout = function() {
       Navbar.logout();
     };
+
+    $scope.privateProfile = function(){
+      $state.go('privateProfile');
+    };
+
   }]);
