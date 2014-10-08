@@ -8,6 +8,23 @@ angular.module('app')
 
     };
 
+    function initialize() {
+      // Create the autocomplete object, restricting the search
+      // to geographical location types.
+      autocomplete = new google.maps.places.Autocomplete(
+          /** @type {HTMLInputElement} */(document.getElementById('autocomplete')),
+          { types: ['geocode'], 
+            componentRestrictions: {country: "us"} });
+      // When the user selects an address from the dropdown,
+      // populate the address fields in the form.
+      // google.maps.event.addListener(autocomplete, 'place_changed', function() {
+      //   fillInAddress();
+      // });
+    }
+
+    initialize();
+
+
     // jump to bottom of page when user clicks on white down arrow
     $scope.goToBottom = function(){
       //set the location.hash to id="bottom" in the "meetTheTeamSection" material-toolbar
