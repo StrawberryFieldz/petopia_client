@@ -5,7 +5,7 @@ angular.module('app')
   
     var logout = function(){
       $http({
-        url: 'http://localhost:8080/logout',
+        url: 'http://petopia-server.azurewebsites.net/logout',
         method: 'GET',
         headers: {'Content-type': 'application/json'}        
       }).success(function(data, status, headers, config) {
@@ -83,6 +83,22 @@ angular.module('app')
 
             $scope.close = function() {
               $hideDialog();
+            };
+
+            $scope.scheduleForm = {
+              dog: false,
+              cat: false
+            };
+
+            $scope.submitSchedule = function(data){
+              // $http({
+              //   data: JSON.stringify(data);
+              // }).success(function(data, status, headers, config){
+              //   $hideDialog();
+              // }).error(function(data, status, headers, config){
+              //   console.log("Error in sumbitSchedule");
+              // });
+              console.log('data: ', data);
             };
           }]
         });       
