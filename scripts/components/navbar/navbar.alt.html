@@ -10,7 +10,7 @@
         <p>Log In</p>
       </material-button>
       <material-button class="materialButton" ng-if="isLoggedIn()">
-        <p>*Username*</p>
+        <p>{{ user }}</p>
       </material-button>
       <material-button class="materialButton" ng-if="isLoggedIn()" ng-click="clear()">
         <p>Log Out</p>
