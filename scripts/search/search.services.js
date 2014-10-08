@@ -21,17 +21,7 @@ angular.module('app')
       GetSitter: function(sitter){
         return currentSitter;
       },
-
-  		// FindSitter: function(username, callback){
-  		// 	for(var i=0; i<stub.length; i++){
-  		// 		if(stub[i].name === username){
-  		// 			callback(stub[i]);
-  		// 			return;
-  		// 		}
-  		// 	}
-
-  		// 	callback(null);
-  		// },
+      
   		GetStubData: function(callback){
   			return stub;
   		}
