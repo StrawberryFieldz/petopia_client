@@ -6,11 +6,11 @@
       <section layout="vertical" layout-sm="vertical" layout-align="center center">
           <div class="filterStyle" flex layout="vertical" layout-align="center center">
             <material-content layout-align="center center" style="overflow-y: hidden">
-              <form ng-submit="setPetSitterInfo(petSitter)" class="searchFormParent">
+              <form class="searchFormParent">
                 <input class="searchFormStyle" type="text" ng-model="cityName" placeholder="Enter your city">
               </form>
             </material-content>
-            <material-button class="buttonMargin button-customize button-call-to-action-color">Search</material-button>
+            <material-button ng-click="newSearchCity(cityName)" class="buttonMargin button-customize button-call-to-action-color">Search</material-button>
           </div>
         <material-button ng-click="filters=!filters" class="search-button button-call-to-action-color">
           <i class="fa fa-arrow-circle-down fa-3x"></i>

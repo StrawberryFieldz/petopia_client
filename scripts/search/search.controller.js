@@ -2,18 +2,19 @@ angular.module('app')
   .controller('SearchController', ['$scope', '$state', 'CityFactory', 'SitterManager', 'PawIconManager', function($scope, $state, CityFactory, SitterManager, PawIconManager){
 
     var city = CityFactory.getCity();
-    console.log("city is currently: ",city);
 
     SitterManager.GetSitters(function(data){
-      console.log(data);
       $scope.sitters = data;
     });
-    
-    // $scope.setCity = function(cityName){
-    //   console.log(cityName);
-    //   CityFactory.setCity(cityName);
-    //   // $scope.city = CityFactory.getCity();
-    // };
+
+    $scope.newSearchCity = function(cityName){
+      $scope.sitters = [];
+      CityFactory.setCity(cityName);
+      SitterManager.GetSitters(function(data){
+        $scope.sitters = data;
+      });
+      $scope.cityName = "";
+    }
 
     $scope.getRating = function(sitter){
       return PawIconManager.GetIcons(sitter.rating);
