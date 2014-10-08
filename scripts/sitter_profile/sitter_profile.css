@@ -81,7 +81,7 @@
 }
 
 .sitter-popup {
-  width: 400px;
+  width: 350px;
   height: 300px;
 }
 
@@ -89,5 +89,26 @@
   float: left;
   margin-right: 10px;
   margin-top: 10px;
+}
+
+.sitter-popup-buttons {
+  margin-top: 30px;
+}
+
+.cancel-button {
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.accept-button {
+  color: white;
+  background-color: #3D7899;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.accept-button:hover {
+  background-color: #5BB4E5;
 }
 
