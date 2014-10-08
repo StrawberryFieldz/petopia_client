@@ -1,5 +1,5 @@
 angular.module('app')
-  .controller('SitterProfileController', ['$scope', '$state', 'SitterManager', 'PawIconManager', 'GoogleMapManager', function($scope, $state, SitterManager, PawIconManager, GoogleMapManager){
+  .controller('SitterProfileController', ['$scope', '$state', 'SitterManager', 'PawIconManager', 'GoogleMapManager', 'PopUp', function($scope, $state, SitterManager, PawIconManager, GoogleMapManager, PopUp){
     SitterManager.FindSitter($state.params.username, function(sitter){
       if(sitter)
         $scope.sitter = sitter;
@@ -23,7 +23,11 @@ angular.module('app')
     $scope.mapCreated = function(map) {
         $scope.map = map;  // this sets the map we just created in our directive to the $scope
         $scope.placeMarkers(); // this places the first marker on our map
-      };
+    };
+
+    $scope.schedule = function(e){
+      PopUp.PopUpCall(e, './scripts/sitter_profile/sitter_profile.popup.html');
+    };
 
   }])
   .directive('googlemap', ['GoogleMapManager', function(GoogleMapManager){
