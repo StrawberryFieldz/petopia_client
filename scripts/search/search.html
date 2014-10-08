@@ -55,7 +55,7 @@
   <div flex class="search-layout">
 
     <div id="wrapper" style="overflow: hidden; width: 100%">
-        <div class="box1 repeated-item" ng-repeat="sitter in sitters | matchMaxPrice:price | dogFilterer:dogFilter:catFilter">
+        <div class="box1 repeated-item" ng-repeat="sitter in sitters | orderBy:matchMaxPrice:price | dogFilterer:dogFilter:catFilter | orderBy:'-rating'">
           <div ng-click="GoToProfile(sitter)" style="width: 100%; height: 100%; cursor: pointer;">
           <p class="sitter-card-city">{{sitter.name}}</p>
           <center>
