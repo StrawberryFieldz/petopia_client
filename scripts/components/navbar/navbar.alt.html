@@ -3,16 +3,16 @@
     <div class="material-toolbar-tools">
       <img src="./assets/images/paw-logo.png"><h1 class="navbarTitle" ng-click="goHome()">petopia</h1>
       <span flex></span>
-      <material-button class="materialButton" ng-if="!loggedIn" ng-click="signup($event)">
+      <material-button class="materialButton" ng-if="!isLoggedIn()" ng-click="signup($event)">
         <p>Sign Up</p>
       </material-button>
-      <material-button class="materialButton" ng-if="!loggedIn" ng-click="login($event)">
+      <material-button class="materialButton" ng-if="!isLoggedIn()" ng-click="login($event)">
         <p>Log In</p>
       </material-button>
-      <material-button class="materialButton" ng-if="loggedIn">
-        <p>*Username*</p>
+      <material-button class="materialButton" ng-if="isLoggedIn()">
+        <p>{{ user }}</p>
       </material-button>
-      <material-button class="materialButton" ng-if="loggedIn">
+      <material-button class="materialButton" ng-if="isLoggedIn()" ng-click="clear()">
         <p>Log Out</p>
       </material-button>
       <material-content class="navbarMaterialContent">

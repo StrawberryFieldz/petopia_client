@@ -1,5 +1,13 @@
 angular.module('app')
-  .controller('NavbarController',[ '$scope', '$state', 'Navbar', '$materialDialog', 'PopUp', function($scope, $state, Navbar, $materialDialog, PopUp){
+  .controller('NavbarController',[ '$scope', '$state', '$storage', 'Navbar', '$materialDialog', 'PopUp', function($scope, $state, $storage, Navbar, $materialDialog, PopUp){
+    var user = $storage.get('user');
+
+    $scope.user = user;
+
+    $scope.isLoggedIn = function() {
+      return user;
+    };
+
     // User login status
     $scope.loggedIn = Navbar.loggedIn;
 
@@ -38,4 +46,7 @@ angular.module('app')
       PopUp.PopUpCall(e, './scripts/components/navbar/navbar-popup-templates/popup.tmpl.html', false);
     };
 
+    $scope.clear = function() {
+      $storage.clear();
+    };
   }]);
