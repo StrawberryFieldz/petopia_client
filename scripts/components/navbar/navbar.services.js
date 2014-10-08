@@ -34,8 +34,9 @@ angular.module('app')
                 data: JSON.stringify(newUser),
                 headers: {'Content-type': 'application/json'}
               }).success(function(data, status, headers, config) {
-                $storage.set(newUser.username);
+                $storage.set('user', $scope.newUser.username);
                 $scope.close();
+                $state.go($state.current, {}, {reload: true});
               }).error(function(data, status, headers, config) {
                 $scope.newUser = {};
               });
@@ -48,7 +49,7 @@ angular.module('app')
                 data: JSON.stringify(user),
                 headers: {'Content-type': 'application/json'}
               }).success(function(data, status, headers, config) {
-                $storage.set('user', $scope.newUser.username);
+                $storage.set('user', $scope.existingUser.username);
                 $scope.close();
                 $state.go($state.current, {}, {reload: true});
               }).error(function(data, status, headers, config) {

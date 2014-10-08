@@ -2,6 +2,8 @@ angular.module('app')
   .controller('NavbarController',[ '$scope', '$state', '$storage', 'Navbar', '$materialDialog', 'PopUp', function($scope, $state, $storage, Navbar, $materialDialog, PopUp){
     var user = $storage.get('user');
 
+    $scope.user = user;
+
     $scope.isLoggedIn = function() {
       return user;
     };
