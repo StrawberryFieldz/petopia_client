@@ -4,14 +4,10 @@ angular.module('app')
   	return {
   		GetSitters: function(callback){
         var city = CityFactory.getCity();
-        // console.log("City in GetSitters", city);
   			$http({
   			  method: 'GET',
   			  url: 'http://petopia-server.azurewebsites.net/api/search/location/'+city
   			}).success(function(data){
-
-          console.log("data in callback", data);
-          console.log("city:", city);
   			  callback(data);
   			});
 
