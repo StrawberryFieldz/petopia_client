@@ -16,7 +16,7 @@
         <div class="sitter-profile-left" layout="vertical" layout-sm="vertical" layout-align="start" flex="25">
           <span class="sitter-profile-name">${{sitter.cost}} purr day</span>
           <span> {{sitter.location}} </span>
-          <material-button class= "button-call-to-action-color" style="color:white;">
+          <material-button class= "button-call-to-action-color" style="color:white;" ng-click="schedule($event)">
             Schedule Now
           </material-button>
           <div layout="horizontal" style="margin-top:10px; margin-bottom:10px">

@@ -1,0 +1,29 @@
+<material-dialog>
+  <div class="dialog-content sitter-popup">
+    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+    </section>
+    <material-content>
+      <form>
+        <span>What type of pet do you have?<span>
+        <material-checkbox ng-model="dogFilter" ng-click="scheduleForm.dog=!scheduleForm.dog" aria-label="Checkbox 1">
+          Dog
+        </material-checkbox>
+        <material-checkbox ng-model="catFilter" ng-click="scheduleForm.cat=!scheduleForm.cat" aria-label="Checkbox 2">
+          Cat
+        </material-checkbox>
+        <div class="sitter-popup-text">
+          Start Date:
+        </div>
+        <ig fid="i2" label="" type="date" class="material-input-group-theme-light-blue" ng-model="scheduleForm.startDate"></ig>
+        <div class="sitter-popup-text">
+          End Date:
+        </div>
+        <ig fid="i2" label="" type="date" class="material-input-group-theme-light-blue" ng-model="scheduleForm.endDate"></ig>
+      </form>
+    </material-content>
+    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+      <material-button ng-click="submitSchedule(scheduleForm)">Accept</material-button>
+      <material-button class="button-call-to-action-color" ng-click="close()">Cancel</material-button>
+    </section>
+  </div>
+</material-dialog>

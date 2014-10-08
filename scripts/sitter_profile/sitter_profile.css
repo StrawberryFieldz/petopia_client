@@ -79,3 +79,15 @@
   height: 30px;
   width: 30px;
 }
+
+.sitter-popup {
+  width: 400px;
+  height: 300px;
+}
+
+.sitter-popup-text {
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
