@@ -1,10 +1,25 @@
 angular.module('app')
-  .factory('Navbar', [function(){
+  .factory('Navbar', ['$state', '$http', '$storage', function($state, $http, $storage){
     // User login status
     var loggedIn = false;
   
+    var logout = function(){
+      $http({
+        url: 'http://localhost:8080/logout',
+        method: 'GET',
+        headers: {'Content-type': 'application/json'}        
+      }).success(function(data, status, headers, config) {
+        console.log("SUCCESS");
+        $storage.clear();
+        $state.go($state.current, {}, {reload: true});
+      }).error(function(data, status, headers, config) {
+        console.log("ERROR in logout");
+      });
+    };
+
     return {
-      loggedIn: loggedIn
+      loggedIn: loggedIn,
+      logout: logout
     };
   }])
 

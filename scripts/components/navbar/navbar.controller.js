@@ -46,7 +46,7 @@ angular.module('app')
       PopUp.PopUpCall(e, './scripts/components/navbar/navbar-popup-templates/popup.tmpl.html', false);
     };
 
-    $scope.clear = function() {
-      $storage.clear();
+    $scope.logout = function() {
+      Navbar.logout();
     };
   }]);
