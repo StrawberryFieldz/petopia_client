@@ -21,9 +21,11 @@
         <ig fid="i2" label="" type="date" class="material-input-group-theme-light-blue" ng-model="scheduleForm.endDate"></ig>
       </form>
     </material-content>
-    <section layout="vertical" layout-sm="horizontal" layout-align="center center">
-      <material-button ng-click="submitSchedule(scheduleForm)">Accept</material-button>
-      <material-button class="button-call-to-action-color" ng-click="close()">Cancel</material-button>
-    </section>
+    <div class="sitter-popup-buttons">
+      <section layout="vertical" layout-sm="horizontal" layout-align="center center">
+        <material-button class="accept-button" ng-click="submitSchedule(scheduleForm)">Accept</material-button>
+        <material-button class="button-call-to-action-color cancel-button" ng-click="close()">Cancel</material-button>
+      </section>
+    </div>
   </div>
 </material-dialog>
