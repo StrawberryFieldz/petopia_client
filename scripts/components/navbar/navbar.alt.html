@@ -9,7 +9,7 @@
       <material-button class="materialButton" ng-if="!isLoggedIn()" ng-click="login($event)">
         <p>Log In</p>
       </material-button>
-      <material-button class="materialButton" ng-if="isLoggedIn()">
+      <material-button class="materialButton" ng-if="isLoggedIn()" ng-click="privateProfile()">
         <p>{{ user }}</p>
       </material-button>
       <material-button class="materialButton" ng-if="isLoggedIn()" ng-click="logout()">

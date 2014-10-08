@@ -9,11 +9,9 @@ angular.module('app')
         method: 'GET',
         headers: {'Content-type': 'application/json'}        
       }).success(function(data, status, headers, config) {
-        console.log("SUCCESS");
         $storage.clear();
-        $state.go($state.current, {}, {reload: true});
+        $state.go('splash');
       }).error(function(data, status, headers, config) {
-        console.log("ERROR in logout");
       });
     };
 
