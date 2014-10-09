@@ -98,7 +98,53 @@ angular.module('app')
               // }).error(function(data, status, headers, config){
               //   console.log("Error in sumbitSchedule");
               // });
-              console.log('data: ', data);
+              
+              var username = $storage.get('user');
+              var dog = data.dog;
+              var cat = data.cat;
+              var pet = '';
+              if(dog && cat) { pet = 'dog and cat' }
+              else if(dog) { pet = 'dog' }
+              else if(cat) { pet = 'cat' }
+              console.log(data.startDate);
+              console.log(data.startDate);
+
+              var startDateArray = data.startDate.toString().split(' ');
+              var endDateArray = data.endDate.toString().split(' ');
+
+              var days = {
+                'Mon': 'Monday',
+                'Tue': 'Tuesday',
+                'Wed': 'Wednesday',
+                'Thu': 'Thursday',
+                'Fri': 'Friday',
+                'Sat': 'Saturday',
+                'Sun': 'Sunday'
+              };
+
+              var months = {
+                'Jan': 'January',
+                'Feb': 'February',
+                'Mar': 'March',
+                'Apr': 'April',
+                'May': 'May',
+                'Jun': 'June',
+                'Jul': 'July',
+                'Aug': 'August',
+                'Sep': 'September',
+                'Oct': 'October',
+                'Nov': 'November',
+                'Dec': 'December'
+              };
+
+              var setDate = function(array) {
+                return days[array[0]] + ', ' + months[array[1]] + ' ' + array[2] + ', ' + array[3];
+              };
+
+              var message = 'Hello fellow Petopia member! Can you please watch my ' + pet + ' from ' + setDate(startDateArray) + ' to ' + setDate(endDateArray) + '? \n' +
+                            'Thank you! \n' +
+                            '-'+username;
+              window.open('mailto:tyhlewis@gmail.com?subject=Petopia Pet Sitter Request&body=' + message);
             };
           }]
         });       
