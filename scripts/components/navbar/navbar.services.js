@@ -10,7 +10,12 @@ angular.module('app')
         headers: {'Content-type': 'application/json'}        
       }).success(function(data, status, headers, config) {
         $storage.clear();
-        $state.go('splash');
+        console.log($state.current);
+        if($state.current.name === 'splash'){
+          $state.go($state.current, {}, {reload: true});
+        } else {
+          $state.go('splash');
+        }
       }).error(function(data, status, headers, config) {
       });
     };
