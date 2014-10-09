@@ -6,7 +6,7 @@
       <section layout="vertical" layout-sm="vertical" layout-align="center center">
           <div class="filterStyle" flex layout="vertical" layout-align="center center">
             <material-content layout-align="center center" style="overflow-y: hidden">
-              <form class="searchFormParent">
+              <form class="searchFormParent" ng-submit="newSearchCity(cityName)">
                 <input class="searchFormStyle" type="text" ng-model="cityName" placeholder="Enter your city">
               </form>
             </material-content>
