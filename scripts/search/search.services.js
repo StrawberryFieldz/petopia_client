@@ -1,6 +1,6 @@
 // Basic structure for a factory
 angular.module('app')
-  .factory('SitterManager', ['$http', 'CityFactory', function($http, CityFactory){
+  .factory('SitterManager', ['$http', 'CityFactory', '$storage', function($http, CityFactory, $storage){
     var currentSitter;
   	return {
   		GetSitters: function(callback){
@@ -15,11 +15,23 @@ angular.module('app')
   		},
 
       SetSitter: function(sitter){
-        currentSitter = sitter;
+        $storage.setObject('sitter', sitter);
       },
 
       GetSitter: function(sitter){
-        return currentSitter;
+        return $storage.getObject('sitter');
+      },
+
+      GetAllUserInfo: function(user, callback) {
+        console.log(user);
+        return $http({
+          url: 'http://petopia-server.azurewebsites.net/api/users/' + user,
+          method: 'GET'
+        }).success(function(data) {
+          callback(data);
+        }).error(function(err) {
+          //
+        });
       },
       
   		GetStubData: function(callback){

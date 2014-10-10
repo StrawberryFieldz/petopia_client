@@ -38,10 +38,9 @@ angular.module('app')
             function initialize() {
 
               var sitter = SitterManager.GetSitter();
-              console.log(sitter);
 
               GoogleMapManager.lookupGeoCode(sitter.location, sitter.zip, function(data){
-                console.log("Inside lookupGeoCode callback", data);
+                // console.log("Inside lookupGeoCode callback", data);
                 var latitude = data.results[0].geometry.location.lat;
                 var longitude = data.results[0].geometry.location.lng;
 
