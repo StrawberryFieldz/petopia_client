@@ -16,6 +16,25 @@
   height: 500px;
 }
 
+button.sub {
+  background-color: #EC6F72;
+  width: 150px;
+  height: 40px;
+  color: white;
+  padding-top: 10px;
+  outline: none;
+  margin-bottom: 5%;
+}
+
+button:hover.sub {
+  background-color: #FFD0A6;
+}
+
+button:disabled.sub {
+  color: white;
+  background-color: #ddd;
+}
+
 .pet-sitter-select {
   margin-top: 20px;
   margin-bottom: 20px;
