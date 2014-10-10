@@ -95,6 +95,84 @@ angular.module('app')
               cat: false
             };
 
+            $scope.submitSchedule = function() {
+              var sitter = $storage.getObject('sitter');
+              var messageToUser = 'You requested that ' + sitter.username + ' watch your ';
+              var user = $storage.get('user');
+              var pets = '';
+              if($scope.scheduleForm.dog && $scope.scheduleForm.cat) { pets += 'cat and dog.'; }
+              else if($scope.scheduleForm.dog) { pets += 'dog.'; }
+              else if($scope.scheduleForm.cat) { pets += 'cat.'; }
+              messageToUser += pets;
+
+              var startDateArray = $scope.scheduleForm.startDate.toString().split(' ');
+              var endDateArray = $scope.scheduleForm.endDate.toString().split(' ');
+
+              var days = {
+                'Mon': 'Monday',
+                'Tue': 'Tuesday',
+                'Wed': 'Wednesday',
+                'Thu': 'Thursday',
+                'Fri': 'Friday',
+                'Sat': 'Saturday',
+                'Sun': 'Sunday'
+              };
+
+              var months = {
+                'Jan': 'January',
+                'Feb': 'February',
+                'Mar': 'March',
+                'Apr': 'April',
+                'May': 'May',
+                'Jun': 'June',
+                'Jul': 'July',
+                'Aug': 'August',
+                'Sep': 'September',
+                'Oct': 'October',
+                'Nov': 'November',
+                'Dec': 'December'
+              };
+
+              var setDate = function(array) {
+                return days[array[0]] + ', ' + months[array[1]] + ' ' + array[2] + ', ' + array[3];
+              };
+
+              startDate = setDate(startDateArray);
+              endDate = setDate(endDateArray);
+
+              var requestBody = {
+                message: messageToUser,
+                date: {
+                  start: startDate,
+                  end: endDate
+                }
+              };
+              
+              // $http({
+              //   url: 'http://petopia-server.azurewebsites.net/api/users/messages/' + user,
+              //   method: 'POST',
+              //   data: JSON.stringify(requestBody)
+              // }).success(function(data, status, headers, config) {
+              //   $scope.close();
+              // }).error(function(data, status, headers, config) {
+
+              // });
+
+              var messageToSitter = user + ' requested that you watch their ' + pets;
+              requestBody.message = messageToSitter;
+
+              $http({
+                url: 'http://petopia-server.azurewebsites.net/api/users/messages/' + sitter.username,
+                method: 'POST',
+                data: JSON.stringify(requestBody)
+              }).success(function(data, status, headers, config) {
+                $scope.close();
+              }).error(function(data, status, headers, config) {
+
+              });
+
+            };
+
             $scope.addPetForm = {
               dog: false,
               cat: false

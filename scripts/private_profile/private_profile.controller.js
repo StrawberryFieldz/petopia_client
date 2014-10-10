@@ -35,10 +35,11 @@ angular.module('app')
           };
           $scope.submitRating = function(number){
             $scope.rating = number;
-            console.log($scope.rating);
             $scope.close();
           };
         }]
       });       
     };
+
+
   }]);
