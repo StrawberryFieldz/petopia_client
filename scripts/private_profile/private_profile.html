@@ -13,8 +13,8 @@
       <div class="animate-switch tab1" ng-switch-when="0">
         <div layout="vertical" layout-md="horizontal" layout-padding layout-align="center">
           
-          <div layout="vertical" layout-align="center" class="customLayout">
-            <img class="private-image-style" ng-src="{{userPhoto}}">
+          <div flex layout="vertical" layout-align="center" class="customLayout">
+            <img class="private-image-style" ng-src="{{ user.photo }}">
             <material-button class="privte-profile-button button-call-to-action-color private" ng-click="uploadImage()">Upload Image</material-button>
             <material-content class="firstRow">
               <material-toolbar class="tableHeader">
@@ -22,156 +22,34 @@
                   <span>My Pets</span>
                 </h1>
               </material-toolbar>
-              <material-list>
-                <div class="material-tile-content">
-                  <div flex layout="horizontal" layout-align="center">
-                    <div flex="33">
-                      <img src="http://static.ddmcdn.com/gif/dog-breed-dog-breed-pictures1.jpg" class="petImage">
-                    </div>
-                    <div flex layout="vertical" layout-align="center"> 
-                      <span class="dogname">Bob</span>
-                      <span class="dogbreed">Golden Retriever</span>
-                    </div>
-                  </div>
-                </div>
-              </material-list>
-              <material-divider inset ng-if="!$last"></material-divider>
-              <material-list>
-                <div class="material-tile-content">
-                  <div flex layout="horizontal" layout-align="center">
-                    <div flex="33">
-                      <img src="http://upload.wikimedia.org/wikipedia/commons/4/43/Timba%2B1.jpg" class="petImage">
-                    </div>
-                    <div flex layout="vertical" layout-align="center"> 
-                      <span class="dogname">Sam</span>
-                      <span class="dogbreed">Lab</span>
-                    </div>
-                  </div>
-                </div>
-              </material-list>
-              <material-divider inset ng-if="!$last"></material-divider>
-              <material-list>
-                <div class="material-tile-content">
-                  <div flex layout="horizontal" layout-align="center">
-                    <div flex="33">
-                      <img src="http://kcen.images.worldnow.com/images/23411805_BG1.jpg" class="petImage">
-                    </div>
-                    <div flex layout="vertical" layout-align="center"> 
-                      <span class="dogname">Charlie</span>
-                      <span class="dogbreed">Collie</span>
-                    </div>
-                  </div>
-                </div>
-              </material-list>
             </material-content>
           </div>
 
           <div flex class="secondRow">
             <material-toolbar class="tableHeader">
-                <h1 class="material-toolbar-tools" layout-align="center">
+              <h1 class="material-toolbar-tools" layout-align="center">
                 <span>Recent Activity</span>
               </h1>
             </material-toolbar>
             <material-content>
-              <material-list>
-                <div class="material-tile-content">
-                  <div flex layout="horizontal" layout-align="center center">
-                    <div flex="30">
-                      <img src="https://avatars2.githubusercontent.com/u/7147319?v=2&s=400" class="personImage">
-                    </div>
-                    <div flex="20" layout="horizontal" layout-align="center">
-                      <span class="datestyle">10/25/2014</span>
-                    </div>
-                    <div flex layout="vertical" layout-align="center center">
-                      <span class="activityStlye">You watched (Insert Pet)</span>
-                      <span class="activityStlye">Earned: $50</span>
-                      <material-button class="rate-button button-call-to-action-color" ng-click="rateUser($event)">Rate this user</material-button>
-                      <!-- {{rating}} -->
-                    </div>
-                  </div>
-                </div>
-              </material-list>
-              <material-divider inset ng-if="!$last"></material-divider>
-              <material-list>
-                <div class="material-tile-content">
-                  <div flex layout="horizontal" layout-align="center center">
-                    <div flex="30">
-                      <img src="https://avatars1.githubusercontent.com/u/7740415?v=2&s=400" class="personImage">
-                    </div>
-                    <div flex="20" layout="horizontal" layout-align="center">
-                      <span class="datestyle">10/25/2014</span>
-                    </div>
-                    <div flex layout="vertical" layout-align="center center">
-                      <span class="activityStlye">You watched (Insert Pet)</span>
-                      <span class="activityStlye">Earned: $50</span>
-                      <material-button class="rate-button button-call-to-action-color" ng-click="rateUser($event)">Rate this user</material-button>
-                    </div>
-                  </div>
-                </div>
-              </material-list>
-              <material-divider inset ng-if="!$last"></material-divider>
-              <material-list>
-                <div class="material-tile-content">
-                  <div flex layout="horizontal" layout-align="center center">
-                    <div flex="30">
-                      <img src="https://avatars2.githubusercontent.com/u/6237873?v=2&s=400" class="personImage">
-                    </div>
-                    <div flex="20" layout="horizontal" layout-align="center">
-                      <span class="datestyle">10/25/2014</span>
-                    </div>
-                    <div flex layout="vertical" layout-align="center center">
-                      <span class="activityStlye">You watched (Insert Pet)</span>
-                      <span class="activityStlye">Earned: $50</span>
-                      <material-button class="rate-button button-call-to-action-color" ng-click="rateUser($event)">Rate this user</material-button>
-                    </div>
-                  </div>
-                </div>
-              </material-list>
-              <material-divider inset ng-if="!$last"></material-divider>
-              <material-list>
-                <div class="material-tile-content">
-                  <div flex layout="horizontal" layout-align="center center">
-                    <div flex="30">
-                      <img src="https://avatars2.githubusercontent.com/u/7004952?v=2&s=400" class="personImage">
-                    </div>
-                    <div flex="20" layout="horizontal" layout-align="center">
-                      <span class="datestyle">10/25/2014</span>
-                    </div>
-                    <div flex layout="vertical" layout-align="center center">
-                      <span class="activityStlye">You watched (Insert Pet)</span>
-                      <span class="activityStlye">Earned: $50</span>
-                      <material-button class="rate-button button-call-to-action-color" ng-click="rateUser($event)">Rate this user</material-button>
-                    </div>
-                  </div>
-                </div>
-              </material-list>
-              <material-divider inset ng-if="!$last"></material-divider>
-              <material-list>
-                <div class="material-tile-content">
-                  <div flex layout="horizontal" layout-align="center center">
-                    <div flex="30">
-                      <img src="https://avatars2.githubusercontent.com/u/7147319?v=2&s=400" class="personImage">
-                    </div>
-                    <div flex="20" layout="horizontal" layout-align="center">
-                      <span class="datestyle">10/25/2014</span>
-                    </div>
-                    <div flex layout="vertical" layout-align="center center">
-                      <span class="activityStlye">You watched (Insert Pet)</span>
-                      <span class="activityStlye">Earned: $50</span>
-                      <material-button class="rate-button button-call-to-action-color" ng-click="rateUser($event)">Rate this user</material-button>
-                    </div>
-                  </div>
-                </div>
-              </material-list>
+
             </material-content>
           </div>
 
-          <div flex layout="horizontal" layout-align="center">
-            <img class="profile-logo" src="./assets/images/petopia-logo.png">
+          <div flex class="secondRow">
+            <material-toolbar class="tableHeader">
+              <h1 class="material-toolbar-tools" layout-align="center">
+                <span>Messages</span>
+              </h1>
+            </material-toolbar>
+            <material-content>  
+              <message ng-repeat="message in messages"></message>
+            </material-content>
           </div>
 
         </div>
       </div>
+
       <div class="animate-switch tab2" ng-switch-when="1">
         <material-content layout="horizontal" layout-align="center" style="overflow-y: hidden">
           <form ng-submit="setPetSitterInfo(petSitter)" class="formClass">
