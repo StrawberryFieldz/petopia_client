@@ -1,0 +1,43 @@
+<div ng-if="transaction.type==='hired'">
+  <material-list>
+    <div class="material-tile-content">
+      <div flex layout="horizontal" layout-align="center center">
+        <div flex="30">
+          <!-- <img src="https://avatars2.githubusercontent.com/u/7147319?v=2&s=400" class="personImage"> -->
+        </div>
+        <div flex="20" layout="horizontal" layout-align="center">
+          <span class="datestyle">Date</span>
+        </div>
+        <div flex layout="vertical" layout-align="center center">
+          <span class="activityStlye">{{ transaction.otherUser }} watched your pet</span>
+          <span class="activityStlye">Total Cost: ${{ transaction.cost }}</span>
+          <material-button class="rate-button button-call-to-action-color" ng-click="rateUser($event)">Rate this user</material-button>
+          <!-- {{rating}} -->
+        </div>
+      </div>
+    </div>
+    <material-divider inset ng-if="!$last"></material-divider>
+  </material-list>
+</div>
+
+<div ng-if="transaction.type==='watched'">
+  <material-list>
+    <div class="material-tile-content">
+      <div flex layout="horizontal" layout-align="center center">
+        <div flex="30">
+          <!-- <img src="https://avatars2.githubusercontent.com/u/7147319?v=2&s=400" class="personImage"> -->
+        </div>
+        <div flex="20" layout="horizontal" layout-align="center">
+          <span class="datestyle">Date</span>
+        </div>
+        <div flex layout="vertical" layout-align="center center">
+          <span class="activityStlye">You watched {{ transaction.otherUser }}'s pet</span>
+          <span class="activityStlye">Earned: ${{ transaction.cost }}</span>
+          <material-button class="rate-button button-call-to-action-color" ng-click="rateUser($event)">Rate this user</material-button>
+          <!-- {{rating}} -->
+        </div>
+      </div>
+    </div>
+    <material-divider inset ng-if="!$last"></material-divider>
+  </material-list>
+</div>
