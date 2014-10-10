@@ -1,7 +1,8 @@
 .pet-sitter-header {
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  background: white;
+  padding: 40px;
+  margin: 0;
 }
 
 .pet-sitter-body {
