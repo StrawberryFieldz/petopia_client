@@ -1,4 +1,4 @@
-<div>
+<!-- <div ng-if="!canceled">
   <material-list>
     <div class="material-tile-content">
       <div flex="20" layout="horizontal" layout-align="center">
@@ -6,13 +6,13 @@
       </div>
       <div flex layout="horizontal" layout-align="center center">
         <div flex layout="vertical" layout-align="center center">
-          <span class="">You requested {{ message.sitter }} to watch your</span>
-          <span class="">Start Date: {{ message.startDate }}</span>
-          <span class="">End Date: {{ message.endDate }}</span>
+          <span class="">{{ message.message }}</span>
+          <span class="">Start Date: {{ message.date.start }}</span>
+          <span class="">End Date: {{ message.date.end }}</span>
             <div class="sitter-popup-buttons">
               <section layout="vertical" layout-sm="horizontal" layout-align="center center">
-                <span class="">Status: Pending</span>
-                <material-button class="button-call-to-action-color cancel-button" ng-click="">Cancel</material-button>
+                <span class="">Status: {{ requestStatus }}</span>
+                <material-button class="button-call-to-action-color cancel-button" ng-click="cancelRequest()">Cancel</material-button>
               </section>
             </div>
         </div>
@@ -20,9 +20,9 @@
     </div>
     <material-divider inset ng-if="!$last"></material-divider>
   </material-list>
-</div>
+</div> -->
 
-<div>
+<div ng-if="!declined">
   <material-list>
     <div class="material-tile-content">
       <div flex="20" layout="horizontal" layout-align="center">
@@ -30,13 +30,13 @@
       </div>
       <div flex layout="horizontal" layout-align="center center">
         <div flex layout="vertical" layout-align="center center">
-          <span class="">*User* has requested you to watch their dog</span>
-          <span class="">Start Date: </span>
-          <span class="">End Date: </span>
+          <span class="">{{ message.message }}</span>
+          <span class="">Start Date: {{ message.date.start }}</span>
+          <span class="">End Date: {{ message.date.end }}</span>
           <div class="sitter-popup-buttons">
             <section layout="vertical" layout-sm="horizontal" layout-align="center center">
-              <material-button class="accept-button" ng-click="submitSchedule(scheduleForm)">Accept</material-button>
-              <material-button class="button-call-to-action-color cancel-button" ng-click="decline()">Decline</material-button>
+              <material-button class="accept-button" ng-click="acceptRequest()">Accept</material-button>
+              <material-button class="button-call-to-action-color cancel-button" ng-click="declineRequest()">Decline</material-button>
             </section>
           </div>
         </div>
