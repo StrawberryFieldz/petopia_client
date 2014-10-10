@@ -19,6 +19,10 @@ angular.module('app')
       console.log("placeholder");
     };
 
+    $scope.addPet = function(e){
+      PopUp.PopUpCall(e, './scripts/private_profile/private_profile.popup.html');
+    };
+
     $scope.rating = 1;
 
     $scope.rateUser = function(e){
