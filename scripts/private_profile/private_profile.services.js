@@ -2,8 +2,6 @@ angular.module('app')
   .factory('PrivateProfileService', function($http, $storage){
     return {
       setPetSitterInfo: function(info, callback){
-        //this will ultimately send the info to the database
-        console.log(info);
         var user = $storage.get('user');
         $http({
           method: 'POST',
