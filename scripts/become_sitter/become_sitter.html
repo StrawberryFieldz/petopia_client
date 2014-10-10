@@ -15,16 +15,17 @@
     <material-content layout="horizontal" layout-align="center" style="overflow-y: hidden">
       <form ng-submit="setPetSitterInfo(petSitter)" class="becomeFormClass">
         <ig fid="t1" label="Name" type="text" value="{{petSitter.name}}" ng-model="petSitter.name" class="material-input-group-theme-light material-input-group-inverted"></ig>
-        <ig fid="t2" label="Location" type="text" value="{{petSitter.userLocation}}" ng-model="petSitter.userLocation" label="Location" class="material-input-group-theme-light material-input-group-inverted"></ig>
-        <ig fid="t3" label="Bio" type="text" value="{{petSitter.bio}}" ng-model="petSitter.bio" label="Bio" class="material-input-group-theme-light material-input-group-inverted"></ig>
-        <ig fid="t4" label="Daily Rate" type="text" value="{{petSitter.dailyRate}}" ng-model="petSitter.dailyRate" label="Daily Rate" class="material-input-group-theme-light material-input-group-inverted"></ig>
+        <ig fid="t2" label="Location" type="text" value="{{petSitter.location}}" ng-model="petSitter.location" label="Location" class="material-input-group-theme-light material-input-group-inverted"></ig>
+        <ig fid="t3" label="Zip" type="text" value="{{petSitter.zip}}" ng-model="petSitter.zip" label="Zip Code" class="material-input-group-theme-light material-input-group-inverted"></ig>
+        <ig fid="t4" label="Daily Rate" type="text" value="{{petSitter.cost}}" ng-model="petSitter.cost" label="Daily Rate" class="material-input-group-theme-light material-input-group-inverted"></ig>
+        <ig fid="t5" label="Bio" type="text" value="{{petSitter.bio}}" ng-model="petSitter.bio" label="Bio" class="material-input-group-theme-light material-input-group-inverted"></ig>
       
         <div class="pet-sitter-select">Select the type of pet(s) you want to watch:</div>
-        <material-checkbox ng-click="petSitter.petToWatchObject.dog=!petSitter.petToWatchObject.dog" aria-label="Checkbox 1">
+        <material-checkbox ng-click="petSitter.dog=!petSitter.dog" aria-label="Checkbox 1">
           Dog
         </material-checkbox>
 
-        <material-checkbox ng-click="petSitter.petToWatchObject.cat=!petSitter.petToWatchObject.cat" aria-label="Checkbox 2">
+        <material-checkbox ng-click="petSitter.cat=!petSitter.cat" aria-label="Checkbox 2">
           Cat
         </material-checkbox>
         <material-button class= "button-call-to-action-color private-button-customize">Submit</material-button>

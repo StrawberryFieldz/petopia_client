@@ -2,13 +2,12 @@ angular.module('app')
   .controller('BecomeSitterController', ['$scope', '$state', 'PrivateProfileService', function($scope, $state, PrivateProfileService){
     $scope.petSitter = {
       name: '',
-      userLocation: '',
+      location: '',
+      zip: '',
       bio: '',
-      dailyRate: '',
-      petToWatchObject: {
-        dog: false,
-        cat: false
-      }
+      cost: '',
+      dogs: false,
+      cats: false
     };
 
     $scope.setPetSitterInfo = PrivateProfileService.setPetSitterInfo;
