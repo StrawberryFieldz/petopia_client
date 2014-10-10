@@ -1,5 +1,5 @@
 angular.module('app')
-  .factory('PrivateProfileService', function($http, $storage){
+  .factory('PrivateProfileService', ['$http', '$storage', function($http, $storage){
     return {
       setPetSitterInfo: function(info, callback){
         var user = $storage.get('user');
@@ -12,7 +12,7 @@ angular.module('app')
         });
       }
     };
-  })
+  }])
 
   .directive('message', function() {
     return  {

@@ -13,12 +13,12 @@
 
   <div class="pet-sitter-body">
     <material-content layout="horizontal" layout-align="center" style="overflow-y: hidden">
-      <form ng-submit="setPetSitterInfo(petSitter)" class="becomeFormClass">
-        <ig fid="t1" label="Name" type="text" value="{{petSitter.name}}" ng-model="petSitter.name" class="material-input-group-theme-light material-input-group-inverted"></ig>
-        <ig fid="t2" label="Location" type="text" value="{{petSitter.location}}" ng-model="petSitter.location" label="Location" class="material-input-group-theme-light material-input-group-inverted"></ig>
-        <ig fid="t3" label="Zip" type="text" value="{{petSitter.zip}}" ng-model="petSitter.zip" label="Zip Code" class="material-input-group-theme-light material-input-group-inverted"></ig>
-        <ig fid="t4" label="Daily Rate" type="text" value="{{petSitter.cost}}" ng-model="petSitter.cost" label="Daily Rate" class="material-input-group-theme-light material-input-group-inverted"></ig>
-        <ig fid="t5" label="Bio" type="text" value="{{petSitter.bio}}" ng-model="petSitter.bio" label="Bio" class="material-input-group-theme-light material-input-group-inverted"></ig>
+      <form name="userForm" ng-submit="setPetSitterInfo(petSitter)" class="becomeFormClass">
+        <ig fid="t1" label="Name" type="text" value="{{petSitter.name}}" ng-model="petSitter.name" class="material-input-group-theme-light material-input-group-inverted" required></ig>
+        <ig fid="t2" label="Location" type="text" value="{{petSitter.location}}" ng-model="petSitter.location" label="Location" class="material-input-group-theme-light material-input-group-inverted" required></ig>
+        <ig fid="t3" label="Zip" type="text" value="{{petSitter.zip}}" ng-model="petSitter.zip" label="Zip Code" class="material-input-group-theme-light material-input-group-inverted" required></ig>
+        <ig fid="t4" label="Daily Rate" type="text" value="{{petSitter.cost}}" ng-model="petSitter.cost" label="Daily Rate" class="material-input-group-theme-light material-input-group-inverted" required></ig>
+        <ig fid="t5" label="Bio" type="text" value="{{petSitter.bio}}" ng-model="petSitter.bio" label="Bio" class="material-input-group-theme-light material-input-group-inverted" required></ig>
       
         <div class="pet-sitter-select">Select the type of pet(s) you want to watch:</div>
         <material-checkbox ng-click="petSitter.dogs=!petSitter.dogs" aria-label="Checkbox 1">
@@ -28,7 +28,9 @@
         <material-checkbox ng-click="petSitter.cats=!petSitter.cats" aria-label="Checkbox 2">
           Cat
         </material-checkbox>
-        <material-button class= "button-call-to-action-color private-button-customize">Submit</material-button>
+        <div layout="horizontal" layout-align="center">
+          <button class="sub" ng-disabled="userForm.$invalid">Submit</button>
+        </div>
         <!-- <material-button class="material-button-raised material-button-colored" layout="horizontal">Submit</material-button> -->
       </form>
     </material-content>
