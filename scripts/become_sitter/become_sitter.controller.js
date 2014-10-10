@@ -9,10 +9,7 @@ angular.module('app')
       dogs: false,
       cats: false
     };
-    
+
     $scope.setPetSitterInfo = PrivateProfileService.setPetSitterInfo;
-    // $scope.setPetSitterInfo = function(pet){
-    //   console.log("here");
-    // }
 
   }]);
