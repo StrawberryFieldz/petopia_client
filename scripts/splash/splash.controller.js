@@ -25,7 +25,6 @@ angular.module('app')
       // populate the address fields in the form.
       google.maps.event.addListener(autocomplete, 'place_changed', function() {
         var place = autocomplete.getPlace().formatted_address.split(',')[0];   
-        console.log(place);     
         CityFactory.setCity(place);
       });
     }
