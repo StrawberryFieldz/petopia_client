@@ -1,16 +1,18 @@
 <div ng-include=" 'scripts/components/navbar/navbar.alt.html' "></div>
 <div ng-controller="SplashController">
 
-      <section class="splashBackground" layout="vertical" layout-sm="vertical" layout-align="center center">
-        <div class="splashHeader">petopia</div>
-        <div class="splashTagline">pet sitters right meow</div>
-        <div class="cityInputForm" id="locationField">
-          <form name="cityInput" ng-submit="setCity(cityName)">
-            <input class="inputFormText" id="autocomplete" type="text" ng-model="cityName" placeholder="Enter your city">
-            <material-button class= "button-customize button-call-to-action-color">Search</material-button>
-          </form>
+      <section class="splashBackground">
+        <div layout="vertical" layout-sm="vertical" layout-align="center center">
+          <span class="splashHeader">petopia</span>
+          <span class="splashTagline">pet sitters right meow</span>
+          <span class="cityInputForm" id="locationField">
+            <form name="cityInput" ng-submit="setCity(cityName)">
+              <input class="inputFormText" id="autocomplete" type="text" ng-model="cityName" placeholder="Enter your city">
+              <material-button class= "button-customize button-call-to-action-color">Search</material-button>
+            </form>
+          </span>
+          <i class="fa fa-arrow-circle-down fa-4x" style="margin-top:100px; color:white" ng-click="goToBottom()"></i>
         </div>
-        <i class="fa fa-arrow-circle-down fa-4x" style="margin-top:100px; color:white" ng-click="goToBottom()"></i>
       </section>
 
       <material-toolbar class="meetTheTeamToolBar" layout-align="center center"><h2>Meet the Team</h2></material-toolbar>
