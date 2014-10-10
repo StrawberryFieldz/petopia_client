@@ -99,7 +99,6 @@ angular.module('app')
               var sitter = $storage.getObject('sitter');
               var messageToUser = 'You requested that ' + sitter.username + ' watch your ';
               var user = $storage.get('user');
-              console.log(user)
               var pets = '';
               if($scope.scheduleForm.dog && $scope.scheduleForm.cat) { pets += 'cat and dog.'; }
               else if($scope.scheduleForm.dog) { pets += 'dog.'; }
