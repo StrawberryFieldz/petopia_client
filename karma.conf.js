@@ -14,6 +14,7 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['mocha', 'chai'],
 
+    vendor: ["http://maps.googleapis.com/maps/api/js?sensor=false&v=3.exp&libraries=places"],
 
     // list of files / patterns to load in the browser
     files: [
