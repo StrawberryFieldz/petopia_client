@@ -53,7 +53,7 @@
   max-height: 48px;
   min-height: 48px;
   text-transform: none;
-  min-width: 65px;
+  min-width: 65px; 
 }
 
 .materialButton:hover {
