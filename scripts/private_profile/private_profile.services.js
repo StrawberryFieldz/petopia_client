@@ -1,9 +1,15 @@
 angular.module('app')
-  .factory('PrivateProfileService', function(){
+  .factory('PrivateProfileService', function($http, $storage){
     return {
-      setPetSitterInfo: function(info){
-        //this will ultimately send the info to the database
-        console.log(info);
+      setPetSitterInfo: function(info, callback){
+        var user = $storage.get('user');
+        $http({
+          method: 'POST',
+          url: 'http://petopia-server.azurewebsites.net/api/users/'+user,
+          data: info
+        }).success(function(data){
+          console.log("posted to server");
+        });
       }
     };
   })
