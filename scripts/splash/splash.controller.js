@@ -3,7 +3,6 @@ angular.module('app')
     
 
     $scope.setCity = function(cityName){
-      console.log(CityFactory.getCity());
       if(CityFactory.getCity()){
         $state.go('search');
       } else {
