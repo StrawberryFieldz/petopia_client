@@ -53,6 +53,7 @@
   max-height: 48px;
   min-height: 48px;
   text-transform: none;
+  min-width: 65px; 
 }
 
 .materialButton:hover {
@@ -62,6 +63,7 @@
 
 .material-toolbar-tools .navbarMaterialContent {
   margin-right: 1%;
+  min-width: 150px;
 }
 
 .navbar {

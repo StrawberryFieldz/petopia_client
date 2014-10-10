@@ -11,18 +11,23 @@
 .splashHeader {
   color: white;
   font-family: 'Francois One', sans-serif;
-  font-size: 135px;
+  font-size: 150px;
   margin-top: 10px;
   text-shadow: 0 0 2px #000; /* horizontal-offset vertical-offset 'blur' colour */
   -moz-text-shadow: 0 0 2px #000;
   -webkit-text-shadow: 0 0 2px #000;
 }
 
+.splashHomeStyle {
+  padding-top: 3%;
+}
+
 .splashTagline {
   color: white;
   font-family: 'Francois One', sans-serif;
   font-weight: 100;
-  font-size: 30px;
+  font-size: 40px;
+  margin-top: 10px;
   text-shadow: 0 0 2px #000; /* horizontal-offset vertical-offset 'blur' colour */
   -moz-text-shadow: 0 0 2px #000;
   -webkit-text-shadow: 0 0 2px #000;
