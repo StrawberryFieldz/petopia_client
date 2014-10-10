@@ -25,7 +25,7 @@ angular.module('app')
       GetAllUserInfo: function(user, callback) {
         console.log(user);
         return $http({
-          url: 'http://petopia-server.azurewebsites.net/api/user/' + user,
+          url: 'http://petopia-server.azurewebsites.net/api/users/' + user,
           method: 'GET'
         }).success(function(data) {
           callback(data);
