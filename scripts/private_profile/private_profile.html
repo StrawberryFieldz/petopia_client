@@ -15,13 +15,14 @@
           
           <div flex layout="vertical" layout-align="center" class="customLayout">
             <img class="private-image-style" ng-src="{{ user.photo }}">
-            <material-button class="privte-profile-button button-call-to-action-color private" ng-click="uploadImage()">Upload Image</material-button>
+            <material-button class="private-profile-button button-call-to-action-color private" ng-click="uploadImage()">Upload Image</material-button>
             <material-content class="firstRow">
               <material-toolbar class="tableHeader">
                 <h1 class="material-toolbar-tools" layout-align="center">
                   <span>My Pets</span>
                 </h1>
               </material-toolbar>
+              <material-button class="private-profile-button button-call-to-action-color private" ng-click="addPet($event)">Add Pet</material-button>
             </material-content>
           </div>
 
