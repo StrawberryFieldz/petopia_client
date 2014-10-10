@@ -17,7 +17,7 @@ angular.module('app')
   .directive('message', function() {
     return {
       restrict: 'E',
-      controller: function($scope) {
+      controller: ['$scope', function($scope) {
         $scope.requestStatus = 'Pending';
         $scope.canceled = false;
         $scope.accepted = false;
@@ -34,7 +34,7 @@ angular.module('app')
         $scope.declineRequest = function() {
           $scope.declined = true;
         };
-      },
+      }],
       templateUrl: './scripts/private_profile/private_profile.message.html'
     };
   })
