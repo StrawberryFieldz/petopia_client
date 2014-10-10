@@ -38,12 +38,3 @@ angular.module('app')
       });       
     };
   }]);
-
-
-
-  // transactions: [{
-  //   otherUser: String, //user that bought or sold from current user
-  //   type: String, // type of transaction (hired/watched)
-  //   cost: Number, // how much the transaction cost
-  //   isRated: Boolean // if transaction has already been rated
-  // }]
