@@ -15,8 +15,26 @@ angular.module('app')
   }])
 
   .directive('message', function() {
-    return  {
+    return {
       restrict: 'E',
+      controller: function($scope) {
+        $scope.requestStatus = 'Pending';
+        $scope.canceled = false;
+        $scope.accepted = false;
+        $scope.declined = false;
+
+        $scope.cancelRequest = function() {
+          $scope.canceled = true;
+        };
+
+        $scope.acceptRequest = function() {
+          $scope.accepted = true;
+        };
+
+        $scope.declineRequest = function() {
+          $scope.declined = true;
+        };
+      },
       templateUrl: './scripts/private_profile/private_profile.message.html'
     };
   })
