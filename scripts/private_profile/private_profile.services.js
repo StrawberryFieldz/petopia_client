@@ -6,4 +6,11 @@ angular.module('app')
         console.log(info);
       }
     };
+  })
+
+  .directive('message', function() {
+    return  {
+      restrict: 'E',
+      templateUrl: './scripts/private_profile/private_profile.message.html'
+    };
   });
