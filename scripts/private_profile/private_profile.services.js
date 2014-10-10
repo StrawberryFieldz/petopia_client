@@ -13,4 +13,15 @@ angular.module('app')
       restrict: 'E',
       templateUrl: './scripts/private_profile/private_profile.message.html'
     };
+  })
+
+  .directive('transaction', function(){
+    return {
+      restrict: 'E',
+      scope: {
+        value: '=ngModel'
+      },
+      controller: 'PrivateProfileController',
+      templateUrl: './scripts/private_profile/private_profile.transaction.html'
+    };
   });
