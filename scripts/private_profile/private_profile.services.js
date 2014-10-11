@@ -1,5 +1,5 @@
 angular.module('app')
-  .factory('PrivateProfileService', ['$http', '$storage', function($http, $storage){
+  .factory('PrivateProfileService', ['$http', '$storage', '$state', function($http, $storage, $state){
     return {
       setPetSitterInfo: function(info, callback){
         var user = $storage.get('user');
@@ -10,6 +10,18 @@ angular.module('app')
         }).success(function(data){
           console.log("posted to server");
         });
+      },
+
+      acceptRequest: function(user, acceptObject){
+        $http({
+          method: 'POST',
+          url: 'http://petopia-server.azurewebsites.net/api/users/transactions/' + user,
+          data: JSON.stringify(acceptObject)
+        }).success(function(data){
+          $state.go($state.current, {}, {reload: true});
+        }).error(function(data){
+          console.log('error in acceptRequest');
+        });
       }
     };
   }])
@@ -17,7 +29,7 @@ angular.module('app')
   .directive('message', function() {
     return {
       restrict: 'E',
-      controller: ['$scope', function($scope) {
+      controller: ['$scope', '$storage', 'PrivateProfileService', function($scope, $storage, PrivateProfileService) {
         $scope.requestStatus = 'Pending';
         $scope.canceled = false;
         $scope.accepted = false;
@@ -28,6 +40,20 @@ angular.module('app')
         };
 
         $scope.acceptRequest = function() {
+          $scope.name;
+
+          var nameSplit = $scope.name.split(' ');
+
+          var acceptObject = {
+            transaction_name: nameSplit[0],
+            transaction_type: 'watched',
+            transaction_cost: $scope.user.cost,
+            transaction_isRated: false
+          };
+          var user = $storage.get('user');
+          console.log('acceptObject: ', acceptObject);
+          PrivateProfileService.acceptRequest(user, acceptObject);
+
           $scope.accepted = true;
         };
 
@@ -42,9 +68,6 @@ angular.module('app')
   .directive('transaction', function(){
     return {
       restrict: 'E',
-      scope: {
-        value: '=ngModel'
-      },
       controller: 'PrivateProfileController',
       templateUrl: './scripts/private_profile/private_profile.transaction.html'
     };
