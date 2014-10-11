@@ -1,16 +1,10 @@
-<div ng-if="transaction.type==='hired'">
+<div ng-if="transaction.transaction_type==='hired'">
   <material-list>
     <div class="material-tile-content">
       <div flex layout="horizontal" layout-align="center center">
-        <div flex="30">
-          <!-- <img src="https://avatars2.githubusercontent.com/u/7147319?v=2&s=400" class="personImage"> -->
-        </div>
-        <div flex="20" layout="horizontal" layout-align="center">
-          <span class="datestyle">Date</span>
-        </div>
         <div flex layout="vertical" layout-align="center center">
-          <span class="activityStlye">{{ transaction.otherUser }} watched your pet</span>
-          <span class="activityStlye">Total Cost: ${{ transaction.cost }}</span>
+          <span class="activityStlye">{{ transaction.transaction_name }} watched your pet</span>
+          <span class="activityStlye">Total Cost: ${{ transaction.transaction_cost }}</span>
           <material-button class="rate-button button-call-to-action-color" ng-click="rateUser($event)">Rate this user</material-button>
           <!-- {{rating}} -->
         </div>
@@ -20,19 +14,13 @@
   </material-list>
 </div>
 
-<div ng-if="transaction.type==='watched'">
+<div ng-if="transaction.transaction_type==='watched'">
   <material-list>
     <div class="material-tile-content">
       <div flex layout="horizontal" layout-align="center center">
-        <div flex="30">
-          <!-- <img src="https://avatars2.githubusercontent.com/u/7147319?v=2&s=400" class="personImage"> -->
-        </div>
-        <div flex="20" layout="horizontal" layout-align="center">
-          <span class="datestyle">Date</span>
-        </div>
         <div flex layout="vertical" layout-align="center center">
-          <span class="activityStlye">You watched {{ transaction.otherUser }}'s pet</span>
-          <span class="activityStlye">Earned: ${{ transaction.cost }}</span>
+          <span class="activityStlye">You watched {{ transaction.transaction_name }}'s pet</span>
+          <span class="activityStlye">Earned: ${{ transaction.transaction_cost }}</span>
           <material-button class="rate-button button-call-to-action-color" ng-click="rateUser($event)">Rate this user</material-button>
           <!-- {{rating}} -->
         </div>

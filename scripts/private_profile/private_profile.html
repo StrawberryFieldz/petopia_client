@@ -33,7 +33,7 @@
               </h1>
             </material-toolbar>
             <material-content>
-              <transaction ng-repeat="transaction in transactions"></transaction>
+              <transaction ng-repeat="transaction in user.transactions"></transaction>
             </material-content>
           </div>
 
@@ -44,7 +44,7 @@
               </h1>
             </material-toolbar>
             <material-content>  
-              <message ng-repeat="message in user.receivedMessages"></message>
+              <message ng-repeat="message in user.receivedMessages" ng-init="name=message.message"></message>
             </material-content>
           </div>
 
@@ -56,8 +56,9 @@
           <form ng-submit="setPetSitterInfo(petSitter)" class="formClass">
             <ig fid="t1" label="Name" type="text" value="{{petSitter.name}}" ng-model="petSitter.name" class="material-input-group-theme-light material-input-group-inverted"></ig>
             <ig fid="t2" label="Location" type="text" value="{{petSitter.userLocation}}" ng-model="petSitter.userLocation" label="Location" class="material-input-group-theme-light material-input-group-inverted"></ig>
-            <ig fid="t3" label="Bio" type="text" value="{{petSitter.bio}}" ng-model="petSitter.bio" label="Bio" class="material-input-group-theme-light material-input-group-inverted"></ig>
-            <ig fid="t4" label="Daily Rate" type="text" value="{{petSitter.dailyRate}}" ng-model="petSitter.dailyRate" label="Daily Rate" class="material-input-group-theme-light material-input-group-inverted"></ig>
+            <ig fid="t3" label="Zip" type="text" value="{{petSitter.userZip}}" ng-model="petSitter.userZip" label="Zip" class="material-input-group-theme-light material-input-group-inverted"></ig>
+            <ig fid="t4" label="Bio" type="text" value="{{petSitter.bio}}" ng-model="petSitter.bio" label="Bio" class="material-input-group-theme-light material-input-group-inverted"></ig>
+            <ig fid="t5" label="Daily Rate" type="text" value="{{petSitter.dailyRate}}" ng-model="petSitter.dailyRate" label="Daily Rate" class="material-input-group-theme-light material-input-group-inverted"></ig>
           
             <div class="pet-sitter-select">Select the type of pet(s) you want to watch:</div>
             <material-checkbox ng-click="petSitter.petToWatchObject.dog=!petSitter.petToWatchObject.dog" aria-label="Checkbox 1">
