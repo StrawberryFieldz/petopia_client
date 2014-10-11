@@ -10,7 +10,6 @@ angular.module('app')
         headers: {'Content-type': 'application/json'}        
       }).success(function(data, status, headers, config) {
         $storage.clear();
-        console.log($state.current);
         if($state.current.name === 'splash'){
           $state.go($state.current, {}, {reload: true});
         } else {
@@ -166,6 +165,7 @@ angular.module('app')
                 method: 'POST',
                 data: JSON.stringify(requestBody)
               }).success(function(data, status, headers, config) {
+                console.log('config: ', config);
                 $scope.close();
               }).error(function(data, status, headers, config) {
 
