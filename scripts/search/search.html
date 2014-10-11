@@ -23,13 +23,25 @@
         <!-- <hr width="80%"> -->
           <div class="filterStyle" flex layout="vertical" layout-align="center center">
             Maximum Price:
-            <div class="slider">
-              <div flex="50" offset="25">
-                <material-slider>
-                  <input type="range" ng-model="price" min="5" max="300">{{price}}
-                </material-slider>
-              </div>
-            </div>
+            <material-radio-group class="radioButtons" flex layout="horizontal" ng-model="maxPrice">
+
+                <material-radio-button ng-model="maxPrice" flex value="20" aria-label="Label 1">
+                  $20
+                </material-radio-button>
+
+                <material-radio-button ng-model="maxPrice" flex value="50" noink>
+                  $50
+                </material-radio-button>
+
+                <material-radio-button ng-model="maxPrice" flex value="75" aria-label="Label 3">
+                  $75
+                </material-radio-button>
+
+                <material-radio-button ng-model="maxPrice" flex value="1000" aria-label="Label 3">
+                  $100+
+                </material-radio-button>
+
+              </material-radio-group>
           </div>    
           
           <!-- <hr width="80%"> -->
@@ -55,7 +67,7 @@
   <div flex class="search-layout">
 
     <div id="wrapper" style="overflow: hidden; width: 100%">
-        <div class="box1 repeated-item" ng-repeat="sitter in sitters | orderBy:matchMaxPrice:price | dogFilterer:dogFilter:catFilter | orderBy:'-rating'">
+        <div class="box1 repeated-item" ng-repeat="sitter in sitters | matchMaxPrice:maxPrice | dogFilterer:dogFilter:catFilter | orderBy:'-rating'">
           <div ng-click="GoToProfile(sitter)" style="width: 100%; height: 100%; cursor: pointer;">
           <p class="sitter-card-city">{{sitter.name}}</p>
           <center>

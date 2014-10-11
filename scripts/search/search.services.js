@@ -71,14 +71,14 @@ angular.module('app')
 	})
 
   .filter('matchMaxPrice', function () {
-	  return function (items, maxPrice) {
+    return function (items, maxPrice) {
 	  	if(maxPrice === undefined || maxPrice === '' || !parseInt(maxPrice)){
 	  	  return items;
 	  	}
 	    var filtered = [];
 	    for (var i = 0; i < items.length; i++) {
 	      var item = items[i];
-	      if (maxPrice > item.cost) {
+	      if (maxPrice >= item.cost) {
 	        filtered.push(item);
 	      }
 	    }
