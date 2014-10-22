@@ -73,4 +73,4 @@ View the project roadmap [here](https://github.com/StrawberryFieldz/petopia_clie
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/StrawberryFieldz/petopia_client/blob/master/CONTRIBUTING.md) for contribution guidelines.
+See [CONTRIBUTING.md](https://github.com/StrawberryFieldz/petopia_client/blob/master/docs/CONTRIBUTING.md) for contribution guidelines.
